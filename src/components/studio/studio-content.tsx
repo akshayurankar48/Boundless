@@ -1,0 +1,321 @@
+"use client";
+
+import Image from "next/image";
+import Link from "next/link";
+import { ParallaxImage } from "@/components/animations/parallax-image";
+import { TextReveal } from "@/components/animations/text-reveal";
+import { ScrollReveal } from "@/components/animations/scroll-reveal";
+import { ClipPathReveal } from "@/components/animations/clip-path-reveal";
+import { SectionHeading } from "@/components/shared/section-heading";
+import { ClinicalStandards } from "@/components/sections/clinical-standards";
+import { siteConfig } from "@/data/site-config";
+import { MapPin, Clock, Phone, Mail } from "lucide-react";
+import { MapPlaceholder } from "@/components/shared/map-placeholder";
+
+const studioImages = [
+  {
+    src: "https://images.unsplash.com/photo-1611501275019-9b5cda994e8d?w=800&q=80",
+    alt: "Studio workstation with professional tattoo equipment",
+  },
+  {
+    src: "https://images.unsplash.com/photo-1568515045052-f9a854d70bfd?w=800&q=80",
+    alt: "Clean studio interior with modern industrial design",
+  },
+  {
+    src: "https://images.unsplash.com/photo-1565058379802-bbe93b2f703a?w=800&q=80",
+    alt: "Artist workspace with reference materials and ink setup",
+  },
+  {
+    src: "https://images.unsplash.com/photo-1611501275019-9b5cda994e8d?w=800&q=80",
+    alt: "Studio reception and client consultation area",
+  },
+];
+
+export function StudioContent() {
+  const { studio } = siteConfig;
+
+  return (
+    <>
+      {/* Hero */}
+      <section className="relative h-[70vh] min-h-[500px] md:h-[80vh]">
+        <ParallaxImage
+          src="https://images.unsplash.com/photo-1611501275019-9b5cda994e8d?w=1600&q=80"
+          alt="Vanguard Ink studio interior"
+          width={1600}
+          height={900}
+          className="absolute inset-0 h-full w-full"
+          sizes="100vw"
+          speed={0.2}
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-[var(--bg-primary)] via-[var(--bg-primary)]/40 to-transparent" />
+        <div className="absolute bottom-0 left-0 right-0 pb-16 md:pb-24">
+          <div className="mx-auto max-w-7xl px-4 md:px-8">
+            <p className="mb-3 font-mono text-xs uppercase tracking-[0.2em] text-[var(--accent-silver)]">
+              The Space
+            </p>
+            <TextReveal
+              text="A Sanctuary of Precision"
+              as="h1"
+              className="text-h1 font-serif font-bold text-[var(--text-primary)]"
+            />
+          </div>
+        </div>
+      </section>
+
+      {/* Philosophy */}
+      <section className="bg-[var(--bg-primary)] py-24 md:py-32">
+        <div className="mx-auto max-w-7xl px-4 md:px-8">
+          <div className="grid grid-cols-1 gap-12 md:grid-cols-2 md:gap-16">
+            <ScrollReveal direction="left">
+              <blockquote className="font-serif text-2xl leading-relaxed text-[var(--text-primary)] md:text-3xl lg:text-4xl">
+                &ldquo;We designed this space not as a shop, but as a sanctuary
+                &mdash; where the ritual of tattooing is elevated to its highest
+                form.&rdquo;
+              </blockquote>
+              <p className="mt-6 font-mono text-xs uppercase tracking-[0.15em] text-[var(--accent-silver)]">
+                {siteConfig.artist.name}, Founder
+              </p>
+            </ScrollReveal>
+
+            <ScrollReveal direction="right">
+              <div className="space-y-4 text-base leading-relaxed text-[var(--text-secondary)]">
+                <p>
+                  Located at {studio.address} in the heart of {studio.city},
+                  Vanguard Ink was conceived by award-winning architects to
+                  provide a cinematic atmosphere that inspires both artist and
+                  collector. Every element &mdash; from the curated lighting to
+                  the acoustic design &mdash; exists to serve the craft.
+                </p>
+                <p>
+                  The studio operates on a private appointment basis, ensuring
+                  each client receives undivided attention in an environment free
+                  from distraction. Our clinical-grade sterilization protocols
+                  exceed industry standards, while the atmosphere remains warm,
+                  deliberate, and deeply personal.
+                </p>
+                <p>
+                  This is where precision meets permanence. Where every session
+                  is a collaboration between artist and canvas, conducted in a
+                  space worthy of the work it produces.
+                </p>
+              </div>
+            </ScrollReveal>
+          </div>
+        </div>
+      </section>
+
+      {/* Studio Gallery */}
+      <section className="bg-[var(--bg-secondary)] py-24 md:py-32">
+        <div className="mx-auto max-w-7xl px-4 md:px-8">
+          <SectionHeading
+            label="The Environment"
+            title="Designed for the Craft"
+            description="Every corner of our studio is intentionally designed to support the art of tattooing at the highest level."
+          />
+
+          <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-12">
+            {/* Large left image */}
+            <ClipPathReveal
+              direction="left"
+              className="lg:col-span-7 lg:row-span-2"
+            >
+              <div className="relative aspect-[4/3] lg:aspect-auto lg:h-full">
+                <Image
+                  src={studioImages[0].src}
+                  alt={studioImages[0].alt}
+                  fill
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 58vw"
+                  className="object-cover"
+                />
+              </div>
+            </ClipPathReveal>
+
+            {/* Top right */}
+            <ClipPathReveal
+              direction="right"
+              delay={0.15}
+              className="lg:col-span-5"
+            >
+              <div className="relative aspect-[4/3]">
+                <Image
+                  src={studioImages[1].src}
+                  alt={studioImages[1].alt}
+                  fill
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 42vw"
+                  className="object-cover"
+                />
+              </div>
+            </ClipPathReveal>
+
+            {/* Bottom right - two images side by side */}
+            <ClipPathReveal
+              direction="bottom"
+              delay={0.25}
+              className="sm:col-span-1 lg:col-span-2"
+            >
+              <div className="relative aspect-square">
+                <Image
+                  src={studioImages[2].src}
+                  alt={studioImages[2].alt}
+                  fill
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 25vw, 17vw"
+                  className="object-cover"
+                />
+              </div>
+            </ClipPathReveal>
+
+            <ClipPathReveal
+              direction="bottom"
+              delay={0.35}
+              className="sm:col-span-1 lg:col-span-3"
+            >
+              <div className="relative aspect-square">
+                <Image
+                  src={studioImages[3].src}
+                  alt={studioImages[3].alt}
+                  fill
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 25vw, 25vw"
+                  className="object-cover"
+                />
+              </div>
+            </ClipPathReveal>
+          </div>
+        </div>
+      </section>
+
+      {/* Clinical Standards */}
+      <ClinicalStandards />
+
+      {/* Location */}
+      <section className="bg-[var(--bg-secondary)] py-24 md:py-32">
+        <div className="mx-auto max-w-7xl px-4 md:px-8">
+          <SectionHeading
+            label="Find Us"
+            title="Visit the Studio"
+          />
+
+          <div className="grid grid-cols-1 gap-12 md:grid-cols-2 md:gap-16">
+            <ScrollReveal direction="left">
+              <div className="space-y-8">
+                {/* Address */}
+                <div className="flex gap-4">
+                  <MapPin
+                    size={20}
+                    className="mt-1 shrink-0 text-[var(--accent-silver)]"
+                    strokeWidth={1.5}
+                  />
+                  <div>
+                    <p className="mb-1 font-mono text-xs uppercase tracking-[0.15em] text-[var(--text-tertiary)]">
+                      Address
+                    </p>
+                    <p className="text-base text-[var(--text-primary)]">
+                      {studio.address}
+                    </p>
+                    <p className="text-base text-[var(--text-secondary)]">
+                      {studio.city}, {studio.state} {studio.zip}
+                    </p>
+                  </div>
+                </div>
+
+                {/* Hours */}
+                <div className="flex gap-4">
+                  <Clock
+                    size={20}
+                    className="mt-1 shrink-0 text-[var(--accent-silver)]"
+                    strokeWidth={1.5}
+                  />
+                  <div>
+                    <p className="mb-1 font-mono text-xs uppercase tracking-[0.15em] text-[var(--text-tertiary)]">
+                      Studio Hours
+                    </p>
+                    <div className="space-y-1 text-base text-[var(--text-secondary)]">
+                      <p>
+                        <span className="text-[var(--text-primary)]">
+                          Mon&ndash;Fri:
+                        </span>{" "}
+                        {studio.hours.weekdays}
+                      </p>
+                      <p>
+                        <span className="text-[var(--text-primary)]">
+                          Saturday:
+                        </span>{" "}
+                        {studio.hours.saturday}
+                      </p>
+                      <p>
+                        <span className="text-[var(--text-primary)]">
+                          Sunday:
+                        </span>{" "}
+                        {studio.hours.sunday}
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Contact */}
+                <div className="flex gap-4">
+                  <Phone
+                    size={20}
+                    className="mt-1 shrink-0 text-[var(--accent-silver)]"
+                    strokeWidth={1.5}
+                  />
+                  <div>
+                    <p className="mb-1 font-mono text-xs uppercase tracking-[0.15em] text-[var(--text-tertiary)]">
+                      Contact
+                    </p>
+                    <p className="text-base">
+                      <a
+                        href={`tel:${studio.phone}`}
+                        className="text-[var(--text-secondary)] transition-colors hover:text-[var(--text-primary)]"
+                      >
+                        {studio.phone}
+                      </a>
+                    </p>
+                    <p className="text-base">
+                      <a
+                        href={`mailto:${studio.email}`}
+                        className="text-[var(--text-secondary)] transition-colors hover:text-[var(--text-primary)]"
+                      >
+                        {studio.email}
+                      </a>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </ScrollReveal>
+
+            {/* Map */}
+            <ScrollReveal direction="right">
+              <MapPlaceholder className="aspect-[4/3]" />
+            </ScrollReveal>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA */}
+      <section className="bg-[var(--bg-primary)] py-24 md:py-32">
+        <div className="mx-auto max-w-7xl px-4 text-center md:px-8">
+          <ScrollReveal>
+            <p className="mb-4 font-mono text-xs uppercase tracking-[0.25em] text-[var(--accent-silver)]">
+              Your Journey Begins Here
+            </p>
+            <h2 className="text-h1 font-serif font-bold text-[var(--text-primary)]">
+              Book a Consultation
+            </h2>
+            <p className="mx-auto mt-6 max-w-md text-base text-[var(--text-secondary)]">
+              Every masterpiece starts with a conversation. Visit us in person or
+              schedule a consultation to discuss your vision.
+            </p>
+            <div className="mt-10">
+              <Link
+                href="/contact"
+                className="border border-[var(--accent-silver)] bg-[var(--accent-silver)] px-8 py-3 font-mono text-xs uppercase tracking-[0.15em] text-[var(--bg-primary)] transition-all hover:bg-transparent hover:text-[var(--accent-silver)] focus-visible:ring-2 focus-visible:ring-[var(--accent-silver)]/50 focus-visible:outline-none"
+              >
+                Book a Consultation
+              </Link>
+            </div>
+          </ScrollReveal>
+        </div>
+      </section>
+    </>
+  );
+}
