@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>VANGUARD | Luxury Tattoo Studio</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@100;300;400;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              colors: {
+                "primary": "#ec5b13",
+                "background-light": "#f8f6f6",
+                "background-dark": "#120b08",
+              },
+              fontFamily: {
+                "display": ["Public Sans", "sans-serif"]
+              },
+              borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+            },
+          },
+        }
+      </script>
+<style>
+        .glass-effect {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        .metallic-text {
+            background: linear-gradient(to bottom, #ffffff 0%, #a1a1a1 50%, #ffffff 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .sidebar-text {
+            writing-mode: vertical-rl;
+            text-orientation: mixed;
+        }
+    
+        @keyframes subtleFloat {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+        .animate-subtle-float {
+            animation: subtleFloat 6s ease-in-out infinite;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 selection:bg-primary selection:text-white">
+<!-- Sidebar Navigation (Asymmetrical Layout Element) -->
+<aside class="fixed left-0 top-0 h-full w-16 hidden lg:flex flex-col items-center justify-between py-10 border-r border-slate-800/30 z-50 bg-background-dark">
+<div class="text-primary">
+<span class="material-symbols-outlined text-3xl">stat_3</span>
+</div>
+<div class="sidebar-text uppercase tracking-[0.5em] text-[10px] font-light text-slate-500">
+            ESTABLISHED MMXXIV — VANGUARD COLLECTIVE
+        </div>
+<div class="flex flex-col gap-6 text-slate-400">
+<span class="material-symbols-outlined cursor-pointer hover:text-primary transition-colors">share</span>
+<span class="material-symbols-outlined cursor-pointer hover:text-primary transition-colors">mail</span>
+</div>
+</aside>
+<div class="lg:ml-16">
+<!-- Top Navigation -->
+<header class="sticky top-0 z-40 w-full glass-effect border-b border-white/5 px-6 lg:px-12 py-4">
+<div class="max-w-7xl mx-auto flex items-center justify-between">
+<div class="flex items-center gap-3">
+<h2 class="text-2xl font-black tracking-tighter metallic-text">VANGUARD</h2>
+</div>
+<nav class="hidden md:flex items-center gap-12">
+<a class="text-xs uppercase tracking-widest font-medium hover:text-primary transition-colors" href="#">Portfolio</a>
+<a class="text-xs uppercase tracking-widest font-medium hover:text-primary transition-colors" href="#">Studio</a>
+<a class="text-xs uppercase tracking-widest font-medium hover:text-primary transition-colors" href="#">Artists</a>
+<a class="text-xs uppercase tracking-widest font-medium hover:text-primary transition-colors" href="#">Residency</a>
+</nav>
+<div class="flex items-center gap-6">
+<button class="bg-primary text-white px-6 py-2 rounded-full text-xs font-bold uppercase tracking-widest hover:scale-105 transition-transform active:scale-95">
+                        Book Now
+                    </button>
+</div>
+</div>
+</header>
+<!-- Hero Section -->
+<section class="relative h-[90vh] w-full flex items-end overflow-hidden">
+<div class="absolute inset-0 z-0">
+<div class="absolute inset-0 bg-gradient-to-t from-background-dark via-transparent to-background-dark/20 z-10"></div>
+<div class="absolute inset-0 bg-gradient-to-r from-background-dark/80 via-transparent to-transparent z-10"></div>
+<img class="w-full h-full object-cover grayscale brightness-50 contrast-125" data-alt="Cinematic shot of a professional tattoo artist working" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDYElAhSg1RfUZuDjeWslww-43rtX8MoZ3I9nr7n_WZAl9AolkF9ptiLmq2voe7mznQELX4p9IJkvTUXUXyR9wDZsfp6JRyFbnnwkw8QWK6AiVkuNkPJAzODVf7Yqq_OEkdPb470XmWRFc7ivyMtR3v0xhaCH9ZhIST6rJV6Uc0cW0OjF7gbruiMETMFZ2ynPSuUzUCtG1eMavdsGXNYTX4Iwm06mPBYYO2642FY7_T31fJo5-BhBzlcNp6EhZyykybnQAy_nXxEtk"/>
+</div>
+<div class="relative z-20 max-w-7xl mx-auto w-full px-6 lg:px-12 pb-20">
+<div class="max-w-2xl">
+<span class="text-primary text-xs font-bold uppercase tracking-[0.4em] mb-4 block">The Pinnacle of Ink</span>
+<h1 class="text-6xl md:text-8xl font-black leading-none mb-6 metallic-text animate-subtle-float">EDITORIAL ARTISTRY.</h1>
+<p class="text-slate-400 text-lg md:text-xl font-light max-w-lg mb-10 leading-relaxed">
+                        A sanctuary for the discerning collector. Where high-end cinematic vision meets world-class hyper-realism.
+                    </p>
+<div class="flex flex-wrap gap-4">
+<button class="flex items-center gap-3 bg-white text-black px-8 py-4 rounded-full font-bold uppercase text-sm hover:bg-primary hover:text-white transition-all">
+                            Explore Works
+                            <span class="material-symbols-outlined">arrow_forward</span>
+</button>
+<div class="flex -space-x-4 items-center pl-4">
+<img class="w-12 h-12 rounded-full border-4 border-background-dark object-cover" data-alt="Portrait of lead artist" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB4zfhaOI6-NQhbkheQQ7iWkfJDm9OHmnP76a80GU00ltXEKLlzjGGu_cjjonDaK93QaSbNn6tyfs9c5XUQM38bhnbbE0UnWEO5TlK9IALIa35bvYkytt3o6GAnW8Y3efmB6iMcCz5Mf_32qKNTXB_HwbHykNyJXE5QFH6_2w0e4wn0PH7FxBQ5a-dSMiS_UqrRMIuEc-WTF7j9VXuV_Ihva94n0weN-j37Q54_WhLq1s4Kkl-7Y_427zrRBy13IL3EuWVw69VI8G0"/>
+<img class="w-12 h-12 rounded-full border-4 border-background-dark object-cover" data-alt="Portrait of senior artist" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAZSb7NqttcMIOaLF1LJcqZSjAlLrsMG2HBnqMWfXpfBHyHIwLKfZgfnlksIdYZnQsptEik_5scZr_FSFGoXMSa-dq0fhlIdrpeGshoyDcmW3Vt0qTuuF9_vcPQJntUEeRLZxRuWbUOp-bP86PPoJ6lbwXe4ATrfH9wQdsBVIuW_-8kyHfeIUSPwPUZAd2x_Y1E_VZ257wesD6rM_aYLzT8NZFYXp5CK5WDM2WTjZ1LArhC_6pqLBTQeFo1UQfw4xYGa9GLfe4Lz3Y"/>
+<div class="w-12 h-12 rounded-full border-4 border-background-dark bg-slate-800 flex items-center justify-center text-[10px] font-bold">12+ ARTISTS</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- The Portfolio Grid (Asymmetrical) -->
+<section class="py-24 px-6 lg:px-12 max-w-7xl mx-auto">
+<div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-8">
+<div class="max-w-xl">
+<h2 class="text-4xl md:text-5xl font-black tracking-tighter mb-4 animate-subtle-float">THE PORTFOLIO</h2>
+<p class="text-slate-500 font-light">Curated masterpieces from our resident visionaries. Each piece is a bespoke commission, designed for the individual anatomy.</p>
+</div>
+<div class="flex gap-4">
+<button class="p-4 border border-slate-800 rounded-full hover:border-primary transition-colors">
+<span class="material-symbols-outlined">west</span>
+</button>
+<button class="p-4 bg-primary text-white rounded-full">
+<span class="material-symbols-outlined">east</span>
+</button>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-6">
+<div class="md:col-span-8 group relative overflow-hidden rounded-xl h-[500px]">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 grayscale hover:grayscale-0" data-alt="Hyper-realistic sleeve tattoo artwork" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD5QNJ5_l-DkG5jPjnFExcSIYpE4WbO_AfbtLAfSybLPCmv50TvQvklZw86pwnHbKl6PxLENrVh-NSfLO8rBI_sMp9q7yQUoGQZE_ADKl942S2IMO9bXDMi37GDti9EXDkxyEs8l0XPaTUt-PqtULihetu8RjCC_3ovbYq0zq9oST633iDNDnykF5ZNkURJtrPu0SOJj6ZshhmJ7TX7gSgYv9ENL0n_sCQWZP7ksS_aj1Ye0I11Yvy7GTqCrnUevb5JwpSr5uNvC4w"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background-dark via-transparent p-8 flex flex-col justify-end">
+<span class="text-primary text-[10px] uppercase tracking-widest font-bold">Featured Artist: Elena V.</span>
+<h3 class="text-2xl font-bold">Hyper-Realism Noir</h3>
+</div>
+</div>
+<div class="md:col-span-4 group relative overflow-hidden rounded-xl h-[500px]">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 grayscale hover:grayscale-0" data-alt="Minimalist abstract tattoo design" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBxsDAi6pQmACVQG7rLOjg_go0PsUjs_JeV_ArJWmGF1loJXORg1WR43vOCQIo6LmRSvcmzhduf0rn0ikpszohH6DB8h03MPVkcA6T8ry5Fz2KfAyUHi_xPwmxHaD3AzDZv12nuGXUu5og40n--YyuY7Musd904aR_6K9QYXBpoPW3-BJyk7l7VHU06tIJGR4X0HOYsX4IriIMN_JeQYr0opWwNgQf7WjCH_b92cYUKRnIC1tXNmjeBxQGs0NlcvVnmGv10NbCYpsc"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background-dark via-transparent p-8 flex flex-col justify-end">
+<span class="text-primary text-[10px] uppercase tracking-widest font-bold">Featured Artist: Marcus Thorne</span>
+<h3 class="text-2xl font-bold">Minimalist Script</h3>
+</div>
+</div>
+<div class="md:col-span-4 group relative overflow-hidden rounded-xl h-[400px]">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 grayscale hover:grayscale-0" data-alt="Geometric tattoo art on forearm" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAU24Ti_ci7qJYG2UqXis78a6XqHLCQisXSoDXUEaWatkv5UKCtk9CJfnWpsojnfvnuuidMVNoy_RzQJK7Y9gBiyQqe-NqjldAuKw6_V-1DaO1Voy16Z0bPMuYI4TKUecG9uuzL8AosOZbyGPsq2jQ6w35uHZwMvd-WPgYPMD3K3gR0VXnBQrT6niCnDJosmhRSxlgGPMIZqm3l61QXOYFdjBJcnlIuLSKUEJvsyQQm_w-w1IBUAsg9vvMr8FRZAxYpWhvyEKPRWuA"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background-dark via-transparent p-8 flex flex-col justify-end">
+<span class="text-primary text-[10px] uppercase tracking-widest font-bold">Featured Artist: Sarah Jin</span>
+<h3 class="text-2xl font-bold">Geometric Flow</h3>
+</div>
+</div>
+<div class="md:col-span-8 group relative overflow-hidden rounded-xl h-[400px]">
+<div class="absolute inset-0 bg-primary/10 backdrop-blur-3xl z-0"></div>
+<div class="relative z-10 h-full p-12 flex flex-col justify-center items-center text-center">
+<h3 class="text-4xl font-black mb-4 italic">"Art is the only way to run away without leaving home."</h3>
+<p class="text-slate-400 uppercase tracking-widest text-xs">— Twyla Tharp</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Studio Story -->
+<section class="py-24 bg-white/5 border-y border-white/5">
+<div class="max-w-7xl mx-auto px-6 lg:px-12 grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+<div class="relative">
+<div class="absolute -top-10 -left-10 w-40 h-40 bg-primary/20 rounded-full blur-3xl"></div>
+<img class="rounded-xl grayscale" data-alt="Luxurious interior of Vanguard studio" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAcr1IXTCW9ikVRjXiZjdZ_tIb7NRI9X66wzIgB4IpiIy2HlrMP-LGQ4LqolMXVzE57U_knrqtPNw-Q9a1ZsAvKW59l6NOtpX1IyCvkORuS9S1Pg9MhLo25qRboB1shwV9P4Q8h2w_NqQgS4NdQoz5v4ICK2Q5rabNhLy0bP-8zXbHVeCYlRyASIBUBP0qUn6XxagX3eMeuGn-JwsP2fJtoiMoXVaEVsi4nyxftLd9g6DtQz8CbcHNoLP1aEZWFDAtsh0Fax6ErmFE"/>
+<div class="absolute bottom-6 -right-6 glass-effect p-8 rounded-xl max-w-xs hidden md:block">
+<h4 class="font-bold text-primary mb-2">Private Suites</h4>
+<p class="text-xs text-slate-400 leading-relaxed">Absolute discretion and comfort for our distinguished clientele.</p>
+</div>
+</div>
+<div>
+<span class="text-primary text-xs font-bold uppercase tracking-[0.4em] mb-4 block">Our Philosophy</span>
+<h2 class="text-5xl font-black tracking-tighter mb-8 metallic-text animate-subtle-float">A SANCTUARY OF PRECISION</h2>
+<div class="space-y-6 text-slate-400 font-light leading-relaxed text-lg">
+<p>
+                            VANGUARD is not just a studio; it is a creative laboratory. Located in a discreet heritage building, our space was designed by award-winning architects to provide a cinematic atmosphere that inspires both artist and collector.
+                        </p>
+<p>
+                            Every procedure follows medical-grade sterilization protocols within a lounge environment that rivals the world’s most exclusive private clubs. Here, your skin is the canvas for the world's most elite technical masters.
+                        </p>
+</div>
+<div class="mt-12 grid grid-cols-3 gap-6">
+<div>
+<span class="block text-3xl font-bold text-white mb-1">100%</span>
+<span class="text-[10px] uppercase tracking-widest text-slate-500">Sterile Environment</span>
+</div>
+<div>
+<span class="block text-3xl font-bold text-white mb-1">08</span>
+<span class="text-[10px] uppercase tracking-widest text-slate-500">Master Artists</span>
+</div>
+<div>
+<span class="block text-3xl font-bold text-white mb-1">12</span>
+<span class="text-[10px] uppercase tracking-widest text-slate-500">Global Awards</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Residency CTA Section -->
+<section class="py-32 relative overflow-hidden">
+<div class="absolute inset-0 z-0">
+<img class="w-full h-full object-cover opacity-20 grayscale" data-alt="Abstract close up of ink and needle" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAotaaaNkI3yJmHgCjZWvYCEEQdropK7aD4PJ8m8YwkgsMGnfzwSrRqZP64ooH1lL8Y9xs503icejjLiPFRzmFVW_8jHT_OalT7Uqq-SMBu7PkRQ1XtYl6VBCOyhtLariLSmz9MWV9AiGI5aTQvqOb0J0G9pRJthf0pc__MA5s1c8xiBLU0DbzDt3Dm2A304joy9TWCVbisG2i5YWH9tx-AebqFbqjFQcYIYm3nw4YmSoFRupvfVhUbS7GdFZoF_VQBrFt46EF7hTY"/>
+<div class="absolute inset-0 bg-background-dark/90"></div>
+</div>
+<div class="relative z-10 max-w-4xl mx-auto px-6 text-center">
+<div class="inline-block px-4 py-1 border border-primary/30 rounded-full mb-8">
+<span class="text-primary text-[10px] uppercase tracking-[0.5em] font-bold">Limited Availability</span>
+</div>
+<h2 class="text-5xl md:text-7xl font-black mb-8 metallic-text animate-subtle-float">SECURE YOUR 2026 RESIDENCY</h2>
+<p class="text-xl text-slate-400 mb-12 font-light max-w-2xl mx-auto">
+                    Due to the high demand for our master artists, we are now opening applications for the 2026 calendar year. Exclusive priority for legacy clients.
+                </p>
+<div class="flex flex-col sm:flex-row gap-4 justify-center">
+<button class="bg-primary text-white px-10 py-5 rounded-full font-bold uppercase tracking-widest hover:shadow-[0_0_30px_rgba(236,91,19,0.3)] transition-all">
+                        Begin Application
+                    </button>
+<button class="glass-effect text-white px-10 py-5 rounded-full font-bold uppercase tracking-widest border border-white/10">
+                        View Artist Availability
+                    </button>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-black py-20 px-6 lg:px-12 border-t border-white/5">
+<div class="max-w-7xl mx-auto">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-20">
+<div class="col-span-1 md:col-span-2">
+<h2 class="text-3xl font-black tracking-tighter mb-6">VANGUARD</h2>
+<p class="text-slate-500 max-w-sm font-light leading-relaxed">
+                            The intersection of fine art and human canvas. An editorial approach to permanent aesthetics.
+                        </p>
+</div>
+<div>
+<h4 class="text-xs font-bold uppercase tracking-widest text-slate-300 mb-6">Inquiries</h4>
+<ul class="text-slate-500 text-sm space-y-4 font-light">
+<li><a class="hover:text-primary" href="#">studio@vanguard.art</a></li>
+<li><a class="hover:text-primary" href="#">+1 (212) 555-0198</a></li>
+<li><a class="hover:text-primary" href="#">Join the Collective</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-xs font-bold uppercase tracking-widest text-slate-300 mb-6">Studio</h4>
+<p class="text-slate-500 text-sm font-light leading-relaxed">
+                            442 Luxury Row, Suite 12<br/>
+                            Tribeca, New York, NY 10013
+                        </p>
+<div class="mt-4">
+<a class="text-primary text-xs font-bold uppercase tracking-widest flex items-center gap-2" href="#">
+<span class="material-symbols-outlined text-sm">location_on</span>
+                                Get Directions
+                            </a>
+</div>
+</div>
+</div>
+<div class="pt-10 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-6">
+<p class="text-[10px] text-slate-600 uppercase tracking-widest">© 2024 VANGUARD COLLECTIVE. All Rights Reserved.</p>
+<div class="flex gap-8">
+<a class="text-[10px] text-slate-600 hover:text-white uppercase tracking-widest" href="#">Privacy Policy</a>
+<a class="text-[10px] text-slate-600 hover:text-white uppercase tracking-widest" href="#">Terms of Service</a>
+</div>
+</div>
+</div>
+</footer>
+</div>
+</body></html>

@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>VANGUARD | Elite Tattoo Artists</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,100..900;1,100..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#ec5b13",
+                        "background-light": "#f8f6f6",
+                        "background-dark": "#221610",
+                        "silver": "#c0c0c0",
+                        "platinum": "#e5e4e2"
+                    },
+                    fontFamily: {
+                        "display": ["Public Sans", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+        .silver-gradient {
+            background: linear-gradient(135deg, #c0c0c0 0%, #ffffff 50%, #8e8e8e 100%);
+        }
+        .text-silver-shine {
+            background: linear-gradient(to right, #e5e4e2, #ffffff, #c0c0c0);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        @keyframes slowFloat {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+        .animate-fade-in-down {
+            animation: fadeInDown 0.8s ease-out forwards;
+        }
+        .animate-slow-float {
+            animation: slowFloat 5s ease-in-out infinite;
+        }
+        .animate-fade-in-up {
+            animation: fadeInDown 0.8s ease-out reverse backwards;
+            opacity: 0;
+            animation-fill-mode: forwards;
+            animation-direction: alternate-reverse;
+        }
+        /* Custom delay classes */
+        .delay-100 { animation-delay: 100ms; }
+        .delay-200 { animation-delay: 200ms; }
+        .delay-300 { animation-delay: 300ms; }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 transition-colors duration-300">
+<div class="relative flex h-auto min-screen w-full flex-col bg-background-light dark:bg-background-dark overflow-x-hidden">
+<!-- Navigation -->
+<header class="flex items-center justify-between border-b border-slate-200 dark:border-slate-800 px-6 md:px-20 py-6 sticky top-0 bg-background-light/90 dark:bg-background-dark/90 backdrop-blur-md z-50 animate-fade-in-down">
+<div class="flex items-center gap-3">
+<div class="size-8 text-primary">
+<svg fill="currentColor" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path d="M4 42.4379C4 42.4379 14.0962 36.0744 24 41.1692C35.0664 46.8624 44 42.2078 44 42.2078L44 7.01134C44 7.01134 35.068 11.6577 24.0031 5.96913C14.0971 0.876274 4 7.27094 4 7.27094L4 42.4379Z"></path>
+</svg>
+</div>
+<h2 class="text-xl font-black tracking-widest uppercase">Vanguard</h2>
+</div>
+<nav class="hidden md:flex items-center gap-10">
+<a class="text-xs font-bold uppercase tracking-widest hover:text-primary transition-colors border-b-2 border-primary" href="#">Artists</a>
+<a class="text-xs font-bold uppercase tracking-widest hover:text-primary transition-colors" href="#">Gallery</a>
+<a class="text-xs font-bold uppercase tracking-widest hover:text-primary transition-colors" href="#">Studio</a>
+<a class="text-xs font-bold uppercase tracking-widest hover:text-primary transition-colors" href="#">Booking</a>
+</nav>
+<div class="flex items-center gap-4">
+<button class="flex items-center justify-center rounded-full size-10 bg-slate-100 dark:bg-slate-800 hover:bg-primary/20 transition-all">
+<span class="material-symbols-outlined text-[20px]">search</span>
+</button>
+<button class="md:hidden flex items-center justify-center rounded-xl h-10 px-3 bg-slate-100 dark:bg-slate-800">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</header>
+<main class="flex-1">
+<!-- Hero Section -->
+<div class="px-6 md:px-20 py-12 md:py-20 flex flex-col md:flex-row justify-between items-end gap-8">
+<div class="max-w-2xl">
+<h3 class="text-primary font-bold uppercase tracking-[0.3em] text-sm mb-4 animate-fade-in-down delay-100">Elite Residency</h3>
+<h1 class="text-5xl md:text-8xl font-black leading-none tracking-tighter uppercase mb-6 animate-slow-float">
+                    Mastering the <span class="text-silver-shine italic">Permanent</span>
+</h1>
+<p class="text-slate-600 dark:text-slate-400 text-lg max-w-md leading-relaxed animate-fade-in-down delay-200">
+                    A collective of world-class visionaries defining the avant-garde of modern luxury tattooing.
+                </p>
+</div>
+<div class="flex flex-col items-end text-right animate-fade-in-down delay-300">
+<span class="text-6xl font-thin text-slate-200 dark:text-slate-800">01 // 08</span>
+<p class="text-xs uppercase tracking-widest font-bold mt-2">Scroll to Explore</p>
+</div>
+</div>
+<!-- Artists Horizontal Scroll -->
+<div class="no-scrollbar overflow-x-auto flex gap-8 px-6 md:px-20 pb-20 snap-x snap-mandatory">
+<!-- Artist 1 -->
+<div class="min-w-[320px] md:min-w-[450px] group snap-center cursor-pointer">
+<div class="relative aspect-[3/4] overflow-hidden rounded-lg mb-6 bg-slate-200 dark:bg-slate-900">
+<img class="w-full h-full object-cover grayscale transition-transform duration-700 group-hover:scale-105" data-alt="High fashion monochromatic portrait of Julian Vance tattoo artist" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBtUy30spSXdi7gLMo_UFskrjLiMkfniFHLNKdhVC7JyNb0fi9FQU3YwWT5eEUM1NYgGjG04-VNkiJymMfDqQhVBPoO7HS1tvncod1-obVsJ4nOhJENoOF6SGr_U0FhOzatrw-DPWKZy-SlDC2_fLYUELXuzJK9z4uBoc1c5Po8oJP_z-XGR1-iGsN3IgzL-i_GD4VCj01qg0u6aFLQ3DotU0i31m61jhglBrL9kInozFijlNC34KYA-fom6qW9qGR4FhLx95oLjCk"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-60"></div>
+<div class="absolute bottom-6 left-6 right-6 flex flex-col gap-2">
+<div class="flex items-center gap-2">
+<span class="size-2 rounded-full bg-green-500 animate-pulse"></span>
+<span class="text-[10px] font-bold uppercase tracking-[0.2em] text-white">Status: In Studio</span>
+</div>
+</div>
+</div>
+<div class="flex justify-between items-start">
+<div>
+<h4 class="text-2xl font-black uppercase tracking-tight">Julian Vance</h4>
+<p class="text-sm text-slate-500 dark:text-slate-400 font-medium uppercase tracking-widest mt-1">Specialty: Micro-Realism</p>
+</div>
+<div class="size-10 rounded-full border border-slate-300 dark:border-slate-700 flex items-center justify-center group-hover:bg-primary group-hover:border-primary group-hover:text-white transition-all">
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</div>
+</div>
+</div>
+<!-- Artist 2 -->
+<div class="min-w-[320px] md:min-w-[450px] group snap-center cursor-pointer">
+<div class="relative aspect-[3/4] overflow-hidden rounded-lg mb-6 bg-slate-200 dark:bg-slate-900">
+<img class="w-full h-full object-cover grayscale transition-transform duration-700 group-hover:scale-105" data-alt="Avant-garde portrait of Elena Rossi tattoo artist silver accents" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDeMi5COeE6JfEzlx684JUZ_cGmIlqRsVrZk0zC0bYBH77idIDjQr403apst3wNjNrml8wtN4IT8M_IxY4WZ9zO1kUUy7UyA2Bj8_7_10TlibOFID_n9lqeFZhCro8lH3vryCblpAqX7qO_Em_fR_jxidrjMljt5m50TanxZ7rl_49JqjKaNrgyVsZKbUbN54Ek_H0Lb6ecngoGLP9N-mRUNuOnpWl2FqPpq8AyjBJgESBmKBKjX85K71HkJNfc9KLyQ7gYwd5yHv0"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-60"></div>
+<div class="absolute bottom-6 left-6 right-6">
+<div class="flex items-center gap-2 bg-silver/20 backdrop-blur-sm border border-silver/30 px-3 py-1 rounded-full w-fit">
+<span class="material-symbols-outlined text-[14px] text-platinum">verified</span>
+<span class="text-[10px] font-bold uppercase tracking-[0.2em] text-white">Residency Open</span>
+</div>
+</div>
+</div>
+<div class="flex justify-between items-start">
+<div>
+<h4 class="text-2xl font-black uppercase tracking-tight">Elena Rossi</h4>
+<p class="text-sm text-slate-500 dark:text-slate-400 font-medium uppercase tracking-widest mt-1">Specialty: Neo-Traditional</p>
+</div>
+<div class="size-10 rounded-full border border-slate-300 dark:border-slate-700 flex items-center justify-center group-hover:bg-primary group-hover:border-primary group-hover:text-white transition-all">
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</div>
+</div>
+</div>
+<!-- Artist 3 -->
+<div class="min-w-[320px] md:min-w-[450px] group snap-center cursor-pointer">
+<div class="relative aspect-[3/4] overflow-hidden rounded-lg mb-6 bg-slate-200 dark:bg-slate-900">
+<img class="w-full h-full object-cover grayscale transition-transform duration-700 group-hover:scale-105" data-alt="Moody dark portrait of Silas Vane master artist" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAtk7RnVq1kSuwbS67bkEPRCO_O-n5XeJA8bNqk9fmAN8xn94TaJrp_WlAIblu9dfmruopn94Xuikz5E8Ov4wi6n1aEPwJu6MBVgLxA_5N3DPEu_cWAaWNXgZ4rC4AkAiDnQZeCmrb_Nz2-3iwB4SAW1F99e_VqkSc6Uabmnu2Esd0rf1mieFtfTDkLQxwzsKSNULym6YTveNfxBfE_7BuKR4k1k1jeWLFSh5ip4omDpy0j4E2F3zimZA0Hv-kVa6l39MAlYklABKA"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-60"></div>
+<div class="absolute bottom-6 left-6 right-6">
+<div class="flex items-center gap-2">
+<span class="size-2 rounded-full bg-green-500 animate-pulse"></span>
+<span class="text-[10px] font-bold uppercase tracking-[0.2em] text-white">Status: In Studio</span>
+</div>
+</div>
+</div>
+<div class="flex justify-between items-start">
+<div>
+<h4 class="text-2xl font-black uppercase tracking-tight">Silas Vane</h4>
+<p class="text-sm text-slate-500 dark:text-slate-400 font-medium uppercase tracking-widest mt-1">Specialty: Dark Surrealism</p>
+</div>
+<div class="size-10 rounded-full border border-slate-300 dark:border-slate-700 flex items-center justify-center group-hover:bg-primary group-hover:border-primary group-hover:text-white transition-all">
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</div>
+</div>
+</div>
+<!-- Artist 4 (Guest) -->
+<div class="min-w-[320px] md:min-w-[450px] group snap-center cursor-pointer">
+<div class="relative aspect-[3/4] overflow-hidden rounded-lg mb-6 bg-slate-200 dark:bg-slate-900">
+<img class="w-full h-full object-cover grayscale transition-transform duration-700 group-hover:scale-105" data-alt="Guest tattoo artist portrait monochromatic high fashion" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC0NGPtLKyjGIFiFrBPjDA9eCv6GqBaEvlRSyvCzSlSE6KCNlG8g3BghaMQCpyDr7N5sAP5QUI1Z9wRNJBlq8KTQhOwj7Ru76PaxmHoMguQjylVLvw_aIbQGUq8qZo8qsA5wDRzR5UK9TGI7FbG-7BxwS4ciHa7pvuSJgIQ-pQa2xQPpFFDXF0SNpyndab3QXraMkuRUeYJUEFaKJviabswbR13tbtEtHEhVUMC8PatKzaLEKmrZaIJ-y3CtdP4ihY6SvpeId7757s"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-60"></div>
+<div class="absolute top-6 right-6">
+<span class="bg-primary px-3 py-1 text-[10px] font-black text-white uppercase tracking-widest rounded">Guest Artist</span>
+</div>
+<div class="absolute bottom-6 left-6 right-6">
+<div class="flex items-center gap-2 bg-silver/20 backdrop-blur-sm border border-silver/30 px-3 py-1 rounded-full w-fit">
+<span class="material-symbols-outlined text-[14px] text-platinum">calendar_today</span>
+<span class="text-[10px] font-bold uppercase tracking-[0.2em] text-white">Oct 12 - Nov 05</span>
+</div>
+</div>
+</div>
+<div class="flex justify-between items-start">
+<div>
+<h4 class="text-2xl font-black uppercase tracking-tight">Marcus Thorne</h4>
+<p class="text-sm text-slate-500 dark:text-slate-400 font-medium uppercase tracking-widest mt-1">Specialty: Geometric Architecture</p>
+</div>
+<div class="size-10 rounded-full border border-slate-300 dark:border-slate-700 flex items-center justify-center group-hover:bg-primary group-hover:border-primary group-hover:text-white transition-all">
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</div>
+</div>
+</div>
+</div>
+<!-- The Collective Detailed Section -->
+<section class="px-6 md:px-20 py-24 border-t border-slate-200 dark:border-slate-800">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-16">
+<div class="lg:col-span-4">
+<h2 class="text-4xl font-black uppercase tracking-tighter mb-8 leading-none">The Collective Philosophy</h2>
+<p class="text-slate-600 dark:text-slate-400 mb-8 leading-relaxed">
+                        VANGUARD is not just a studio; it is a laboratory of aesthetics. Each resident artist is chosen for their distinct voice and technical mastery, ensuring that every mark made is a contribution to the history of the medium.
+                    </p>
+<div class="flex flex-col gap-4">
+<div class="p-6 bg-slate-100 dark:bg-slate-900/50 rounded-xl border-l-4 border-primary">
+<h5 class="text-xs font-black uppercase tracking-[0.3em] mb-2 text-primary">01. Precision</h5>
+<p class="text-sm opacity-70">Single-needle mastery and architectural composition.</p>
+</div>
+<div class="p-6 bg-slate-100 dark:bg-slate-900/50 rounded-xl border-l-4 border-silver">
+<h5 class="text-xs font-black uppercase tracking-[0.3em] mb-2 text-slate-400">02. Permanence</h5>
+<p class="text-sm opacity-70">Ink formulated for longevity and high-contrast aging.</p>
+</div>
+</div>
+</div>
+<div class="lg:col-span-8 grid grid-cols-2 gap-4">
+<div class="aspect-square bg-slate-200 dark:bg-slate-900 rounded-lg overflow-hidden">
+<img class="w-full h-full object-cover grayscale opacity-80 hover:opacity-100 transition-opacity" data-alt="Close up of tattoo machine in luxury studio" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDcAhd9nX64Nf06Lkyh4l0il0qGLnlXVPU7K4YBP-MWu-dJkvJMVJ1F-oms0axYk2bvAS-c7PXEcaBIOVB7KCa7hXwHEda57-AuXRTg1rUxwfkupBDq2RgrfLGsx3MhiSMaOdgzDoywyzMH6JGgiCMKIwR7OXD-E7VmHohcwyrwxFw-azG7gANGhYszlm3a8H_DPorwn-W15yGl9-zb8mLUA_NzsL8m_04RWIMOztW3XfsI0Rta_6fhz-a19X4J51uupE7hjd-m-us"/>
+</div>
+<div class="aspect-square bg-slate-200 dark:bg-slate-900 rounded-lg overflow-hidden translate-y-8">
+<img class="w-full h-full object-cover grayscale opacity-80 hover:opacity-100 transition-opacity" data-alt="Minimalist luxury tattoo studio interior" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDMuwfOGIizsK2rDB1bTfwYwDjtETfH1c62a-GPvWBs_aUzCB5nTYjuDfshf3WauIIgdDcTXnUKcf8YbialZmM-HMSPXMHXJ9LdxE03R2MycnlKMG5eM-TFbFLKMOhp-feETbZAoV75CPdWFNF5mYa2fHKh-Wu0cDnjD8NjICuy1cO7AjxpyBCp2TnphFvmro8PCpvqUkKbfw-TMtqAXyqowPphbRA3GZF0SRrL4F1kADTivSkIwPElaJEMYKdUB_8i3zX-m3niSJ8"/>
+</div>
+<div class="aspect-square bg-slate-200 dark:bg-slate-900 rounded-lg overflow-hidden -translate-y-8">
+<img class="w-full h-full object-cover grayscale opacity-80 hover:opacity-100 transition-opacity" data-alt="Ink bottles monochromatic arrangement" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAP-wog_2LOqv8lEw6kLeIqPsGKfGgJEb6z5ForvFyiL1sn-dBsTss6TfvMlEd9dB9D4jkB-qhAggn8QGnIWBJ4TiBXrNAYQqBhXNcHEHJ8zi_ynXCIZI4tQBoRpgzIiPXWFG_g2KVc_BDM-aCPFG7DVhPSCp01aMEr_LsuvThLMV0g-NX1InzUFcq2NOwrME-zc07BzC_it5yCK-MSulksyjYHfpQmKrs47-MPqe3RTc_icV160q9A-j0qVYocsiFMVfZjb47G5Ys"/>
+</div>
+<div class="aspect-square bg-slate-200 dark:bg-slate-900 rounded-lg overflow-hidden">
+<img class="w-full h-full object-cover grayscale opacity-80 hover:opacity-100 transition-opacity" data-alt="Detail of tattoo art on human skin" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBvCkmpfCd41m6Loa1wj6VFJeNvvDl6iVDQVZnu0JoZZWylqhHe_emLI3SOKgLzZ-ZJRhpz3zSYv_8zY_u8MlPwMSE_13QNK-zjtZD5-F_5mb_vzEt-HNgV6dym81JWWQMrX4q5Fau2LMWsrvP__MTS_uD2eI2tgNUfz81qQ6uWLahCvlchav7GUAoo_SjHGdEW7ps5uAV4RnsLXcLEviTZf27g-m4tpU5KnVpU9WLsGhs4jy_9GLHBrxJyfie8jFQboumc2iC1sTI"/>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="mx-6 md:mx-20 my-20 bg-background-dark dark:bg-slate-900 rounded-[2rem] p-12 md:p-24 text-center overflow-hidden relative">
+<div class="absolute top-0 right-0 w-1/3 h-full opacity-10 pointer-events-none">
+<svg class="w-full h-full fill-white" viewbox="0 0 100 100">
+<path d="M0 100 L100 0 L100 100 Z"></path>
+</svg>
+</div>
+<h2 class="text-4xl md:text-6xl font-black text-white uppercase tracking-tighter mb-8 max-w-3xl mx-auto leading-none">
+                Secure your place in the <span class="text-silver-shine italic">Vanguard</span> archive.
+            </h2>
+<div class="flex flex-col md:flex-row items-center justify-center gap-6">
+<button class="bg-primary text-white px-10 py-5 rounded-full font-black uppercase tracking-widest text-sm hover:scale-105 transition-transform">
+                    Request Consultation
+                </button>
+<button class="border border-white/20 text-white px-10 py-5 rounded-full font-black uppercase tracking-widest text-sm hover:bg-white/10 transition-all">
+                    View Portfolio
+                </button>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="px-6 md:px-20 py-12 border-t border-slate-200 dark:border-slate-800 bg-slate-100 dark:bg-background-dark/50">
+<div class="flex flex-col md:flex-row justify-between items-start gap-12">
+<div class="flex flex-col gap-4">
+<div class="flex items-center gap-3">
+<div class="size-6 text-primary">
+<svg fill="currentColor" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path d="M4 42.4379C4 42.4379 14.0962 36.0744 24 41.1692C35.0664 46.8624 44 42.2078 44 42.2078L44 7.01134C44 7.01134 35.068 11.6577 24.0031 5.96913C14.0971 0.876274 4 7.27094 4 7.27094L4 42.4379Z"></path>
+</svg>
+</div>
+<h2 class="text-lg font-black tracking-widest uppercase">Vanguard</h2>
+</div>
+<p class="text-sm opacity-60 max-w-xs">Private studio specializing in high-contrast custom works.</p>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-3 gap-12">
+<div class="flex flex-col gap-4">
+<h5 class="text-xs font-black uppercase tracking-[0.2em]">Contact</h5>
+<a class="text-sm opacity-60 hover:opacity-100" href="#">info@vanguard.tattoo</a>
+<a class="text-sm opacity-60 hover:opacity-100" href="#">+1 (212) 555-0198</a>
+</div>
+<div class="flex flex-col gap-4">
+<h5 class="text-xs font-black uppercase tracking-[0.2em]">Location</h5>
+<p class="text-sm opacity-60" data-location="New York City">221B Mercer St, Soho<br/>New York, NY 10012</p>
+</div>
+<div class="flex flex-col gap-4 col-span-2 md:col-span-1">
+<h5 class="text-xs font-black uppercase tracking-[0.2em]">Follow</h5>
+<div class="flex gap-4">
+<a class="opacity-60 hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined">camera</span></a>
+<a class="opacity-60 hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined">share</span></a>
+<a class="opacity-60 hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined">mail</span></a>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-20 pt-8 border-t border-slate-200 dark:border-slate-800 flex justify-between items-center text-[10px] font-bold uppercase tracking-[0.3em] opacity-40">
+<span>© 2024 VANGUARD COLLECTIVE</span>
+<span>All rights reserved</span>
+</div>
+</footer>
+</div>
+</body></html>

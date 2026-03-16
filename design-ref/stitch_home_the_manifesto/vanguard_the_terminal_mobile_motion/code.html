@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>VANGUARD | Secure Terminal Booking</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#ec5b13",
+                        "background-light": "#f8f6f6",
+                        "background-dark": "#1a120e",
+                        "neutral-dark": "#2d241e",
+                        "silver": "#a3a3a3",
+                    },
+                    fontFamily: {
+                        "display": ["Public Sans", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                    animation: {
+                        'fade-in-up': 'fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards',
+                        'float': 'float 6s ease-in-out infinite',
+                    },
+                    keyframes: {
+                        fadeInUp: {
+                            '0%': { opacity: '0', transform: 'translateY(20px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' },
+                        },
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-5px)' },
+                        }
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        body { font-family: 'Public Sans', sans-serif; }
+        .glass-panel {
+            background: rgba(45, 36, 30, 0.6);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(236, 91, 19, 0.1);
+        }
+        .stagger-1 { animation-delay: 0.1s; }
+        .stagger-2 { animation-delay: 0.2s; }
+        .stagger-3 { animation-delay: 0.3s; }
+        
+        /* Smooth reveal for initial load */
+        .reveal {
+            opacity: 0;
+            animation: fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+        }
+    </style>
+<style>
+        body {
+            min-height: max(884px, 100dvh);
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 font-display">
+<div class="relative flex min-h-screen w-full flex-col overflow-x-hidden pb-24">
+<!-- Header -->
+<header class="flex items-center bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md sticky top-0 z-50 p-4 justify-between border-b border-primary/10">
+<div class="text-primary flex size-10 shrink-0 items-center justify-center rounded-full hover:bg-primary/10 transition-colors">
+<span class="material-symbols-outlined">arrow_back</span>
+</div>
+<div class="flex flex-col items-center reveal">
+<h2 class="text-slate-900 dark:text-slate-100 text-sm font-bold tracking-widest uppercase">Vanguard Terminal</h2>
+<span class="text-[10px] text-primary font-medium tracking-widest uppercase">Encrypted Session</span>
+</div>
+<div class="flex size-10 items-center justify-end">
+<span class="material-symbols-outlined text-primary">account_circle</span>
+</div>
+</header>
+<!-- Progress Indicator -->
+<div class="px-6 pt-8 pb-4">
+<h1 class="text-slate-900 dark:text-slate-100 tracking-tight text-2xl font-bold text-center mb-6 reveal stagger-1">Secure Your Arrival</h1>
+<div class="flex w-full flex-row items-center justify-center gap-4 py-2 reveal stagger-2">
+<div class="h-1.5 w-12 rounded-full bg-primary shadow-[0_0_8px_rgba(236,91,19,0.5)]"></div>
+<div class="h-1.5 w-12 rounded-full bg-slate-300 dark:bg-neutral-dark"></div>
+<div class="h-1.5 w-12 rounded-full bg-slate-300 dark:bg-neutral-dark"></div>
+<div class="h-1.5 w-12 rounded-full bg-slate-300 dark:bg-neutral-dark"></div>
+</div>
+<p class="text-slate-500 dark:text-silver text-[10px] text-center mt-3 font-bold tracking-[0.2em] uppercase reveal stagger-3">Step 1: Destination Logistics</p>
+</div>
+<!-- Booking Form -->
+<main class="flex-1 px-4 py-2 space-y-6">
+<section class="glass-panel p-5 rounded-xl space-y-4 reveal stagger-3">
+<div class="flex items-center gap-3 mb-2 animate-float">
+<span class="material-symbols-outlined text-primary text-sm">location_on</span>
+<h3 class="text-slate-900 dark:text-slate-100 text-xs font-bold tracking-wider uppercase">Select Destination</h3>
+</div>
+<div class="space-y-3">
+<div class="relative">
+<label class="text-[10px] font-bold text-primary absolute left-3 top-2 uppercase tracking-tighter">Origin
+                        <input class="w-full bg-white dark:bg-neutral-dark/50 border border-slate-200 dark:border-primary/20 rounded-lg pt-6 pb-2 px-3 text-sm focus:ring-1 focus:ring-primary focus:border-primary outline-none text-slate-900 dark:text-slate-100 transition-all focus:bg-white dark:focus:bg-neutral-dark/80" type="text" value="London Heliport (EGLW)"/>
+</label></div>
+<div class="flex justify-center -my-2 relative z-10">
+<div class="bg-primary p-1.5 rounded-full shadow-lg shadow-primary/20 transition-transform hover:rotate-180 duration-500 cursor-pointer">
+<span class="material-symbols-outlined text-white text-base">swap_vert</span>
+</div>
+</div>
+<div class="relative">
+<label class="text-[10px] font-bold text-primary absolute left-3 top-2 uppercase tracking-tighter">Destination
+                        <input class="w-full bg-white dark:bg-neutral-dark/50 border border-slate-200 dark:border-primary/20 rounded-lg pt-6 pb-2 px-3 text-sm focus:ring-1 focus:ring-primary focus:border-primary outline-none text-slate-900 dark:text-slate-100 transition-all focus:bg-white dark:focus:bg-neutral-dark/80" placeholder="Enter target coordinates or city" type="text"/>
+</label></div>
+</div>
+</section>
+<!-- Logistics Detail -->
+<section class="space-y-4 reveal stagger-3" style="animation-delay: 0.4s;">
+<h3 class="text-slate-900 dark:text-slate-100 text-xs font-bold tracking-wider uppercase px-1">Arrival Parameters</h3>
+<div class="grid grid-cols-2 gap-3">
+<div class="glass-panel p-4 rounded-xl border border-primary/10 group hover:border-primary/30 transition-colors">
+<span class="material-symbols-outlined text-primary text-lg mb-2 group-hover:scale-110 transition-transform">calendar_today</span>
+<p class="text-[10px] text-slate-500 dark:text-silver uppercase font-bold">Date</p>
+<p class="text-sm font-semibold dark:text-slate-100">Oct 24, 2024</p>
+</div>
+<div class="glass-panel p-4 rounded-xl border border-primary/10 group hover:border-primary/30 transition-colors">
+<span class="material-symbols-outlined text-primary text-lg mb-2 group-hover:scale-110 transition-transform">schedule</span>
+<p class="text-[10px] text-slate-500 dark:text-silver uppercase font-bold">Time</p>
+<p class="text-sm font-semibold dark:text-slate-100">22:00 ZULU</p>
+</div>
+</div>
+</section>
+<!-- Asset Selection Preview -->
+<section class="space-y-4 reveal stagger-3" style="animation-delay: 0.5s;">
+<div class="flex justify-between items-center px-1">
+<h3 class="text-slate-900 dark:text-slate-100 text-xs font-bold tracking-wider uppercase">Transport Class</h3>
+<a class="text-primary text-[10px] font-bold uppercase underline underline-offset-4 hover:opacity-80 transition-opacity" href="#">View Fleet</a>
+</div>
+<div class="relative h-40 w-full rounded-xl overflow-hidden group cursor-pointer shadow-2xl shadow-black/20">
+<img class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" data-alt="Sleek black executive private jet on runway" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBHLBxCoo6HAZ9VX8QEoMJmS4pJZr7f4x7rycvkvh8ywOLJWjDyxauM09wLgRIoUGpnW17qmew6jjFPxACkPVJkYqPhJN7FDStQ0VfCq71tKepP9x4RTzh1JvUYf49IHoFk-jxT46ahC83Sa3ll1XZpoPGtLT6_3s7d3s60gAy7Yd1wHIeo95xQo8fVhW6_CBxGPOpAeJmTbhVJ8eNNXVd07RC8AH2oVPVipsY2BxhUtn0F-i-KR-xgTEZ_V-Bqblb1mQyhbcG3lMA"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background-dark/90 via-background-dark/20 to-transparent"></div>
+<div class="absolute bottom-4 left-4 transform transition-transform group-hover:translate-x-1 duration-500">
+<p class="text-white text-sm font-bold tracking-tight">VANGUARD G-650</p>
+<p class="text-primary text-[10px] font-bold tracking-widest uppercase">Stealth Executive Class</p>
+</div>
+<div class="absolute top-4 right-4 bg-primary text-white text-[10px] font-bold px-2 py-1 rounded shadow-lg shadow-primary/20">
+                    SELECTED
+                </div>
+</div>
+</section>
+<!-- Trust Elements -->
+<div class="flex items-center justify-center gap-6 py-4 opacity-40 grayscale hover:grayscale-0 hover:opacity-100 transition-all duration-700 reveal stagger-3" style="animation-delay: 0.6s;">
+<div class="flex flex-col items-center gap-1">
+<span class="material-symbols-outlined text-primary">verified_user</span>
+<span class="text-[8px] uppercase font-bold tracking-widest">Secure</span>
+</div>
+<div class="flex flex-col items-center gap-1">
+<span class="material-symbols-outlined text-primary">encrypted</span>
+<span class="text-[8px] uppercase font-bold tracking-widest">Private</span>
+</div>
+<div class="flex flex-col items-center gap-1">
+<span class="material-symbols-outlined text-primary">support_agent</span>
+<span class="text-[8px] uppercase font-bold tracking-widest">24/7 Ops</span>
+</div>
+</div>
+</main>
+<!-- Fixed Footer CTA -->
+<div class="fixed bottom-20 left-0 w-full px-4 pb-4 z-40 reveal" style="animation-delay: 0.8s; opacity: 0; animation-fill-mode: forwards;">
+<button class="w-full bg-primary hover:bg-primary/90 text-white font-bold py-4 rounded-xl shadow-lg shadow-primary/30 flex items-center justify-center gap-2 transition-all active:scale-[0.98] hover:shadow-primary/40 uppercase tracking-widest text-sm group">
+            Next: Passenger Manifest
+            <span class="material-symbols-outlined text-lg transform group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</button>
+</div>
+<!-- Bottom Navigation -->
+<nav class="fixed bottom-0 w-full flex border-t border-slate-200 dark:border-primary/20 bg-white/90 dark:bg-neutral-dark/90 backdrop-blur-md px-4 pb-4 pt-2 z-50">
+<a class="flex flex-1 flex-col items-center justify-end gap-1 text-primary" href="#">
+<span class="material-symbols-outlined fill-[1] animate-pulse">terminal</span>
+<p class="text-[10px] font-bold leading-normal tracking-wider uppercase">Terminal</p>
+</a>
+<a class="flex flex-1 flex-col items-center justify-end gap-1 text-slate-400 dark:text-silver hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined">inventory_2</span>
+<p class="text-[10px] font-medium leading-normal tracking-wider uppercase">Assets</p>
+</a>
+<a class="flex flex-1 flex-col items-center justify-end gap-1 text-slate-400 dark:text-silver hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined">local_shipping</span>
+<p class="text-[10px] font-medium leading-normal tracking-wider uppercase">Logistics</p>
+</a>
+<a class="flex flex-1 flex-col items-center justify-end gap-1 text-slate-400 dark:text-silver hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined">person</span>
+<p class="text-[10px] font-medium leading-normal tracking-wider uppercase">Profile</p>
+</a>
+</nav>
+</div>
+</body></html>

@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#1152d4",
+                        "background-light": "#f6f6f8",
+                        "background-dark": "#0a0c10",
+                        "silver-accent": "#e2e8f0",
+                    },
+                    fontFamily: {
+                        "display": ["Space Grotesk", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Space Grotesk', sans-serif;
+            -webkit-tap-highlight-color: transparent;
+        }
+        .masonry-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 12px;
+        }
+        .custom-blur {
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+        .silver-gradient {
+            background: linear-gradient(135deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.05) 100%);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 min-h-screen flex flex-col">
+<!-- Top Navigation Header -->
+<header class="sticky top-0 z-50 bg-background-light/80 dark:bg-background-dark/80 custom-blur border-b border-slate-200 dark:border-slate-800">
+<div class="flex items-center justify-between px-4 h-16">
+<button class="p-2 text-slate-600 dark:text-slate-400">
+<span class="material-symbols-outlined">menu</span>
+</button>
+<div class="flex flex-col items-center">
+<h1 class="text-xs tracking-[0.3em] font-light text-slate-500 dark:text-slate-400 uppercase">Collections</h1>
+<h2 class="text-sm font-bold tracking-tight text-slate-900 dark:text-white uppercase">The Silver Archive</h2>
+</div>
+<button class="p-2 text-slate-600 dark:text-slate-400">
+<span class="material-symbols-outlined">search</span>
+</button>
+</div>
+<!-- Filter Bar -->
+<div class="flex gap-2 p-3 overflow-x-auto no-scrollbar border-t border-slate-200 dark:border-slate-800/50">
+<div class="flex h-9 shrink-0 items-center justify-center gap-x-2 rounded-full bg-primary px-5 shadow-lg shadow-primary/20">
+<p class="text-white text-xs font-semibold uppercase tracking-wider">All Works</p>
+</div>
+<div class="flex h-9 shrink-0 items-center justify-center gap-x-2 rounded-full bg-slate-200 dark:bg-slate-800 px-5 border border-slate-300 dark:border-slate-700">
+<p class="text-slate-700 dark:text-slate-300 text-xs font-semibold uppercase tracking-wider">Blackwork</p>
+</div>
+<div class="flex h-9 shrink-0 items-center justify-center gap-x-2 rounded-full bg-slate-200 dark:bg-slate-800 px-5 border border-slate-300 dark:border-slate-700">
+<p class="text-slate-700 dark:text-slate-300 text-xs font-semibold uppercase tracking-wider">Realism</p>
+</div>
+<div class="flex h-9 shrink-0 items-center justify-center gap-x-2 rounded-full bg-slate-200 dark:bg-slate-800 px-5 border border-slate-300 dark:border-slate-700">
+<p class="text-slate-700 dark:text-slate-300 text-xs font-semibold uppercase tracking-wider">Fine Line</p>
+</div>
+<div class="flex h-9 shrink-0 items-center justify-center gap-x-2 rounded-full bg-slate-200 dark:bg-slate-800 px-5 border border-slate-300 dark:border-slate-700">
+<p class="text-slate-700 dark:text-slate-300 text-xs font-semibold uppercase tracking-wider">Traditional</p>
+</div>
+</div>
+</header>
+<!-- Content Area -->
+<main class="flex-1 overflow-y-auto px-4 py-6">
+<div class="masonry-grid">
+<!-- Grid Item 1 -->
+<div class="flex flex-col gap-2 group">
+<div class="relative w-full aspect-[4/5] overflow-hidden rounded-xl bg-slate-200 dark:bg-slate-800 shadow-xl shadow-black/20">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110" data-alt="Intricate blackwork tattoo design on skin" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDz6Tf-NM0HqBZwx13IVxwdtNIHJ6OL8xdK2YiyfFDeKzaLg8D8yS9oW76CO4FntEOSuuR_ZH2YgmVluUqWx-lMDBnMiN3il4T2ErOoLOCYwU4UHDnnx6wm2i5undd_lXuwJidUKGtnkz_vpQS52OP0mljOBj7LBqT_E4o-rdUv_LFTgCtvzlKjN40M2sr95qoGeP0YK5vWhYBP1vHb26zlmEBKRvctPUN68KwsQW1Fw36qOoSIENNyRtdUe-8BPTWjW2XARkKmwWk");'>
+</div>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+<div class="absolute bottom-3 left-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+<span class="text-[10px] font-bold text-white uppercase tracking-widest px-2 py-1 bg-primary rounded">Featured</span>
+</div>
+</div>
+</div>
+<!-- Grid Item 2 -->
+<div class="flex flex-col gap-2 group">
+<div class="relative w-full aspect-[3/4] overflow-hidden rounded-xl bg-slate-200 dark:bg-slate-800 shadow-xl shadow-black/20">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110" data-alt="Hyper-realistic sleeve tattoo artwork" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDmk5MJhRjJdYfRv-E6qCmIW2Bw_Ru4zFu90DU142dH3xN-09lmDuNX0Ngb6u1FlQhCoOVGzSMz-h_ntmGNi1hUot02KqWtMDizYSe79mCcKRjM_Ksy4RC7w-TDsPeFsk_N5d3yTHcDgFA4_LCKDEwLMaE9ceibvadQWyRg3gyqr9x1ZmJ9LGo6awngO0gPCMo8vr3nn8gM3vm_f4awF_-_sFmR4N9Kmb84LuCnRx4BdeDO9W5IXCMJ8gZUAaTvV7hgHYLQ2UI2M78");'>
+</div>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+</div>
+</div>
+<!-- Grid Item 3 -->
+<div class="flex flex-col gap-2 group mt-[-20px]">
+<div class="relative w-full aspect-[1/1] overflow-hidden rounded-xl bg-slate-200 dark:bg-slate-800 shadow-xl shadow-black/20">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110" data-alt="Minimalist fine line tattoo detail" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAwGOEOBK4faYgD5oRk7OENtPaSfqv6mQyTxEWIE1EBaJF6Kd6UfyKbrSxG3qKZZ82vqnCaPnSeCEoEKyze7S27nSW7VVmr66o97XPvErQ9VKzaObMS8ffbJGvuGl-9xdps5oD8JP4HlBlCuuvTysO_t7qEL0jSYzYFNSBU2VrEK5Y4TNutMTkNZ-sZpAIJmYzqQulfjmOZc7fWK7CYoFlUAekms2BTtmCpcvhBlNE5ZXS_8Sp_2c-Q0UDg8-pmt7PHV3YKpM4zuD4");'>
+</div>
+</div>
+</div>
+<!-- Grid Item 4 -->
+<div class="flex flex-col gap-2 group">
+<div class="relative w-full aspect-[3/5] overflow-hidden rounded-xl bg-slate-200 dark:bg-slate-800 shadow-xl shadow-black/20">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110" data-alt="Artistic skull and botanical tattoo design" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCEBpqspHScUeJevnSC_buQHKoqw1vaXCalGmxbq4S-SAXPpROpDFJg0r91rz0IYa_T_L2y4TeX8ZkrYCtpT8cvg15Y2a9OIGD_72OHizSe8LSf_lgQjFyfNCbBTXpR-eebeFBo5OWkgfLq-htJ87Eq5xpbTFJWuc90xv0m18tsS1Iv-d6mVDaoTmx5PVyIx0i3nEAC1dBzfHzIrgYPDYV_xdJZcnTujvjPq3KOKMGAs9MCRzkctspN4ISPKc9RZYfNCONx2gKaoXE");'>
+</div>
+</div>
+</div>
+<!-- Grid Item 5 -->
+<div class="flex flex-col gap-2 group">
+<div class="relative w-full aspect-[4/5] overflow-hidden rounded-xl bg-slate-200 dark:bg-slate-800 shadow-xl shadow-black/20 border border-white/5">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110" data-alt="Abstract geometric dark art tattoo" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDoXAXcyodAu1GXmKRfklxF7UypxNJkBCHHAuQbAmrZKayg8HeX2tPgxV8mh2gRi5sn2T1GarOXXk72GTK1ZVIdhXiifCh88_lkqqUCxssI_P_1M4vTZ7Q_HUZdFN1HFZNt5BQ_xmDGDONwh5N7A5wKF54gLhmd_mRVDB9woO2YINwfct8Py44JFLVOfc4pE41A2vIiPdHWErjCZvNUoZixK_KT4odKbDQw-sXqW_W9m66tru8G9PWo2N1f_OoMFU9RefwoTgYt5Eg");'>
+</div>
+</div>
+</div>
+<!-- Grid Item 6 -->
+<div class="flex flex-col gap-2 group mt-[-40px]">
+<div class="relative w-full aspect-[1/1] overflow-hidden rounded-xl bg-slate-200 dark:bg-slate-800 shadow-xl shadow-black/20">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110" data-alt="Detailed botanical fine line art" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBHzXb1pilpkVR9y6x9XbfJGk3CyX6ecsT86mbL8kWB7DYnNetx6MYjaMWmwbuCJPYJoZsqQQPd5huJYL1wT7gfAU0a9jFgBV6SGN_NxKN1j4HiucwOGx9LzoPEjK57_MTGT_8-dlHfeTrc_iAkh16WJp7pQBWkDFlKmPNSE8_wTPfR-QTBVaSggcI9UdZ9iOrYOlhZiEBTva8oj1yiSjjQfRkGpi2bF5h79iyRwUTxEE1w15NLuU9ybGQ2yG8KQ1I_uo4iFcQi7CM");'>
+</div>
+</div>
+</div>
+</div>
+<!-- Curated Series Section -->
+<div class="mt-12 mb-8">
+<h4 class="text-slate-400 dark:text-slate-500 text-[10px] font-bold leading-normal tracking-[0.3em] uppercase text-center mb-6">Curated Series</h4>
+<div class="flex flex-col gap-4">
+<div class="relative h-48 rounded-xl overflow-hidden group">
+<div class="absolute inset-0 bg-cover bg-center" data-alt="The Noir Collection atmospheric portrait" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBsWZc4qy3MRo3wR5y__qthdr_85rqe_Ao5fY1Qhh_xNFmzMeBd71cAh3xBfytTU8W5nztPv8Lbp-ef09ewCm5BTIK5sCdpHU9kodzeOmDOKocV8nYpyyeMzz8e7T8f7mZhXsAzNpce6Cpy_T7U79Kk4jUpzkO7gf892s9lGytPgN65IIkV_8dpM_DozrvoP7EvXF8nb5Qf6CxxYPcygZpMoyvCXChd3K_NtLXcHvsUYZgo8jdQ_lMZBrQX93EYGM7KsG3Ukv_rPrc");'></div>
+<div class="absolute inset-0 bg-gradient-to-r from-background-dark via-background-dark/40 to-transparent"></div>
+<div class="absolute inset-0 flex flex-col justify-center p-6">
+<span class="text-primary text-[10px] font-bold tracking-[0.2em] uppercase mb-1">Vol. 01</span>
+<h3 class="text-xl font-bold text-white uppercase tracking-tight">The Noir Collection</h3>
+<p class="text-slate-400 text-xs mt-1">Deep contrast &amp; shadow focus</p>
+</div>
+</div>
+<div class="relative h-48 rounded-xl overflow-hidden group">
+<div class="absolute inset-0 bg-cover bg-center" data-alt="The Ethereal Series delicate linework" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDh1XwOOT49gW6YexC0aaHc6Usx7M5eQy1KP6jHOiPNkXRsB1TDWAz6vlAx7DmOcs6gd7GK_HZSjZPwdug03_0YSzmW3o7f1yj1XCBGilx0jUt-kin_DkrpAccyBFaThlNwmw2Um2CwFSvNzgJmK7bpf7beAqEnaWepo9YmlQZizs__YCzOAoLmsU4dB4q2jQCb4vGALw3TGhX8vFB0VYvQIAuWHdKyRY-0v2OQr9xdkbkF5_M5s6H5Oz6GbxHXizrp3jfEBYFmaVM");'></div>
+<div class="absolute inset-0 bg-gradient-to-r from-background-dark via-background-dark/40 to-transparent"></div>
+<div class="absolute inset-0 flex flex-col justify-center p-6">
+<span class="text-primary text-[10px] font-bold tracking-[0.2em] uppercase mb-1">Vol. 02</span>
+<h3 class="text-xl font-bold text-white uppercase tracking-tight">Ethereal Lines</h3>
+<p class="text-slate-400 text-xs mt-1">Micro-detail &amp; precision</p>
+</div>
+</div>
+</div>
+</div>
+<div class="h-10"></div>
+</main>
+<!-- Bottom Navigation Bar -->
+<nav class="sticky bottom-0 z-50 bg-background-light dark:bg-background-dark border-t border-slate-200 dark:border-slate-800 pb-safe">
+<div class="flex items-center justify-around h-16 px-4">
+<a class="flex flex-col items-center justify-center gap-1 text-slate-400 dark:text-slate-500 hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined !text-[24px]">home</span>
+<span class="text-[9px] font-bold uppercase tracking-widest">Home</span>
+</a>
+<a class="flex flex-col items-center justify-center gap-1 text-primary" href="#">
+<span class="material-symbols-outlined !text-[24px] !fill-1">grid_view</span>
+<span class="text-[9px] font-bold uppercase tracking-widest">Gallery</span>
+</a>
+<a class="flex flex-col items-center justify-center gap-1 text-slate-400 dark:text-slate-500 hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined !text-[24px]">favorite</span>
+<span class="text-[9px] font-bold uppercase tracking-widest">Saved</span>
+</a>
+<a class="flex flex-col items-center justify-center gap-1 text-slate-400 dark:text-slate-500 hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined !text-[24px]">account_circle</span>
+<span class="text-[9px] font-bold uppercase tracking-widest">Profile</span>
+</a>
+</div>
+</nav>
+<!-- Scroll behavior styling for no-scrollbar -->
+<style>
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+        .pb-safe {
+            padding-bottom: env(safe-area-inset-bottom);
+        }
+    </style>
+</body></html>

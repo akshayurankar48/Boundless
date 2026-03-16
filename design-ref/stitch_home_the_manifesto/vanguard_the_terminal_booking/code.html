@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;600;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#ec5b13",
+                        "background-light": "#f8f6f6",
+                        "background-dark": "#221610",
+                    },
+                    fontFamily: {
+                        "display": ["Public Sans"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        .glass-input {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(8px);
+        }
+        .metallic-border {
+            border: 1px solid rgba(236, 91, 19, 0.3);
+            box-shadow: 0 0 15px rgba(236, 91, 19, 0.1);
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 antialiased">
+<div class="relative flex h-auto min-h-screen w-full flex-col overflow-x-hidden">
+<div class="layout-container flex h-full grow flex-col">
+<!-- Navigation -->
+<header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-slate-200 dark:border-slate-800 px-6 md:px-20 py-4 sticky top-0 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md z-50">
+<div class="flex items-center gap-4">
+<div class="size-6 text-primary">
+<svg fill="currentColor" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path d="M4 42.4379C4 42.4379 14.0962 36.0744 24 41.1692C35.0664 46.8624 44 42.2078 44 42.2078L44 7.01134C44 7.01134 35.068 11.6577 24.0031 5.96913C14.0971 0.876274 4 7.27094 4 7.27094L4 42.4379Z"></path>
+</svg>
+</div>
+<h2 class="text-xl font-black leading-tight tracking-tighter uppercase italic">VANGUARD</h2>
+</div>
+<div class="flex gap-4 items-center">
+<button class="flex items-center justify-center rounded-full h-10 w-10 bg-slate-200 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-primary/20 transition-colors">
+<span class="material-symbols-outlined text-xl">account_circle</span>
+</button>
+<button class="flex items-center justify-center rounded-full h-10 w-10 bg-slate-200 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-primary/20 transition-colors">
+<span class="material-symbols-outlined text-xl">menu</span>
+</button>
+</div>
+</header>
+<main class="flex-1 flex justify-center py-10 px-4">
+<div class="layout-content-container flex flex-col max-w-4xl w-full">
+<!-- Progress Header -->
+<div class="flex flex-col gap-4 mb-10">
+<div class="flex justify-between items-end">
+<div class="flex flex-col gap-1">
+<span class="text-primary text-xs font-bold uppercase tracking-widest">Booking Concierge</span>
+<h1 class="text-4xl font-black tracking-tight">Concept Details</h1>
+</div>
+<p class="text-slate-500 text-sm font-medium">Step 2 of 4</p>
+</div>
+<div class="w-full h-1 bg-slate-200 dark:bg-slate-800 rounded-full overflow-hidden">
+<div class="h-full bg-primary" style="width: 50%;"></div>
+</div>
+<div class="flex justify-between text-[10px] uppercase font-bold tracking-tighter text-slate-400">
+<span>Artist</span>
+<span class="text-primary">Concept</span>
+<span>Placement</span>
+<span>Schedule</span>
+</div>
+</div>
+<!-- Form Section -->
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-10">
+<!-- Form Fields -->
+<div class="lg:col-span-2 flex flex-col gap-8">
+<section>
+<label class="block text-sm font-bold mb-3 uppercase tracking-wider text-slate-500 dark:text-slate-400">Project Title</label>
+<input class="w-full glass-input rounded-xl px-4 py-4 focus:ring-2 focus:ring-primary outline-none transition-all placeholder:text-slate-600" placeholder="A brief name for your vision" type="text"/>
+</section>
+<section>
+<label class="block text-sm font-bold mb-3 uppercase tracking-wider text-slate-500 dark:text-slate-400">The Vision</label>
+<textarea class="w-full glass-input rounded-xl px-4 py-4 focus:ring-2 focus:ring-primary outline-none transition-all placeholder:text-slate-600" placeholder="Describe the atmosphere, elements, and narrative of your piece..." rows="5"></textarea>
+</section>
+<section>
+<label class="block text-sm font-bold mb-3 uppercase tracking-wider text-slate-500 dark:text-slate-400">Reference Imagery</label>
+<div class="border-2 border-dashed border-slate-300 dark:border-slate-800 rounded-xl p-10 flex flex-col items-center justify-center gap-3 hover:border-primary/50 transition-colors cursor-pointer group">
+<span class="material-symbols-outlined text-4xl text-slate-400 group-hover:text-primary transition-colors">cloud_upload</span>
+<p class="text-sm text-slate-500">Drag and drop moodboard elements or click to browse</p>
+<p class="text-[10px] text-slate-600">JPG, PNG up to 10MB per file</p>
+</div>
+</section>
+<div class="flex items-center gap-4 pt-6">
+<button class="flex-1 py-4 px-6 rounded-xl font-bold uppercase tracking-widest text-sm border border-slate-200 dark:border-slate-800 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">
+                                Previous
+                            </button>
+<button class="flex-[2] py-4 px-6 rounded-xl bg-primary text-white font-bold uppercase tracking-widest text-sm hover:opacity-90 transition-opacity shadow-lg shadow-primary/20">
+                                Continue to Placement
+                            </button>
+</div>
+</div>
+<!-- Sidebar Info/Summary -->
+<div class="lg:col-span-1">
+<div class="sticky top-28 flex flex-col gap-6">
+<div class="metallic-border rounded-xl p-6 bg-slate-50 dark:bg-white/5">
+<h3 class="text-sm font-black uppercase mb-4 tracking-widest border-b border-primary/20 pb-2">Selected Artist</h3>
+<div class="flex items-center gap-4">
+<div class="size-16 rounded-lg bg-cover bg-center shrink-0 border border-white/10" data-alt="Portrait of a modern professional artist" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBSFCCH53C_3WO73jD953PbCjz0HSrTBR5urBNSg7Zr3dlaqVP5aVCZeWRkHDzcchfzUiaUWA6KC10X-IRl29u6nKOHaCuvwty3O0Li9-CkVMDSbPlp231a4fpuOp1-JO9jdWVug6sfbAvnZDx0IoDhTV_IO2t_ViTn02LEOfE9tHcrjQbRIoSJ2beA-A2W5lV_OgO7fLX5ZjbFoHGNSU7ODmCccuYEZBWoDzw63O9TfJ9ZVJj9pom_pZfedDPF404g9LP8lswnEWk');"></div>
+<div>
+<p class="font-bold text-primary">Marcus Thorne</p>
+<p class="text-xs text-slate-500">Avant-garde Surrealism</p>
+<div class="flex mt-1">
+<span class="material-symbols-outlined text-xs text-primary fill-1">star</span>
+<span class="material-symbols-outlined text-xs text-primary fill-1">star</span>
+<span class="material-symbols-outlined text-xs text-primary fill-1">star</span>
+<span class="material-symbols-outlined text-xs text-primary fill-1">star</span>
+<span class="material-symbols-outlined text-xs text-primary fill-1">star</span>
+</div>
+</div>
+</div>
+</div>
+<div class="rounded-xl p-6 bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800">
+<h3 class="text-xs font-bold uppercase mb-4 tracking-widest text-slate-500">Vanguard Standards</h3>
+<ul class="flex flex-col gap-4">
+<li class="flex gap-3">
+<span class="material-symbols-outlined text-primary text-lg">verified</span>
+<p class="text-xs leading-relaxed text-slate-600 dark:text-slate-400">Exclusive access to premier private studios worldwide.</p>
+</li>
+<li class="flex gap-3">
+<span class="material-symbols-outlined text-primary text-lg">auto_awesome</span>
+<p class="text-xs leading-relaxed text-slate-600 dark:text-slate-400">One-of-one bespoke design methodology.</p>
+</li>
+<li class="flex gap-3">
+<span class="material-symbols-outlined text-primary text-lg">lock</span>
+<p class="text-xs leading-relaxed text-slate-600 dark:text-slate-400">NDA-protected creative process available upon request.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<!-- Artist Preview Grid (Component Reuse) -->
+<div class="mt-20">
+<div class="flex items-center justify-between mb-6">
+<h2 class="text-xl font-bold tracking-tight">Explore Portfolio Pieces</h2>
+<a class="text-primary text-sm font-bold flex items-center gap-1 hover:underline" href="#">
+                            Full Portfolio <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+<div class="bg-cover bg-center flex flex-col gap-3 rounded-xl justify-end p-4 aspect-[3/4] border border-white/10 group overflow-hidden relative" data-alt="Abstract dark surreal painting texture" style='background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0) 100%), url("https://lh3.googleusercontent.com/aida-public/AB6AXuBF6i05mKhlapSiYV0YuNDeqKYFLpRl4QYNGG04y9JPAzY-r7DBqT3tJf8rv6L9wniIQJ55WdqfKYUygwg8wFJTUukhBZPA8hU0VHWpztFWyCf2g-89r7T2LztDUOwmzKoRfU5HP_d_ZYy1f69Kbrn7MGzi4i9YbkWJXC5ajQekDnIb3XfTHO8NKAHYTIZvLs8pGHAfLURYytNnJOAa6ItPmqI8A0UIz6wkxPh4UhY_UjRYsHBCqoTu11vWYQ4FxPOFmWdg1qz36Hw");'>
+<div class="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+<p class="text-white text-xs font-bold uppercase tracking-widest z-10">Obsidian Veil</p>
+</div>
+<div class="bg-cover bg-center flex flex-col gap-3 rounded-xl justify-end p-4 aspect-[3/4] border border-white/10 group overflow-hidden relative" data-alt="Cybernetic organic sculpture details" style='background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0) 100%), url("https://lh3.googleusercontent.com/aida-public/AB6AXuDzsGPB0cerJxfHBs9yahcKYzMwrs9A9_XW3smHFOH6i_Q10eT6dvY0H7ksQJPxku4scOFjTSdHemi-qwDWFQ4HvGLS63Wa6y3WCPxgySZh_FHD3TdC-tc-pfQepGCMrlM4u5CbWsE5WP5RZw-DluHr_mn38zhum3p8gUv0J79LvwtcXBWdqFvyxJnoq95DjueKNZMn6MsMjYwpzeoeV2i-rtWcIkBc0Ju1aWrXalunF0OE-_w5qjNe9PzTACrRkTxIcMQAyMPp3uI");'>
+<div class="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+<p class="text-white text-xs font-bold uppercase tracking-widest z-10">Neon Pulse</p>
+</div>
+<div class="bg-cover bg-center flex flex-col gap-3 rounded-xl justify-end p-4 aspect-[3/4] border border-white/10 group overflow-hidden relative" data-alt="Geometric black and white marble pattern" style='background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0) 100%), url("https://lh3.googleusercontent.com/aida-public/AB6AXuABV7bLcGdYQQ3pRNN5p5x5LgxGiNSmpAQPlDiNaU_l3bAQGVBZXkmZrrEke7-yGoRQ_qUY1aE2aL1piGUuLNt4zlegGn1H_KOyv0P6ODnOf-ROO9VIpZJqNVqtkX_N4mUkNAspzk4M9iXjzyYSLMmZOhKtIvnqcZ5T_2xcW-cALoVw5ZwsZx5PykEx0h6QAAeOA0usG7nTQhyDfEa-KyqZyiXMqzi1-njdJZlticZ31lwaHvbWPR6g8W46cWvbx1ZtRj4tYzHGnYY");'>
+<div class="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+<p class="text-white text-xs font-bold uppercase tracking-widest z-10">Chrome Statues</p>
+</div>
+<div class="bg-cover bg-center flex flex-col gap-3 rounded-xl justify-end p-4 aspect-[3/4] border border-white/10 group overflow-hidden relative" data-alt="Silver metallic flowing fabric motion" style='background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0) 100%), url("https://lh3.googleusercontent.com/aida-public/AB6AXuDUZPgIShFxCKpZiKEeplbKna2xPBl0yTk-6deG23whefGQC29HNMXc9aASkYgXDaYVsp1c0KH39vxUyOXwOGzbSxO47D7HBr39-v0U6ahz4QYmuZT7RFoxZG3zh0I4Q5sGwz_vW7AjpcIgzK46-lBBB_CCJMhxQUWn2GQe7dqIAuQGLEFO-2Rns3b1nl8W-2Dlo2hMGSXiK_s1B-579I9kO73xMc7lkEXuIL-745gpO8wrRZMF7JjAZ0XXDxKFvnljoB0qnULi6Sg");'>
+<div class="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+<p class="text-white text-xs font-bold uppercase tracking-widest z-10">Liquid Mercury</p>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="border-t border-slate-200 dark:border-slate-800 py-10 px-20 text-center">
+<p class="text-slate-500 text-xs tracking-widest uppercase mb-4">© 2024 VANGUARD ATELIER</p>
+<div class="flex justify-center gap-6">
+<a class="text-slate-400 hover:text-primary transition-colors uppercase text-[10px] font-bold tracking-widest" href="#">Privacy</a>
+<a class="text-slate-400 hover:text-primary transition-colors uppercase text-[10px] font-bold tracking-widest" href="#">Terms</a>
+<a class="text-slate-400 hover:text-primary transition-colors uppercase text-[10px] font-bold tracking-widest" href="#">Support</a>
+</div>
+</footer>
+</div>
+</div>
+</body></html>

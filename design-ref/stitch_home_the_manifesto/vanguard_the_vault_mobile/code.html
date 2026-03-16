@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>VANGUARD: The Vault</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#ec5b13",
+                        "background-light": "#f8f6f6",
+                        "background-dark": "#1a1310",
+                        "silver": "#c0c0c0",
+                    },
+                    fontFamily: {
+                        "display": ["Public Sans", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        .glass-effect {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .silver-gradient {
+            background: linear-gradient(145deg, #e2e2e2 0%, #a0a0a0 100%);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="font-display bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 antialiased">
+<div class="relative flex h-screen w-full flex-col overflow-hidden">
+<!-- Header -->
+<header class="flex items-center justify-between px-6 pt-6 pb-2">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-slate-900 dark:text-slate-100 text-2xl">menu</span>
+</div>
+<h1 class="text-xl font-black tracking-[0.2em] text-slate-900 dark:text-slate-100">VANGUARD</h1>
+<div class="flex items-center gap-2">
+<div class="h-10 w-10 rounded-full border border-slate-200 dark:border-slate-800 flex items-center justify-center overflow-hidden">
+<img class="h-full w-full object-cover" data-alt="User profile avatar close up" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAslhYRE1z2Y2v3Jn5iOR0mMR0ACkYZ2oLGJCeX1kbo3OrcCdvvDLW73oC8-HfanE2_4i_3kTjRkywWL6uQNICb0mHF__QHVzZl-Dmcm5brS5pxnTwVy2yG8ckroW8pEl0LEEMmFwS0wD2s1x-rYngd-cFFSP7KPp6nWxLLNAgFY61wfLwsh0rHsC0IDzU54vGtGWbHgJaiZG-i5P1b3j4wfVwKDRgw_f7LTHf4ntpV_6Qmxdz1E_WNt7uYl84d3qXpiqCGqCGlLeQ"/>
+</div>
+</div>
+</header>
+<!-- Page Title & Search -->
+<div class="px-6 pt-6 pb-4">
+<h2 class="text-3xl font-bold tracking-tight mb-4">The Vault</h2>
+<div class="relative">
+<div class="absolute inset-y-0 left-0 flex items-center pl-4 pointer-events-none">
+<span class="material-symbols-outlined text-slate-400 dark:text-slate-500 text-xl">search</span>
+</div>
+<input class="block w-full pl-11 pr-4 py-3 bg-slate-100 dark:bg-slate-900/50 border-none rounded-xl focus:ring-2 focus:ring-primary/50 text-sm placeholder:text-slate-400 dark:placeholder:text-slate-600 transition-all" placeholder="Search the archive..." type="text"/>
+</div>
+</div>
+<!-- Horizontal Filters -->
+<div class="flex gap-3 px-6 py-2 overflow-x-auto no-scrollbar">
+<button class="flex h-10 shrink-0 items-center justify-center gap-2 rounded-full bg-slate-900 dark:bg-slate-100 px-5 transition-transform active:scale-95">
+<span class="text-slate-100 dark:text-slate-900 text-sm font-bold">All Art</span>
+</button>
+<button class="flex h-10 shrink-0 items-center justify-center gap-2 rounded-full bg-slate-100 dark:bg-slate-900/50 px-5 border border-slate-200 dark:border-slate-800">
+<span class="text-slate-600 dark:text-slate-400 text-sm font-medium">Dark Realism</span>
+<span class="material-symbols-outlined text-sm">keyboard_arrow_down</span>
+</button>
+<button class="flex h-10 shrink-0 items-center justify-center gap-2 rounded-full bg-slate-100 dark:bg-slate-900/50 px-5 border border-slate-200 dark:border-slate-800">
+<span class="text-slate-600 dark:text-slate-400 text-sm font-medium">Neo-Tribal</span>
+<span class="material-symbols-outlined text-sm">keyboard_arrow_down</span>
+</button>
+<button class="flex h-10 shrink-0 items-center justify-center gap-2 rounded-full bg-slate-100 dark:bg-slate-900/50 px-5 border border-slate-200 dark:border-slate-800">
+<span class="text-slate-600 dark:text-slate-400 text-sm font-medium">Geometric</span>
+<span class="material-symbols-outlined text-sm">keyboard_arrow_down</span>
+</button>
+</div>
+<!-- Scrollable Grid Area -->
+<div class="flex-1 overflow-y-auto px-6 py-4">
+<div class="grid grid-cols-2 gap-4">
+<!-- Art Card 1 -->
+<div class="relative aspect-[3/4] rounded-xl overflow-hidden group">
+<img class="h-full w-full object-cover grayscale brightness-90 group-hover:scale-110 transition-transform duration-500" data-alt="Monochromatic fine line tattoo on arm" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB4IMpDapdlak4vSneUbXrr4ubf9OjcyzB2kvnc6HdWmn0qcwegP0t27Iz2x3sqOYzgZlQT8_4sqSGqugoDsHs54sQO1iZ_gLhJzEDuuh96b2yNqAwyEswkRL5b8OLCgnpVW_CK6Fyo4PJ1LZpmC-lrh0ZGpyOkVyzYibDKK8SIcUAuB8KlA9VNfvDgpDz7KMYSncei_x4X9n85hNxKvOxIJAb6JtfIN3rqcPb1QrYjxdwENUvPjxPzwq_FS-Wubc3s-tuBn1s_ihI"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
+<div class="absolute bottom-3 left-3">
+<p class="text-[10px] uppercase tracking-widest text-slate-300 font-bold mb-0.5">Series 01</p>
+<h3 class="text-white font-bold text-sm">Aethelgard</h3>
+</div>
+<div class="absolute top-3 right-3 glass-effect h-8 w-8 rounded-full flex items-center justify-center">
+<span class="material-symbols-outlined text-white text-lg">bookmark</span>
+</div>
+</div>
+<!-- Art Card 2 -->
+<div class="relative aspect-[3/4] rounded-xl overflow-hidden group">
+<img class="h-full w-full object-cover grayscale brightness-90 group-hover:scale-110 transition-transform duration-500" data-alt="Dark abstract ink tattoo pattern" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBqBKhxMW6Pfx1YUAlE-AQFI5CMaYf0ig21u5VrC9_8rn64fL_rmcAnJQrWXnGFF5dEbKRCWefDnnh554g1SMlteayoMJXrasT-hh3OtP2PBIcQT0cDSz-oHPI49xeC8PRYQSV2wmcjhbrNk7DILirOj97sfs8c6-9TPbTEdAdJ7CvAR1JJXUg1Bp2fV2pf_B8zZt7DPRXfNbyeFSnhfrK66-Tz-0x4RJ6hzYYoH78O8svHzLzxvPnSs6o3ATrF3zFG5CNPoX0fQcs"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
+<div class="absolute bottom-3 left-3">
+<p class="text-[10px] uppercase tracking-widest text-slate-300 font-bold mb-0.5">Series 04</p>
+<h3 class="text-white font-bold text-sm">Void Walker</h3>
+</div>
+<div class="absolute top-3 right-3 glass-effect h-8 w-8 rounded-full flex items-center justify-center">
+<span class="material-symbols-outlined text-white text-lg">bookmark</span>
+</div>
+</div>
+<!-- Art Card 3 -->
+<div class="relative aspect-[3/4] rounded-xl overflow-hidden group">
+<img class="h-full w-full object-cover grayscale brightness-90 group-hover:scale-110 transition-transform duration-500" data-alt="Complex geometric sleeve tattoo" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDSQ8mRWGUPTTrtNcx0QPJ7MHr6cKK8YcdO1ixNdezpf0Q7KBa7K86n0QTpprXSkMZ4sgXL75Y4L6qgoN16D4jonAHyeP3JqJEX0n5YQ7ZqhijZ-1IApNtBmXp1iV6YU7awHtaHb2IfVCzw-H9O8d2JSzbEOk33OkGMJ7KosbyyMYom-z1JOb3xC1bYlmsnfBSH1JWkXYcz_GDZArFkz5wntpwNy4aJ_91b2xxzDUHtTmmsNPIxT0RHa-e6sWMndkgpV-csQAnQJ_E"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
+<div class="absolute bottom-3 left-3">
+<p class="text-[10px] uppercase tracking-widest text-slate-300 font-bold mb-0.5">Series 02</p>
+<h3 class="text-white font-bold text-sm">Fractal Mind</h3>
+</div>
+<div class="absolute top-3 right-3 glass-effect h-8 w-8 rounded-full flex items-center justify-center">
+<span class="material-symbols-outlined text-white text-lg">bookmark</span>
+</div>
+</div>
+<!-- Art Card 4 -->
+<div class="relative aspect-[3/4] rounded-xl overflow-hidden group">
+<img class="h-full w-full object-cover grayscale brightness-90 group-hover:scale-110 transition-transform duration-500" data-alt="Symmetrical black ink chest tattoo" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCsDwmumxCdNE_GQY17EQnvonMb-PkENaRiYGSTKnc7jz6qf0EFroTNCcHsXGWmVK0FpwFenEsizRWYFYenNhmDPus6k_rmrGCCn8ntbuwdfFxubtSsbmHFuvR-hUBdmWgDMaZ0IeoxgMxO02gdv9rfPOtl1TYcu5onL9C4KsgWNlPs5D2RobhbTn94rBb3OfCwviDko1rR8YQtMC7N2HwVgMbGwALaqKvJdwlKUIItWX8S1NTsNQrF0M-ijCZy136mMFvREsBh9Yc"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
+<div class="absolute bottom-3 left-3">
+<p class="text-[10px] uppercase tracking-widest text-slate-300 font-bold mb-0.5">Series 09</p>
+<h3 class="text-white font-bold text-sm">Titan Core</h3>
+</div>
+<div class="absolute top-3 right-3 glass-effect h-8 w-8 rounded-full flex items-center justify-center">
+<span class="material-symbols-outlined text-white text-lg">bookmark</span>
+</div>
+</div>
+<!-- Featured Wide Card -->
+<div class="col-span-2 relative h-48 rounded-xl overflow-hidden group">
+<img class="h-full w-full object-cover grayscale contrast-125" data-alt="Abstract charcoal paint strokes" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAVdI3CRkNU23s9xldrmeRa8yhTrmHsPfG5yrU9RMHOacWU3HnoXuFvVpH5DTHSzsIUoz3Dpsy4XpPtjoIhlBHGtF1G3B1im47YO2M0zD1aJ7NDrj-sZ59qKEvq4Ez1foMwuxATkU-3UPfiK70MX68g_u00S57-a42NHuq66t3je_J8tpUCPvQl0A9NtGiuv-XHo43A9lKa6fL4yJnHg8wP-BODBPbLpUz4FYclvZEBobg8_L9vPkdlAbK_nPmY2yh68YoMzpw1Q3o"/>
+<div class="absolute inset-0 bg-black/40"></div>
+<div class="absolute inset-0 flex flex-col items-center justify-center text-center p-6">
+<span class="text-primary text-[10px] font-black uppercase tracking-[0.3em] mb-2">Exclusive Release</span>
+<h3 class="text-white text-2xl font-bold mb-4">The Obsidian Set</h3>
+<button class="px-6 py-2 bg-white text-black text-xs font-bold uppercase tracking-widest rounded-full hover:bg-primary hover:text-white transition-colors">View Collection</button>
+</div>
+</div>
+</div>
+<div class="h-24"></div> <!-- Spacer for Nav -->
+</div>
+<!-- Bottom Navigation Bar -->
+<nav class="absolute bottom-0 left-0 right-0 border-t border-slate-200/50 dark:border-slate-800/50 bg-white/80 dark:bg-background-dark/80 backdrop-blur-xl px-6 pb-8 pt-4">
+<div class="flex items-center justify-between max-w-md mx-auto">
+<a class="flex flex-col items-center gap-1 group" href="#">
+<span class="material-symbols-outlined text-primary fill-1">grid_view</span>
+<p class="text-[10px] font-bold uppercase tracking-tighter text-primary">Vault</p>
+</a>
+<a class="flex flex-col items-center gap-1 group text-slate-400" href="#">
+<span class="material-symbols-outlined group-hover:text-slate-900 dark:group-hover:text-slate-100 transition-colors">camera</span>
+<p class="text-[10px] font-bold uppercase tracking-tighter">Studio</p>
+</a>
+<div class="relative -top-8">
+<button class="h-14 w-14 silver-gradient rounded-full shadow-lg shadow-black/20 flex items-center justify-center ring-4 ring-background-light dark:ring-background-dark">
+<span class="material-symbols-outlined text-slate-900 font-bold">add</span>
+</button>
+</div>
+<a class="flex flex-col items-center gap-1 group text-slate-400" href="#">
+<span class="material-symbols-outlined group-hover:text-slate-900 dark:group-hover:text-slate-100 transition-colors">brush</span>
+<p class="text-[10px] font-bold uppercase tracking-tighter">Artists</p>
+</a>
+<a class="flex flex-col items-center gap-1 group text-slate-400" href="#">
+<span class="material-symbols-outlined group-hover:text-slate-900 dark:group-hover:text-slate-100 transition-colors">person</span>
+<p class="text-[10px] font-bold uppercase tracking-tighter">Profile</p>
+</a>
+</div>
+</nav>
+</div>
+<style>
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+</body></html>
