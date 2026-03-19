@@ -171,6 +171,11 @@ export function Testimonials() {
             </AnimatePresence>
           </div>
 
+          {/* Screen reader announcement for slide changes */}
+          <div className="sr-only" aria-live="polite" aria-atomic="true">
+            {`Showing testimonial ${current + 1} of ${maxIndex + 1}`}
+          </div>
+
           {/* Navigation dots */}
           <div className="mt-8 flex items-center justify-center gap-2">
             {Array.from({ length: maxIndex + 1 }).map((_, i) => (

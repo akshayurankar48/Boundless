@@ -1,24 +1,69 @@
 "use client";
 
-import { useState, useEffect, useRef, memo } from "react";
+import { useState, useEffect, useRef, useCallback, memo } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
-import { Menu, X } from "lucide-react";
+import { Menu, X, Phone, Check } from "lucide-react";
 import { siteConfig } from "@/data/site-config";
 import { cn } from "@/lib/utils";
+import { CopyToast } from "@/components/shared/copy-toast";
 
 export const Header = memo(function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [showToast, setShowToast] = useState(false);
+  const [copied, setCopied] = useState(false);
   const pathname = usePathname();
   const rafRef = useRef<number>(0);
+  const menuToggleRef = useRef<HTMLButtonElement>(null);
+  const menuRef = useRef<HTMLDivElement>(null);
+
+  const handleCallUs = useCallback(async () => {
+    if (copied) return;
+    try {
+      await navigator.clipboard.writeText(siteConfig.studio.phone);
+    } catch {
+      // Clipboard may fail in some contexts -- still show the toast with the number
+    }
+    setCopied(true);
+    setShowToast(true);
+    setTimeout(() => setCopied(false), 2000);
+  }, [copied]);
+
+  const closeMobileMenu = useCallback(() => {
+    setIsMobileMenuOpen(false);
+    menuToggleRef.current?.focus();
+  }, []);
 
   useEffect(() => {
+    if (!isMobileMenuOpen) return;
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === "Escape") closeMobileMenu();
+    };
+    document.addEventListener("keydown", handleKeyDown);
+    return () => document.removeEventListener("keydown", handleKeyDown);
+  }, [isMobileMenuOpen, closeMobileMenu]);
+
+  useEffect(() => {
+    if (isMobileMenuOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+    }
+    return () => { document.body.style.overflow = ""; };
+  }, [isMobileMenuOpen]);
+
+  useEffect(() => {
+    let lastScrolled = false;
     const handleScroll = () => {
       cancelAnimationFrame(rafRef.current);
       rafRef.current = requestAnimationFrame(() => {
-        setIsScrolled(window.scrollY > 50);
+        const scrolled = window.scrollY > 50;
+        if (scrolled !== lastScrolled) {
+          lastScrolled = scrolled;
+          setIsScrolled(scrolled);
+        }
       });
     };
     window.addEventListener("scroll", handleScroll, { passive: true });
@@ -28,17 +73,15 @@ export const Header = memo(function Header() {
     };
   }, []);
 
-  // Close mobile menu on route change
   useEffect(() => {
     setIsMobileMenuOpen(false);
   }, [pathname]);
 
   return (
     <>
-      {/* Skip to content — visible on focus for keyboard users */}
       <a
         href="#main"
-        className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-[60] focus:bg-[var(--accent-silver)] focus:text-[var(--bg-primary)] focus:px-4 focus:py-2 focus:font-mono focus:text-xs focus:uppercase focus:tracking-wider"
+        className="absolute -top-full left-4 z-[60] bg-[var(--accent-silver)] px-4 py-2 font-mono text-xs uppercase tracking-wider text-[var(--bg-primary)] focus:top-4"
       >
         Skip to content
       </a>
@@ -56,7 +99,6 @@ export const Header = memo(function Header() {
           aria-label="Main navigation"
           className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 md:h-20 md:px-8"
         >
-          {/* Logo */}
           <Link
             href="/"
             className="font-mono text-sm font-bold uppercase tracking-[0.15em] text-[var(--text-primary)]"
@@ -64,7 +106,6 @@ export const Header = memo(function Header() {
             {siteConfig.name}
           </Link>
 
-          {/* Desktop Nav */}
           <div className="hidden items-center gap-8 md:flex">
             {siteConfig.nav.map((item) => (
               <Link
@@ -80,36 +121,70 @@ export const Header = memo(function Header() {
                 {item.label}
               </Link>
             ))}
-            <Link
-              href="/contact"
-              className="border border-[var(--accent-silver)] px-5 py-2 font-mono text-xs uppercase tracking-[0.1em] text-[var(--accent-silver)] transition-colors hover:bg-[var(--accent-silver)] hover:text-[var(--bg-primary)] focus-visible:ring-2 focus-visible:ring-[var(--accent-silver)]/50 focus-visible:outline-none"
+
+            {/* Call Us — button swaps to "Copied!" on click */}
+            <button
+              onClick={handleCallUs}
+              className="group relative inline-flex h-9 items-center gap-2 overflow-hidden border border-[var(--accent-silver)] px-5 font-mono text-xs uppercase tracking-[0.1em] text-[var(--accent-silver)] transition-colors hover:bg-[var(--accent-silver)] hover:text-[var(--bg-primary)] focus-visible:ring-2 focus-visible:ring-[var(--accent-silver)]/50 focus-visible:outline-none"
+              aria-label={`Call us at ${siteConfig.studio.phone}`}
             >
-              Book Now
-            </Link>
+              {/* Default state */}
+              <span
+                className={`inline-flex items-center gap-2 transition-all duration-300 ${
+                  copied ? "-translate-y-8 opacity-0" : "translate-y-0 opacity-100"
+                }`}
+              >
+                <Phone size={12} />
+                Call Us
+              </span>
+              {/* Copied state — slides up from below */}
+              <span
+                className={`absolute inset-0 inline-flex items-center justify-center gap-2 bg-[var(--accent-silver)] text-[var(--bg-primary)] transition-all duration-300 ${
+                  copied ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"
+                }`}
+              >
+                <Check size={12} strokeWidth={3} />
+                Copied!
+              </span>
+            </button>
           </div>
 
-          {/* Mobile Menu Toggle — hidden on desktop, shown on mobile until bottom nav takes over */}
           <button
+            ref={menuToggleRef}
             className="flex h-11 w-11 items-center justify-center text-[var(--text-primary)] md:hidden"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             aria-label={isMobileMenuOpen ? "Close menu" : "Open menu"}
             aria-expanded={isMobileMenuOpen}
+            aria-controls="mobile-menu"
           >
             {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
         </nav>
       </header>
 
-      {/* Mobile Full-Screen Menu */}
       <AnimatePresence>
         {isMobileMenuOpen && (
           <motion.div
+            ref={menuRef}
+            id="mobile-menu"
+            role="dialog"
+            aria-modal="true"
+            aria-label="Navigation menu"
             className="fixed inset-0 z-40 flex flex-col items-center justify-center bg-[var(--bg-primary)] md:hidden"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.3 }}
           >
+            <button
+              onClick={closeMobileMenu}
+              className="absolute top-4 right-4 flex h-11 w-11 items-center justify-center text-[var(--text-primary)]"
+              aria-label="Close menu"
+              autoFocus
+            >
+              <X size={24} />
+            </button>
+
             <nav className="flex flex-col items-center gap-8">
               {siteConfig.nav.map((item, i) => (
                 <motion.div
@@ -126,7 +201,7 @@ export const Header = memo(function Header() {
                         ? "text-[var(--text-primary)]"
                         : "text-[var(--text-tertiary)] hover:text-[var(--text-primary)]"
                     )}
-                    onClick={() => setIsMobileMenuOpen(false)}
+                    onClick={closeMobileMenu}
                   >
                     {item.label}
                   </Link>
@@ -136,6 +211,12 @@ export const Header = memo(function Header() {
           </motion.div>
         )}
       </AnimatePresence>
+
+      <CopyToast
+        message={siteConfig.studio.phone}
+        visible={showToast}
+        onDone={() => setShowToast(false)}
+      />
     </>
   );
 });

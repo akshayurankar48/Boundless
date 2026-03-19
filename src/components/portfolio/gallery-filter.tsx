@@ -15,12 +15,19 @@ export function GalleryFilter({ active, onChange }: GalleryFilterProps) {
       {/* Fade hint for horizontal scroll on mobile */}
       <div className="pointer-events-none absolute right-0 top-0 bottom-0 z-10 w-8 bg-gradient-to-l from-[var(--bg-primary)] to-transparent md:hidden" />
       {/* Mobile: horizontally scrollable */}
-      <div className="flex gap-2 overflow-x-auto pb-2 scrollbar-hide md:flex-wrap md:justify-center md:gap-3 md:overflow-visible md:pb-0">
+      <div
+        role="tablist"
+        aria-label="Filter by style"
+        className="flex gap-2 overflow-x-auto pb-2 scrollbar-hide md:flex-wrap md:justify-center md:gap-3 md:overflow-visible md:pb-0"
+      >
         {portfolioCategories.map((cat) => {
           const isActive = active === cat.value;
           return (
             <button
               key={cat.value}
+              role="tab"
+              aria-selected={isActive}
+              aria-controls="gallery-grid"
               onClick={() => onChange(cat.value)}
               className={cn(
                 "relative shrink-0 px-5 py-2 font-mono text-xs uppercase tracking-[0.15em] transition-colors",

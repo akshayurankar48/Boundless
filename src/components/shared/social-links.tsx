@@ -52,7 +52,7 @@ export function SocialLinks({ className, iconSize = 20 }: SocialLinksProps) {
           href={link.href}
           target="_blank"
           rel="noopener noreferrer"
-          aria-label={link.label}
+          aria-label={`${link.label} (opens in new window)`}
           className="text-[var(--text-tertiary)] transition-colors hover:text-[var(--accent-silver)]"
         >
           <link.icon size={iconSize} />

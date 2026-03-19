@@ -1,8 +1,10 @@
 "use client";
 
 import { useState, useMemo, useCallback, useTransition } from "react";
+import { useSearchParams, useRouter } from "next/navigation";
 import {
   portfolioItems,
+  portfolioCategories,
   type PortfolioCategory,
 } from "@/data/portfolio";
 import { GalleryFilter } from "@/components/portfolio/gallery-filter";
@@ -12,8 +14,20 @@ import { GallerySkeleton } from "@/components/portfolio/gallery-skeleton";
 
 const INITIAL_COUNT = 8;
 
+const validCategories = new Set(portfolioCategories.map((c) => c.value));
+
+function getCategoryFromParams(params: URLSearchParams): PortfolioCategory {
+  const cat = params.get("category");
+  if (cat && validCategories.has(cat as PortfolioCategory)) {
+    return cat as PortfolioCategory;
+  }
+  return "all";
+}
+
 export function PortfolioContent() {
-  const [activeCategory, setActiveCategory] = useState<PortfolioCategory>("all");
+  const searchParams = useSearchParams();
+  const router = useRouter();
+  const activeCategory = getCategoryFromParams(searchParams);
   const [lightboxIndex, setLightboxIndex] = useState<number | null>(null);
   const [showAll, setShowAll] = useState(false);
   const [isFiltering, startFilterTransition] = useTransition();
@@ -28,11 +42,13 @@ export function PortfolioContent() {
 
   const handleCategoryChange = useCallback((cat: PortfolioCategory) => {
     startFilterTransition(() => {
-      setActiveCategory(cat);
+      const params = new URLSearchParams();
+      if (cat !== "all") params.set("category", cat);
+      router.replace(`/portfolio${params.toString() ? `?${params}` : ""}`, { scroll: false });
       setShowAll(false);
       setLightboxIndex(null);
     });
-  }, []);
+  }, [router]);
 
   const handleItemClick = useCallback((index: number) => {
     setLightboxIndex(index);
@@ -49,11 +65,19 @@ export function PortfolioContent() {
   return (
     <>
       <GalleryFilter active={activeCategory} onChange={handleCategoryChange} />
-      {isFiltering ? (
-        <GallerySkeleton />
-      ) : (
-        <GalleryGrid items={visibleItems} onItemClick={handleItemClick} />
-      )}
+
+      {/* Live region for filter changes */}
+      <div className="sr-only" aria-live="polite" aria-atomic="true">
+        {`Showing ${filtered.length} ${activeCategory === "all" ? "" : activeCategory + " "}piece${filtered.length !== 1 ? "s" : ""}`}
+      </div>
+
+      <div id="gallery-grid" role="tabpanel">
+        {isFiltering ? (
+          <GallerySkeleton />
+        ) : (
+          <GalleryGrid items={visibleItems} onItemClick={handleItemClick} />
+        )}
+      </div>
 
       {hasMore && (
         <div className="mt-12 flex justify-center">

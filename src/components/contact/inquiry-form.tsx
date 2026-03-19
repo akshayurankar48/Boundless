@@ -49,6 +49,7 @@ export function InquiryForm() {
   const [images, setImages] = useState<ImagePreview[]>([]);
   const [imageError, setImageError] = useState("");
   const fileInputRef = useRef<HTMLInputElement>(null);
+  const formRef = useRef<HTMLFormElement>(null);
 
   // Render Turnstile widget when the script is loaded and site key is available
   const turnstileRef = useCallback((node: HTMLDivElement | null) => {
@@ -146,6 +147,15 @@ export function InquiryForm() {
         }
       }
       setErrors(fieldErrors);
+      // Scroll to the first field with an error
+      const firstErrorField = Object.keys(fieldErrors)[0];
+      if (firstErrorField && formRef.current) {
+        const el = formRef.current.querySelector(`[name="${firstErrorField}"]`);
+        if (el instanceof HTMLElement) {
+          el.scrollIntoView({ behavior: "smooth", block: "center" });
+          el.focus();
+        }
+      }
       return;
     }
 
@@ -238,7 +248,7 @@ export function InquiryForm() {
   }
 
   return (
-    <form onSubmit={handleSubmit} className="space-y-6" noValidate>
+    <form ref={formRef} onSubmit={handleSubmit} className="space-y-6" noValidate>
       {/* Name */}
       <div>
         <label
