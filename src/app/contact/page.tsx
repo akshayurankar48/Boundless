@@ -3,16 +3,8 @@ import { MapPin, Phone, Mail, Clock } from "lucide-react";
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
 import { MobileBottomNav } from "@/components/layout/mobile-bottom-nav";
-import { SectionHeading } from "@/components/shared/section-heading";
-import { MapPlaceholder } from "@/components/shared/map-placeholder";
 import { ScrollReveal } from "@/components/animations/scroll-reveal";
 import { InquiryForm } from "@/components/contact/inquiry-form";
-import {
-  Accordion,
-  AccordionItem,
-  AccordionTrigger,
-  AccordionContent,
-} from "@/components/ui/accordion";
 import { siteConfig } from "@/data/site-config";
 import { faqItems } from "@/data/faq";
 
@@ -89,10 +81,28 @@ function StudioInfo() {
           </div>
         </div>
       </div>
-
-      {/* Map */}
-      <MapPlaceholder className="h-48 rounded-lg" />
     </div>
+  );
+}
+
+function FaqCard({ index, question, answer }: { index: number; question: string; answer: string }) {
+  return (
+    <ScrollReveal delay={0.05 * index}>
+      <div className="group relative border-t border-[var(--border-default)] py-8 transition-colors hover:border-[var(--accent-silver)]/30">
+        {/* Number */}
+        <span className="mb-4 block font-serif text-3xl font-bold text-[var(--accent-silver)]/20 transition-colors group-hover:text-[var(--accent-silver)]/40 md:text-4xl">
+          {String(index + 1).padStart(2, "0")}
+        </span>
+        {/* Question */}
+        <h3 className="mb-3 font-serif text-lg text-[var(--text-primary)] md:text-xl">
+          {question}
+        </h3>
+        {/* Answer */}
+        <p className="max-w-prose text-sm leading-relaxed text-[var(--text-secondary)]">
+          {answer}
+        </p>
+      </div>
+    </ScrollReveal>
   );
 }
 
@@ -126,33 +136,37 @@ export default function ContactPage() {
           </div>
         </section>
 
-        {/* FAQ Section */}
+        {/* FAQ Section — numbered card grid */}
         <section className="border-t border-[var(--border-default)] bg-[var(--bg-secondary)]">
-          <div className="mx-auto max-w-3xl px-4 py-16 md:px-8 md:py-24">
-            <SectionHeading
-              label="FAQ"
-              title="Common Questions"
-              description="Everything you need to know before booking your session."
-              align="center"
-            />
-
-            <ScrollReveal delay={0.1}>
-              <Accordion className="divide-y-0">
-                {faqItems.map((item, index) => (
-                  <AccordionItem
-                    key={index}
-                    className="border-[var(--border-default)] py-1"
-                  >
-                    <AccordionTrigger className="py-4 text-base font-medium text-[var(--text-primary)] hover:no-underline hover:text-[var(--accent-silver)]">
-                      {item.question}
-                    </AccordionTrigger>
-                    <AccordionContent className="text-[var(--text-secondary)]">
-                      <p>{item.answer}</p>
-                    </AccordionContent>
-                  </AccordionItem>
-                ))}
-              </Accordion>
+          <div className="mx-auto max-w-7xl px-4 py-16 md:px-8 md:py-24">
+            {/* Header */}
+            <ScrollReveal>
+              <div className="mb-12 md:mb-16">
+                <p className="mb-3 font-mono text-xs uppercase tracking-[0.2em] text-[var(--accent-silver)]">
+                  Before You Visit
+                </p>
+                <div className="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
+                  <h2 className="text-h2 font-serif font-bold text-[var(--text-primary)]">
+                    Questions &amp; Answers
+                  </h2>
+                  <p className="max-w-xs text-sm text-[var(--text-tertiary)] md:text-right">
+                    Everything you need to know before your session
+                  </p>
+                </div>
+              </div>
             </ScrollReveal>
+
+            {/* Two-column numbered grid */}
+            <div className="grid gap-x-16 md:grid-cols-2 lg:gap-x-24">
+              {faqItems.map((item, i) => (
+                <FaqCard
+                  key={i}
+                  index={i}
+                  question={item.question}
+                  answer={item.answer}
+                />
+              ))}
+            </div>
           </div>
         </section>
       </main>

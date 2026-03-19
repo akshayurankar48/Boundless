@@ -45,39 +45,6 @@ const styleShowcase = [
   },
 ];
 
-const milestones = [
-  {
-    year: "2014",
-    title: "The First Line",
-    description:
-      "Began apprenticeship under master tattooist in Brooklyn. Two years of intensive study in traditional and contemporary techniques.",
-  },
-  {
-    year: "2016",
-    title: "Going Solo",
-    description:
-      "Completed apprenticeship and began independent practice, quickly building a reputation for meticulous black and gray realism.",
-  },
-  {
-    year: "2019",
-    title: "Vanguard Ink Founded",
-    description:
-      "Opened the studio on Mercer Street with a vision to create a sanctuary where clinical precision meets artistic transcendence.",
-  },
-  {
-    year: "2022",
-    title: "Industry Recognition",
-    description:
-      "Awarded 'Best Black & Gray Realism' at the NYC Tattoo Convention. Featured in multiple international tattoo publications.",
-  },
-  {
-    year: "2025",
-    title: "500+ Pieces Complete",
-    description:
-      "Reached the milestone of 500 completed works, each one a unique collaboration between artist and collector.",
-  },
-];
-
 export function ArtistContent() {
   const { artist, stats } = siteConfig;
 
@@ -249,58 +216,6 @@ export function ArtistContent() {
                 Client Satisfaction
               </p>
             </ScrollReveal>
-          </div>
-        </div>
-      </section>
-
-      {/* Timeline */}
-      <section className="bg-[var(--bg-primary)] py-24 md:py-32">
-        <div className="mx-auto max-w-7xl px-4 md:px-8">
-          <SectionHeading
-            label="The Journey"
-            title="Milestones"
-            align="center"
-          />
-
-          <div className="relative">
-            {/* Vertical line */}
-            <div className="absolute left-4 top-0 bottom-0 w-px bg-[var(--border-default)] md:left-1/2 md:-translate-x-px" />
-
-            <div className="space-y-12 md:space-y-16">
-              {milestones.map((milestone, i) => {
-                const isEven = i % 2 === 0;
-                return (
-                  <ScrollReveal
-                    key={milestone.year}
-                    delay={i * 0.1}
-                    direction={isEven ? "left" : "right"}
-                  >
-                    <div className="relative pl-12 md:pl-0">
-                      {/* Dot */}
-                      <div className="absolute left-[13px] top-1 h-2 w-2 bg-[var(--accent-silver)] md:left-1/2 md:-translate-x-1" />
-
-                      <div
-                        className={`md:w-[45%] ${
-                          isEven
-                            ? "md:mr-auto md:pr-12 md:text-right"
-                            : "md:ml-auto md:pl-12"
-                        }`}
-                      >
-                        <p className="font-mono text-sm font-bold text-[var(--accent-silver)]">
-                          {milestone.year}
-                        </p>
-                        <h3 className="mt-1 font-serif text-xl font-bold text-[var(--text-primary)]">
-                          {milestone.title}
-                        </h3>
-                        <p className="mt-2 text-sm leading-relaxed text-[var(--text-secondary)]">
-                          {milestone.description}
-                        </p>
-                      </div>
-                    </div>
-                  </ScrollReveal>
-                );
-              })}
-            </div>
           </div>
         </div>
       </section>

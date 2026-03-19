@@ -49,7 +49,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
 export default async function PortfolioDetailPage({ params }: Props) {
   const { slug } = await params;
-  const item = portfolioItems.find((p) => p.slug === slug);
+  const itemIndex = portfolioItems.findIndex((p) => p.slug === slug);
+  const item = portfolioItems[itemIndex];
 
   if (!item) {
     notFound();
@@ -59,11 +60,19 @@ export default async function PortfolioDetailPage({ params }: Props) {
     .filter((p) => p.category === item.category && p.slug !== item.slug)
     .slice(0, 4);
 
+  const prevItem = itemIndex > 0 ? portfolioItems[itemIndex - 1] : null;
+  const nextItem = itemIndex < portfolioItems.length - 1 ? portfolioItems[itemIndex + 1] : null;
+
   return (
     <>
       <Header />
       <main id="main" className="min-h-screen pt-20 pb-20 md:pb-0">
-        <PortfolioDetail item={item} relatedItems={relatedItems} />
+        <PortfolioDetail
+          item={item}
+          relatedItems={relatedItems}
+          prevItem={prevItem}
+          nextItem={nextItem}
+        />
       </main>
       <Footer />
       <MobileBottomNav />

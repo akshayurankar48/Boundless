@@ -3,7 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { ArrowLeft, ArrowUpRight } from "lucide-react";
+import { ArrowLeft, ArrowRight, ArrowUpRight, ChevronRight } from "lucide-react";
 import type { PortfolioItem } from "@/data/portfolio";
 import { ScrollReveal } from "@/components/animations/scroll-reveal";
 import { ScrollProgress } from "@/components/animations/scroll-progress";
@@ -11,9 +11,11 @@ import { ScrollProgress } from "@/components/animations/scroll-progress";
 type PortfolioDetailProps = {
   item: PortfolioItem;
   relatedItems: PortfolioItem[];
+  prevItem?: PortfolioItem | null;
+  nextItem?: PortfolioItem | null;
 };
 
-export function PortfolioDetail({ item, relatedItems }: PortfolioDetailProps) {
+export function PortfolioDetail({ item, relatedItems, prevItem, nextItem }: PortfolioDetailProps) {
   return (
     <article>
       <ScrollProgress />
@@ -37,23 +39,33 @@ export function PortfolioDetail({ item, relatedItems }: PortfolioDetailProps) {
 
       {/* Content */}
       <div className="mx-auto max-w-4xl px-4 md:px-8">
-        {/* Back link */}
-        <motion.div
-          initial={{ opacity: 0, x: -10 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.4, delay: 0.1 }}
+        {/* Breadcrumb */}
+        <motion.nav
+          aria-label="Breadcrumb"
+          initial={{ opacity: 0, y: -5 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.3, delay: 0.05 }}
+          className="-mt-8 mb-6"
         >
-          <Link
-            href="/portfolio"
-            className="group/back -mt-8 mb-8 inline-flex items-center gap-2 font-mono text-xs uppercase tracking-[0.15em] text-[var(--text-tertiary)] transition-colors hover:text-[var(--text-primary)]"
-          >
-            <ArrowLeft
-              size={14}
-              className="transition-transform group-hover/back:-translate-x-1"
-            />
-            Back to Portfolio
-          </Link>
-        </motion.div>
+          <ol className="flex items-center gap-1 font-mono text-xs uppercase tracking-[0.1em]">
+            <li>
+              <Link href="/portfolio" className="text-[var(--text-tertiary)] transition-colors hover:text-[var(--text-primary)]">
+                Portfolio
+              </Link>
+            </li>
+            <li><ChevronRight size={12} className="text-[var(--text-tertiary)]" /></li>
+            <li>
+              <Link
+                href={`/portfolio?category=${item.category}`}
+                className="text-[var(--text-tertiary)] transition-colors hover:text-[var(--text-primary)]"
+              >
+                {item.category.replace("-", " ")}
+              </Link>
+            </li>
+            <li><ChevronRight size={12} className="text-[var(--text-tertiary)]" /></li>
+            <li className="text-[var(--text-primary)]">{item.title}</li>
+          </ol>
+        </motion.nav>
 
         {/* Heading */}
         <ScrollReveal>
@@ -86,6 +98,42 @@ export function PortfolioDetail({ item, relatedItems }: PortfolioDetailProps) {
             </p>
           </div>
         </ScrollReveal>
+
+        {/* Prev / Next Navigation */}
+        {(prevItem || nextItem) && (
+          <ScrollReveal delay={0.2}>
+            <div className="mt-12 grid grid-cols-2 gap-4 border-t border-[var(--border-default)] pt-10">
+              {prevItem ? (
+                <Link
+                  href={`/portfolio/${prevItem.slug}`}
+                  className="group flex items-center gap-3 text-left"
+                >
+                  <ArrowLeft size={16} className="shrink-0 text-[var(--text-tertiary)] transition-transform group-hover:-translate-x-1" />
+                  <div>
+                    <p className="font-mono text-[10px] uppercase tracking-[0.15em] text-[var(--text-tertiary)]">Previous</p>
+                    <p className="mt-1 font-serif text-sm text-[var(--text-primary)] transition-colors group-hover:text-[var(--accent-silver)]">
+                      {prevItem.title}
+                    </p>
+                  </div>
+                </Link>
+              ) : <div />}
+              {nextItem ? (
+                <Link
+                  href={`/portfolio/${nextItem.slug}`}
+                  className="group flex items-center justify-end gap-3 text-right"
+                >
+                  <div>
+                    <p className="font-mono text-[10px] uppercase tracking-[0.15em] text-[var(--text-tertiary)]">Next</p>
+                    <p className="mt-1 font-serif text-sm text-[var(--text-primary)] transition-colors group-hover:text-[var(--accent-silver)]">
+                      {nextItem.title}
+                    </p>
+                  </div>
+                  <ArrowRight size={16} className="shrink-0 text-[var(--text-tertiary)] transition-transform group-hover:translate-x-1" />
+                </Link>
+              ) : <div />}
+            </div>
+          </ScrollReveal>
+        )}
 
         {/* CTA */}
         <ScrollReveal delay={0.2}>
