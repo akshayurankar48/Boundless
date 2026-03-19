@@ -71,8 +71,10 @@ export default function RootLayout({
       <head>
         <link rel="dns-prefetch" href="https://images.unsplash.com" />
         <link rel="preconnect" href="https://images.unsplash.com" crossOrigin="anonymous" />
-        {/* Hero poster image preload for instant visual */}
-        <link rel="preload" href="/images/hero/poster.jpg" as="image" />
+        {/* Hero poster image preload for instant LCP */}
+        <link rel="preload" href="/images/hero/poster.jpg" as="image" fetchPriority="high" />
+        {/* Hero video preload — WebM preferred, MP4 fallback */}
+        <link rel="preload" href="/videos/hero-ambient.webm" as="video" type="video/webm" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -92,7 +94,7 @@ export default function RootLayout({
         </TooltipProvider>
         <script
           dangerouslySetInnerHTML={{
-            __html: `if('serviceWorker' in navigator){window.addEventListener('load',()=>{navigator.serviceWorker.register('/sw.js')})}`,
+            __html: `if(typeof window!=='undefined'&&'serviceWorker' in navigator){window.addEventListener('load',function(){navigator.serviceWorker.register('/sw.js').catch(function(){})})}`,
           }}
         />
       </body>

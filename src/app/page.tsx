@@ -2,18 +2,12 @@ import dynamic from "next/dynamic";
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
 import { MobileBottomNav } from "@/components/layout/mobile-bottom-nav";
+import { HeroSection } from "@/components/hero/hero-section";
 import { ArtistIntro } from "@/components/sections/artist-intro";
 import { ProcessSteps } from "@/components/sections/process-steps";
 import { StudioPreview } from "@/components/sections/studio-preview";
 import { CTABanner } from "@/components/sections/cta-banner";
 import { LazySection } from "@/components/shared/lazy-section";
-
-const HeroSection = dynamic(
-  () =>
-    import("@/components/hero/hero-section").then((mod) => ({
-      default: mod.HeroSection,
-    }))
-);
 
 const FeaturedWork = dynamic(
   () =>

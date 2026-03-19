@@ -15,7 +15,7 @@ const nextConfig: NextConfig = {
   headers: async () => [
     {
       // Static assets (fonts, images, videos) — immutable long-term cache
-      source: "/:path*(svg|jpg|jpeg|png|webp|avif|ico|woff|woff2|ttf|mp4|mov)",
+      source: "/:path*(svg|jpg|jpeg|png|webp|avif|ico|woff|woff2|ttf|mp4)",
       headers: [
         {
           key: "Cache-Control",
@@ -63,7 +63,7 @@ const nextConfig: NextConfig = {
           key: "Content-Security-Policy",
           value: [
             "default-src 'self'",
-            "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://challenges.cloudflare.com",
+            "script-src 'self' 'unsafe-inline' https://challenges.cloudflare.com",
             "style-src 'self' 'unsafe-inline'",
             "img-src 'self' data: blob: https://images.unsplash.com",
             "font-src 'self'",

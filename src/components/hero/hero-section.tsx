@@ -11,8 +11,8 @@ import { registerGSAP } from "@/hooks/use-gsap";
 export function HeroSection() {
   const headlineRef = useRef<HTMLHeadingElement>(null);
   const videoRef = useRef<HTMLVideoElement>(null);
-  const [videoFailed, setVideoFailed] = useState(false);
   const prefersReducedMotion = useReducedMotion();
+  const [videoFailed, setVideoFailed] = useState(false);
 
   useEffect(() => {
     if (prefersReducedMotion || typeof window === "undefined") return;
@@ -24,13 +24,6 @@ export function HeroSection() {
       gsap.registerPlugin(ScrollTrigger);
 
       const tl = gsap.timeline({ defaults: { ease: "power3.out" }, delay: 0.3 });
-
-      // Logo fade in
-      tl.fromTo(
-        ".hero-logo",
-        { opacity: 0, y: -20 },
-        { opacity: 1, y: 0, duration: 1.0 }
-      );
 
       // Label reveal
       tl.fromTo(
@@ -101,22 +94,23 @@ export function HeroSection() {
     <section className="hero-container relative flex h-screen items-center justify-center overflow-hidden">
       {/* Background video with image fallback */}
       <div className="hero-bg absolute inset-0 z-0">
-        {!videoFailed && (
+        {!videoFailed && !prefersReducedMotion && (
           <video
             ref={videoRef}
             autoPlay
             muted
             loop
             playsInline
-            preload="none"
+            preload="metadata"
             poster="/images/hero/poster.jpg"
             onError={() => setVideoFailed(true)}
             className="absolute inset-0 h-full w-full object-cover opacity-60"
           >
+            <source src="/videos/hero-ambient.webm" type="video/webm" />
             <source src="/videos/hero-ambient.mp4" type="video/mp4" />
           </video>
         )}
-        {videoFailed && (
+        {(videoFailed || prefersReducedMotion) && (
           <div
             className="absolute inset-0 opacity-60"
             style={{
