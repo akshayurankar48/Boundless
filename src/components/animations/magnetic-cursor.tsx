@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef, useEffect, useState, useCallback } from "react";
+import { useRef, useEffect } from "react";
 import { useReducedMotion } from "@/hooks/use-reduced-motion";
 import { useIsMobile } from "@/hooks/use-media-query";
 import { registerGSAP } from "@/hooks/use-gsap";
@@ -9,32 +9,47 @@ export function MagneticCursor() {
   const cursorRef = useRef<HTMLDivElement>(null);
   const prefersReducedMotion = useReducedMotion();
   const isMobile = useIsMobile();
-  const [isVisible, setIsVisible] = useState(false);
-  const [isHovering, setIsHovering] = useState(false);
-
-  const handleMouseEnter = useCallback(() => setIsVisible(true), []);
-  const handleMouseLeave = useCallback(() => setIsVisible(false), []);
 
   useEffect(() => {
     if (prefersReducedMotion || isMobile || typeof window === "undefined") return;
     registerGSAP();
 
-    let quickToX: ReturnType<typeof import("gsap").default.quickTo> | undefined;
-    let quickToY: ReturnType<typeof import("gsap").default.quickTo> | undefined;
+    let cleanup: (() => void) | undefined;
 
     const init = async () => {
       const gsap = (await import("gsap")).default;
+      const el = cursorRef.current;
+      if (!el) return;
 
-      if (!cursorRef.current) return;
+      // Use GSAP quickTo for position — no React state, no re-renders
+      const quickToX = gsap.quickTo(el, "x", { duration: 0.25, ease: "power2.out" });
+      const quickToY = gsap.quickTo(el, "y", { duration: 0.25, ease: "power2.out" });
 
-      quickToX = gsap.quickTo(cursorRef.current, "x", {
-        duration: 0.3,
-        ease: "power2.out",
-      });
-      quickToY = gsap.quickTo(cursorRef.current, "y", {
-        duration: 0.3,
-        ease: "power2.out",
-      });
+      // Track hover state without React — mutate DOM directly
+      let hovering = false;
+      let visible = false;
+
+      const setCursorStyle = (hover: boolean) => {
+        if (hover === hovering) return;
+        hovering = hover;
+        if (hover) {
+          el.style.width = "40px";
+          el.style.height = "40px";
+          el.style.borderWidth = "1px";
+          el.style.backgroundColor = "transparent";
+        } else {
+          el.style.width = "8px";
+          el.style.height = "8px";
+          el.style.borderWidth = "2px";
+          el.style.backgroundColor = "var(--accent-silver)";
+        }
+      };
+
+      const setVisible = (v: boolean) => {
+        if (v === visible) return;
+        visible = v;
+        el.style.opacity = v ? "1" : "0";
+      };
 
       const onMouseMove = (e: MouseEvent) => {
         const target = e.target as HTMLElement | null;
@@ -48,12 +63,11 @@ export function MagneticCursor() {
           const centerY = rect.top + rect.height / 2;
           const distX = e.clientX - centerX;
           const distY = e.clientY - centerY;
-
-          quickToX?.(centerX + distX * 0.3 - 4);
-          quickToY?.(centerY + distY * 0.3 - 4);
+          quickToX(centerX + distX * 0.3 - 4);
+          quickToY(centerY + distY * 0.3 - 4);
         } else {
-          quickToX?.(e.clientX - 4);
-          quickToY?.(e.clientY - 4);
+          quickToX(e.clientX - 4);
+          quickToY(e.clientY - 4);
         }
 
         const isInteractive = !!(
@@ -62,29 +76,27 @@ export function MagneticCursor() {
           target.closest("[data-cursor='pointer']") ||
           target.closest("[data-cursor='magnetic']")
         );
-        setIsHovering(isInteractive);
+        setCursorStyle(isInteractive);
       };
 
-      document.addEventListener("mousemove", onMouseMove);
-      document.addEventListener("mouseenter", handleMouseEnter);
-      document.addEventListener("mouseleave", handleMouseLeave);
+      const onEnter = () => setVisible(true);
+      const onLeave = () => setVisible(false);
 
-      return () => {
+      document.addEventListener("mousemove", onMouseMove, { passive: true });
+      document.addEventListener("mouseenter", onEnter);
+      document.addEventListener("mouseleave", onLeave);
+
+      cleanup = () => {
         document.removeEventListener("mousemove", onMouseMove);
-        document.removeEventListener("mouseenter", handleMouseEnter);
-        document.removeEventListener("mouseleave", handleMouseLeave);
+        document.removeEventListener("mouseenter", onEnter);
+        document.removeEventListener("mouseleave", onLeave);
       };
     };
 
-    let cleanup: (() => void) | undefined;
-    init().then((c) => {
-      cleanup = c;
-    });
+    init();
 
-    return () => {
-      cleanup?.();
-    };
-  }, [prefersReducedMotion, isMobile, handleMouseEnter, handleMouseLeave]);
+    return () => { cleanup?.(); };
+  }, [prefersReducedMotion, isMobile]);
 
   if (prefersReducedMotion || isMobile) return null;
 
@@ -99,15 +111,17 @@ export function MagneticCursor() {
       `}</style>
       <div
         ref={cursorRef}
-        className="pointer-events-none fixed left-0 top-0 z-50 mix-blend-difference transition-[width,height,border-width] duration-200 ease-out"
+        className="pointer-events-none fixed left-0 top-0 z-50 mix-blend-difference"
         style={{
-          width: isHovering ? 40 : 8,
-          height: isHovering ? 40 : 8,
+          width: 8,
+          height: 8,
           borderRadius: "50%",
-          border: `${isHovering ? 1 : 2}px solid var(--accent-silver)`,
-          opacity: isVisible ? 1 : 0,
+          border: "2px solid var(--accent-silver)",
+          opacity: 0,
           transform: "translate(-50%, -50%)",
-          backgroundColor: isHovering ? "transparent" : "var(--accent-silver)",
+          backgroundColor: "var(--accent-silver)",
+          transition: "width 0.15s ease-out, height 0.15s ease-out, border-width 0.15s ease-out, background-color 0.15s ease-out",
+          willChange: "transform",
         }}
         aria-hidden="true"
       />

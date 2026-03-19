@@ -1,8 +1,8 @@
-// Service Worker — Cache-first for static assets, network-first for pages
-const CACHE_NAME = "tattoo-studio-v1";
+// Service Worker — Cache-first for fonts/videos, stale-while-revalidate for images, network-first for pages
+const CACHE_NAME = "tattoo-studio-v2";
 const STATIC_ASSETS = [
+  "/videos/hero-ambient.webm",
   "/videos/hero-ambient.mp4",
-  "/videos/hero-ambient.mov",
 ];
 
 self.addEventListener("install", (event) => {
@@ -27,13 +27,12 @@ self.addEventListener("fetch", (event) => {
   const { request } = event;
   const url = new URL(request.url);
 
-  // Cache-first for static assets (images, fonts, videos, JS/CSS chunks)
+  // Cache-first for fonts, videos, and static chunks (immutable)
   if (
-    request.destination === "image" ||
     request.destination === "font" ||
     request.destination === "video" ||
     url.pathname.startsWith("/_next/static/") ||
-    /\.(mp4|mov|webp|avif|jpg|jpeg|png|woff2?|ttf|svg|ico)$/.test(url.pathname)
+    /\.(mp4|woff2?|ttf)$/.test(url.pathname)
   ) {
     event.respondWith(
       caches.match(request).then((cached) => {
@@ -46,6 +45,27 @@ self.addEventListener("fetch", (event) => {
           return response;
         });
       })
+    );
+    return;
+  }
+
+  // Stale-while-revalidate for images — serve cached, update in background
+  if (
+    request.destination === "image" ||
+    /\.(webp|avif|jpg|jpeg|png|svg|ico)$/.test(url.pathname)
+  ) {
+    event.respondWith(
+      caches.open(CACHE_NAME).then((cache) =>
+        cache.match(request).then((cached) => {
+          const fetchPromise = fetch(request).then((response) => {
+            if (response.ok) {
+              cache.put(request, response.clone());
+            }
+            return response;
+          });
+          return cached || fetchPromise;
+        })
+      )
     );
     return;
   }

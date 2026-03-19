@@ -1,9 +1,9 @@
 "use client";
 
-import { useRef, useCallback, useState } from "react";
+import { useRef, useCallback, useState, useEffect } from "react";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
-import { motion, animate } from "framer-motion";
+import { animate } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
 import type { PortfolioItem } from "@/data/portfolio";
 import { BLUR_PLACEHOLDER } from "@/lib/image-utils";
@@ -26,8 +26,24 @@ const aspectPatterns = [
 export function GalleryItem({ item, index, onClick }: GalleryItemProps) {
   const aspect = aspectPatterns[index % aspectPatterns.length];
   const imageContainerRef = useRef<HTMLDivElement>(null);
+  const itemRef = useRef<HTMLDivElement>(null);
   const router = useRouter();
   const [imgError, setImgError] = useState(false);
+
+  // CSS-based enter animation — no Framer Motion layout overhead
+  useEffect(() => {
+    const el = itemRef.current;
+    if (!el) return;
+    el.style.opacity = "0";
+    el.style.transform = "translateY(20px)";
+    const delay = Math.min(index * 60, 400);
+    const timer = setTimeout(() => {
+      el.style.transition = "opacity 0.4s ease-out, transform 0.4s ease-out";
+      el.style.opacity = "1";
+      el.style.transform = "translateY(0)";
+    }, delay);
+    return () => clearTimeout(timer);
+  }, [index]);
 
   const handleViewDetails = useCallback(
     (e: React.MouseEvent) => {
@@ -41,7 +57,6 @@ export function GalleryItem({ item, index, onClick }: GalleryItemProps) {
 
       const rect = el.getBoundingClientRect();
 
-      // Create a clone fixed to the viewport that expands to fill the screen
       const clone = el.cloneNode(true) as HTMLElement;
       clone.style.position = "fixed";
       clone.style.top = `${rect.top}px`;
@@ -55,7 +70,6 @@ export function GalleryItem({ item, index, onClick }: GalleryItemProps) {
       clone.style.pointerEvents = "none";
       document.body.appendChild(clone);
 
-      // Animate the clone to fill viewport
       animate(clone, {
         top: "0px",
         left: "0px",
@@ -66,10 +80,7 @@ export function GalleryItem({ item, index, onClick }: GalleryItemProps) {
         ease: [0.25, 0.1, 0.25, 1],
         onComplete: () => {
           router.push(`/portfolio/${item.slug}`);
-          // Clean up after navigation starts
-          setTimeout(() => {
-            clone.remove();
-          }, 100);
+          setTimeout(() => { clone.remove(); }, 100);
         },
       });
     },
@@ -77,28 +88,19 @@ export function GalleryItem({ item, index, onClick }: GalleryItemProps) {
   );
 
   return (
-    <motion.div
-      layout
-      initial={{ opacity: 0, y: 30 }}
-      animate={{ opacity: 1, y: 0 }}
-      exit={{ opacity: 0, y: -20 }}
-      transition={{
-        opacity: { duration: 0.4 },
-        y: { duration: 0.4 },
-        layout: { duration: 0.5, type: "spring", stiffness: 300, damping: 30 },
-      }}
+    <div
+      ref={itemRef}
       className="group mb-4 cursor-pointer break-inside-avoid"
       onClick={onClick}
     >
-      <motion.div
+      <div
         ref={imageContainerRef}
-        className={`relative overflow-hidden ${aspect}`}
-        whileHover={{ scale: 1.02 }}
-        transition={{ duration: 0.4, ease: [0.25, 0.1, 0.25, 1] }}
+        className={`relative overflow-hidden transition-transform duration-400 ease-[cubic-bezier(0.25,0.1,0.25,1)] hover:scale-[1.02] ${aspect}`}
       >
         {imgError ? (
-          <div className="absolute inset-0 flex items-center justify-center bg-[var(--bg-elevated)] text-[var(--text-tertiary)]">
+          <div className="absolute inset-0 flex flex-col items-center justify-center gap-2 bg-[var(--bg-elevated)] text-[var(--text-tertiary)]">
             <span className="font-mono text-xs uppercase tracking-wider">Image unavailable</span>
+            <span className="px-4 text-center font-serif text-sm text-[var(--text-tertiary)]">{item.title}</span>
           </div>
         ) : (
           <Image
@@ -125,7 +127,6 @@ export function GalleryItem({ item, index, onClick }: GalleryItemProps) {
             <p className="mt-1 font-mono text-xs text-[var(--text-tertiary)]">
               {item.placement}
             </p>
-            {/* View Details action */}
             <button
               onClick={handleViewDetails}
               className="mt-2 inline-flex items-center gap-1.5 font-mono text-[10px] uppercase tracking-[0.15em] text-[var(--accent-silver)] transition-colors hover:text-[var(--text-primary)]"
@@ -135,7 +136,7 @@ export function GalleryItem({ item, index, onClick }: GalleryItemProps) {
             </button>
           </div>
         </div>
-      </motion.div>
-    </motion.div>
+      </div>
+    </div>
   );
 }

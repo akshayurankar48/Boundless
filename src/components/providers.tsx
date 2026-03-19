@@ -2,14 +2,11 @@
 
 import dynamic from "next/dynamic";
 import { type ReactNode } from "react";
+import { PageTransition } from "@/components/animations/page-transition";
 
 // Heavy animation components — load after initial paint
 const Preloader = dynamic(
   () => import("@/components/animations/preloader").then((m) => m.Preloader),
-  { ssr: false }
-);
-const MagneticCursor = dynamic(
-  () => import("@/components/animations/magnetic-cursor").then((m) => m.MagneticCursor),
   { ssr: false }
 );
 
@@ -21,8 +18,7 @@ export default function Providers({ children }: ProvidersProps) {
   return (
     <>
       <Preloader />
-      <MagneticCursor />
-      {children}
+      <PageTransition>{children}</PageTransition>
     </>
   );
 }

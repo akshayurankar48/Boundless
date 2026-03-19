@@ -3,6 +3,7 @@
 import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
 import { useReducedMotion } from "@/hooks/use-reduced-motion";
+import { TIMING, EASING } from "@/lib/animation-config";
 
 type ScrollRevealProps = {
   children: React.ReactNode;
@@ -25,7 +26,7 @@ export function ScrollReveal({
   className,
   delay = 0,
   direction = "up",
-  duration = 0.7,
+  duration = TIMING.slow,
   once = true,
 }: ScrollRevealProps) {
   const ref = useRef(null);
@@ -36,8 +37,6 @@ export function ScrollReveal({
     return <div className={className}>{children}</div>;
   }
 
-  // Opacity stays at 1 always — content is never invisible.
-  // Only a subtle translate animates on scroll for polish.
   return (
     <motion.div
       ref={ref}
@@ -50,7 +49,7 @@ export function ScrollReveal({
       transition={{
         duration,
         delay,
-        ease: [0.25, 0.1, 0.25, 1],
+        ease: EASING.smooth,
       }}
     >
       {children}
