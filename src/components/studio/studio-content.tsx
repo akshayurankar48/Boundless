@@ -65,39 +65,16 @@ export function StudioContent() {
       {/* Philosophy */}
       <section className="bg-[var(--bg-primary)] py-24 md:py-32">
         <div className="mx-auto max-w-7xl px-4 md:px-8">
-          <div className="grid grid-cols-1 gap-12 md:grid-cols-2 md:gap-16">
-            <ScrollReveal direction="left">
-              <blockquote className="font-serif text-2xl leading-relaxed text-[var(--text-primary)] md:text-3xl lg:text-4xl">
-                &ldquo;A private studio setup designed for a calm, distraction-free tattoo experience
-                &mdash;  The space is maintained with proper hygiene, clean equipment, and a comfortable environment throughout your session.
-              </blockquote>
-              <p className="mt-6 font-mono text-xs uppercase tracking-[0.15em] text-[var(--accent-silver)]">
-                {siteConfig.artist.name}, Founder
+          <ScrollReveal>
+            <div className="mx-auto max-w-4xl space-y-8 text-center">
+              <p className="font-serif text-2xl leading-relaxed text-[var(--text-secondary)] md:text-3xl lg:text-4xl">
+                A private studio setup designed for a calm, distraction-free tattoo experience. The space is maintained with proper hygiene, clean equipment, and a comfortable environment throughout your session.
               </p>
-            </ScrollReveal>
-
-            <ScrollReveal direction="right">
-              <div className="space-y-4 text-base leading-relaxed text-[var(--text-secondary)]">
-                <p>
-                 
- 	
-I work on an appointment basis to give each client full attention without rush or crowd. Everything is kept simple, professional, and focused on doing the job right.
-                </p>
-                {/* <p>
-                  The studio operates on a private appointment basis, ensuring
-                  each client receives undivided attention in an environment free
-                  from distraction. Our clinical-grade sterilization protocols
-                  exceed industry standards, while the atmosphere remains warm,
-                  deliberate, and deeply personal.
-                </p> */}
-                {/* <p>
-                  This is where precision meets permanence. Where every session
-                  is a collaboration between artist and canvas, conducted in a
-                  space worthy of the work it produces.
-                </p> */}
-              </div>
-            </ScrollReveal>
-          </div>
+              <p className="font-serif text-2xl leading-relaxed text-[var(--text-secondary)] md:text-3xl lg:text-4xl">
+                Clean work, precise execution, and proper hygiene &mdash; every tattoo is done with care and professionalism.
+              </p>
+            </div>
+          </ScrollReveal>
         </div>
       </section>
 

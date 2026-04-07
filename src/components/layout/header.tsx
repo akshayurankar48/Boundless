@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useRef, useCallback, memo } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { Menu, X, Phone, Check } from "lucide-react";
 import { siteConfig } from "@/data/site-config";
@@ -96,13 +97,22 @@ export const Header = memo(function Header() {
         <nav
           role="navigation"
           aria-label="Main navigation"
-          className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 md:h-20 md:px-8"
+          className="mx-auto flex h-20 max-w-7xl items-center justify-between px-4 md:h-24 md:px-8"
         >
           <Link
             href="/"
-            className="font-mono text-sm font-bold uppercase tracking-[0.15em] text-[var(--text-primary)]"
+            className="flex items-center"
           >
-            {siteConfig.name}
+            <div className="relative w-auto">
+              <Image
+                src="/images/logo.png"
+                alt="BOUNDDLESS TATTOOO STUDIO"
+                width={250}
+                height={60}
+                className="h-14 w-auto object-contain md:h-16"
+                priority
+              />
+            </div>
           </Link>
 
           <div className="hidden items-center gap-8 md:flex">

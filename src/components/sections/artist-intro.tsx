@@ -64,7 +64,7 @@ export function ArtistIntro() {
             </div>
             <div>
               <p className="font-serif text-2xl font-bold text-[var(--text-primary)] md:text-3xl">
-                <Counter target={700} suffix="+" />
+                <Counter target={4000} suffix="+" />
               </p>
               <p className="mt-1 font-mono text-[10px] uppercase tracking-[0.15em] text-[var(--text-tertiary)]">
                 Tattoos crafted
