@@ -144,7 +144,12 @@ type TestimonialCardProps = {
 
 function TestimonialCard({ testimonial }: TestimonialCardProps) {
   return (
-    <div className="flex h-full flex-col border border-[var(--border-default)] bg-[var(--bg-secondary)] p-8">
+    <a
+      href={testimonial.link}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="group flex h-full flex-col border border-[var(--border-default)] bg-[var(--bg-secondary)] p-8 transition-all duration-300 hover:border-[var(--accent-silver)] hover:bg-[var(--bg-tertiary)]"
+    >
       <p className="mb-1 inline-block origin-left font-serif text-3xl text-[var(--accent-silver-muted)]">
         &ldquo;
       </p>
@@ -155,10 +160,10 @@ function TestimonialCard({ testimonial }: TestimonialCardProps) {
         <p className="font-mono text-xs font-semibold uppercase tracking-wider text-[var(--text-primary)]">
           {testimonial.name}
         </p>
-        <p className="mt-1 font-mono text-[10px] uppercase tracking-wider text-[var(--text-tertiary)]">
+        <p className="mt-1 font-mono text-[10px] uppercase tracking-wider text-[var(--text-tertiary)] group-hover:text-[var(--accent-silver)]">
           {testimonial.tattooType}
         </p>
       </div>
-    </div>
+    </a>
   );
 }
