@@ -23,9 +23,8 @@ export const siteConfig = {
     },
   },
   social: {
-    instagram: "https://instagram.com/vanguardink",
-    tiktok: "https://tiktok.com/@vanguardink",
-    twitter: "https://x.com/vanguardink",
+    instagram: "https://www.instagram.com/boundlesstattoostudio?igsh=MXFhNXBzeDB5bTQzeQ%3D%3D&utm_source=qr",
+    facebook: "https://www.facebook.com/share/1HFwgcH1k2/",
   },
   nav: [
     { label: "Home", href: "/" },
