@@ -30,15 +30,15 @@ export default function PortfolioPage() {
       <main id="main" className="min-h-screen pt-20 pb-20 md:pb-0">
         <div className="mx-auto max-w-7xl px-4 py-16 md:px-8">
           <p className="mb-3 font-mono text-xs uppercase tracking-[0.2em] text-[var(--accent-silver)]">
-            The Archive
+             Our Portfolio
           </p>
           <h1 className="text-h1 font-serif font-bold text-[var(--text-primary)]">
-            Masterworks Curated.
+             Real work from our studio — focused on clean execution, solid detail, and consistent quality.
           </h1>
-          <p className="mt-4 max-w-lg text-base text-[var(--text-secondary)]">
+          {/* <p className="mt-4 max-w-lg text-base text-[var(--text-secondary)]">
             Every piece in our archive is selected for its technical perfection
             and visionary narrative.
-          </p>
+          </p> */}
         </div>
 
         <div className="mx-auto max-w-7xl px-4 pb-24 md:px-8">

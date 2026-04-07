@@ -54,7 +54,7 @@ export function StudioContent() {
               The Studio
             </p>
             <TextReveal
-              text="A Sanctuary of Precision"
+              text="Private, Clean & Focused"
               as="h1"
               className="text-h1 font-serif font-bold text-[var(--text-primary)]"
             />
@@ -68,9 +68,8 @@ export function StudioContent() {
           <div className="grid grid-cols-1 gap-12 md:grid-cols-2 md:gap-16">
             <ScrollReveal direction="left">
               <blockquote className="font-serif text-2xl leading-relaxed text-[var(--text-primary)] md:text-3xl lg:text-4xl">
-                &ldquo;We designed this space not as a shop, but as a sanctuary
-                &mdash; where the ritual of tattooing is elevated to its highest
-                form.&rdquo;
+                &ldquo;A private studio setup designed for a calm, distraction-free tattoo experience
+                &mdash;  The space is maintained with proper hygiene, clean equipment, and a comfortable environment throughout your session.
               </blockquote>
               <p className="mt-6 font-mono text-xs uppercase tracking-[0.15em] text-[var(--accent-silver)]">
                 {siteConfig.artist.name}, Founder
@@ -80,24 +79,22 @@ export function StudioContent() {
             <ScrollReveal direction="right">
               <div className="space-y-4 text-base leading-relaxed text-[var(--text-secondary)]">
                 <p>
-                  Located at {studio.address} in the heart of {studio.city},
-                  BOUNDDLESS TATTOOO STUDIO was conceived by award-winning architects to
-                  provide a cinematic atmosphere that inspires both artist and
-                  collector. Every element &mdash; from the curated lighting to
-                  the acoustic design &mdash; exists to serve the craft.
+                 
+ 	
+I work on an appointment basis to give each client full attention without rush or crowd. Everything is kept simple, professional, and focused on doing the job right.
                 </p>
-                <p>
+                {/* <p>
                   The studio operates on a private appointment basis, ensuring
                   each client receives undivided attention in an environment free
                   from distraction. Our clinical-grade sterilization protocols
                   exceed industry standards, while the atmosphere remains warm,
                   deliberate, and deeply personal.
-                </p>
-                <p>
+                </p> */}
+                {/* <p>
                   This is where precision meets permanence. Where every session
                   is a collaboration between artist and canvas, conducted in a
                   space worthy of the work it produces.
-                </p>
+                </p> */}
               </div>
             </ScrollReveal>
           </div>

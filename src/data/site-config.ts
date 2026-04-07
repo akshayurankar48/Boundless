@@ -30,7 +30,7 @@ export const siteConfig = {
   nav: [
     { label: "Home", href: "/" },
     { label: "Portfolio", href: "/portfolio" },
-    { label: "Studio", href: "/studio" },
+    { label: "The Space", href: "/space" },
     { label: "Artist", href: "/artist" },
     { label: "Contact", href: "/contact" },
   ],
