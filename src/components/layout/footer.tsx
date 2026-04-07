@@ -27,8 +27,7 @@ export function Footer() {
             <div className="space-y-2 text-sm text-[var(--text-secondary)]">
               <p>{siteConfig.studio.address}</p>
               <p>
-                {siteConfig.studio.city}, {siteConfig.studio.state}{" "}
-                {siteConfig.studio.zip}
+                {siteConfig.studio.city} {siteConfig.studio.zip}
               </p>
               <p className="pt-2">
                 <a

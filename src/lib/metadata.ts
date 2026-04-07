@@ -19,9 +19,8 @@ export function getLocalBusinessSchema() {
       "@type": "PostalAddress",
       streetAddress: studio.address,
       addressLocality: studio.city,
-      addressRegion: studio.state,
       postalCode: studio.zip,
-      addressCountry: "US",
+      addressCountry: "IN",
     },
     geo: {
       "@type": "GeoCoordinates",

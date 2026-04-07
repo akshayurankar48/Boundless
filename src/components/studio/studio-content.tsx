@@ -209,7 +209,7 @@ I work on an appointment basis to give each client full attention without rush o
                       {studio.address}
                     </p>
                     <p className="text-base text-[var(--text-secondary)]">
-                      {studio.city}, {studio.state} {studio.zip}
+                      {studio.city} {studio.zip}
                     </p>
                   </div>
                 </div>

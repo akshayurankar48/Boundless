@@ -16,7 +16,7 @@ export const siteConfig = {
     // state: "NY",
     zip: "580030",
     phone: "+918861424753",
-    email: "bounddlesstattoostudio@gmail.com",
+    email: "akshayurankar48@gmail.com",
     hours: {
       weekdays: "11:00 AM – 8:00 PM",
       sunday: "By Appointment Only",

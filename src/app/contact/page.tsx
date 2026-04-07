@@ -42,7 +42,7 @@ function StudioInfo() {
             <p className="text-sm text-[var(--text-secondary)]">
               {studio.address}
               <br />
-              {studio.city}, {studio.state} {studio.zip}
+              {studio.city} {studio.zip}
             </p>
           </div>
           <div className="flex items-center gap-3">

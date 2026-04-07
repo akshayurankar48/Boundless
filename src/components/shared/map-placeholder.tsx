@@ -79,18 +79,18 @@ export function MapPlaceholder({ className }: MapPlaceholderProps) {
         </div>
 
         <p className="font-mono text-[10px] uppercase tracking-[0.25em] text-[var(--accent-silver)]">
-          {studio.city}, {studio.state}
+          {studio.city}
         </p>
         <p className="mt-2 text-center text-sm text-[var(--text-secondary)]">
           {studio.address}
         </p>
         <p className="text-center text-sm text-[var(--text-tertiary)]">
-          {studio.city}, {studio.state} {studio.zip}
+          {studio.city} {studio.zip}
         </p>
 
         <a
           href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(
-            `${studio.address}, ${studio.city}, ${studio.state} ${studio.zip}`
+            `${studio.address}, ${studio.city} ${studio.zip}`
           )}`}
           target="_blank"
           rel="noopener noreferrer"

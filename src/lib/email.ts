@@ -144,7 +144,7 @@ export function getAutoReplyHtml(name: string): string {
             <a href="tel:${siteConfig.studio.phone.replace(/\s/g, "")}" style="color:#c0c0c0;text-decoration:none;">${siteConfig.studio.phone}</a>
           </p>
           <p style="margin:0;font-size:13px;color:#a3a3a3;">
-            ${siteConfig.studio.address}, ${siteConfig.studio.city}, ${siteConfig.studio.state} ${siteConfig.studio.zip}
+            ${siteConfig.studio.address}, ${siteConfig.studio.city} ${siteConfig.studio.zip}
           </p>
         </td></tr>
       </table>
