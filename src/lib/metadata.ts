@@ -41,7 +41,7 @@ export function getLocalBusinessSchema() {
         closes: "18:00",
       },
     ],
-    sameAs: [social.instagram, social.tiktok, social.twitter],
+    sameAs: [social.instagram, social.facebook],
     priceRange: "$$$",
   };
 }
