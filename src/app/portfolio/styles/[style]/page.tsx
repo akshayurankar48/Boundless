@@ -13,30 +13,30 @@ const styleData: Record<
   Exclude<PortfolioCategory, "all">,
   { label: string; description: string }
 > = {
-  blackwork: {
-    label: "Blackwork",
+  "realism-portrait": {
+    label: "Realism and Portrait",
     description:
-      "Bold, saturated black fills and intricate linework. From geometric patterns to abstract forms.",
+      "Photorealistic rendering and hyper-realistic portraits in black and gray. Every detail captured with surgical precision.",
   },
-  realism: {
-    label: "Realism",
+  color: {
+    label: "Colour Tattoos",
     description:
-      "Photorealistic rendering in black and gray. Every detail captured with surgical precision.",
+      "Vibrant color work bringing your tattoo to life with bold, saturated hues and smooth gradients.",
   },
-  "fine-line": {
-    label: "Fine Line",
+  "black-grey": {
+    label: "Black and Grey",
     description:
-      "Single-needle technique creating impossibly thin, precise strokes. Delicate and minimalist.",
+      "Classic black and grey technique with smooth shading and tonal depth.",
   },
-  geometric: {
-    label: "Geometric",
+  animal: {
+    label: "Animal Tattoos",
     description:
-      "Sacred geometry, mandalas, and mathematical precision meets organic flow.",
+      "Realistic animal portraits and wildlife designs capturing the spirit and power of nature.",
   },
-  portrait: {
-    label: "Portrait",
+  "small-coverup": {
+    label: "Small and Coverups",
     description:
-      "Hyper-realistic portraits rendered in micro-detail grayscale.",
+      "Delicate small pieces and expert coverups transforming old tattoos into new art.",
   },
 };
 
