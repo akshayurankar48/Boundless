@@ -7,11 +7,11 @@ import { siteConfig } from "@/data/site-config";
 export const metadata: Metadata = {
   title: "Privacy Policy",
   description:
-    "Privacy policy for VANGUARD INK. Learn how we collect, use, and protect your personal information.",
+    "Privacy policy for BOUNDDLESS TATTOOO STUDIO. Learn how we collect, use, and protect your personal information.",
   openGraph: {
-    title: "Privacy Policy | VANGUARD INK",
+    title: "Privacy Policy | BOUNDDLESS TATTOOO STUDIO",
     description:
-      "Privacy policy for VANGUARD INK. Learn how we collect, use, and protect your personal information.",
+      "Privacy policy for BOUNDDLESS TATTOOO STUDIO. Learn how we collect, use, and protect your personal information.",
   },
 };
 

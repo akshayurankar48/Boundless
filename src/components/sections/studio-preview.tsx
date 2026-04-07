@@ -57,11 +57,10 @@ export function StudioPreview() {
             The Space
           </p>
           <h2 className="text-h2 font-serif font-bold text-[var(--text-primary)]">
-            A Sanctuary for the Craft
+            Clean & Professional Setup
           </h2>
           <p className="mt-4 max-w-lg text-base text-[var(--text-secondary)]">
-            Clinical precision meets cinematic atmosphere. Our Mercer Street
-            studio is designed for focused, uncompromising artistry.
+             A private studio setup focused on hygiene, proper equipment, and a comfortable environment — giving you a calm, distraction-free tattoo experience.
           </p>
         </ScrollReveal>
 

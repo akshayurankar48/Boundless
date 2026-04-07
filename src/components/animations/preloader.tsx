@@ -60,7 +60,7 @@ export function Preloader() {
             animate={{ opacity: phase === "text" || phase === "line" ? 1 : 0 }}
             transition={{ duration: 0.5, ease: "easeOut" }}
           >
-            Vanguard Ink
+            BOUNDDLESS TATTOOO STUDIO
           </motion.span>
 
           {/* Horizontal line */}

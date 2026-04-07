@@ -24,9 +24,8 @@ function FeaturedItem({ item, index }: { item: PortfolioItem; index: number }) {
         className="group relative block overflow-hidden"
       >
         <div
-          className={`relative ${
-            index === 0 || index === 3 ? "aspect-[3/4]" : "aspect-square"
-          }`}
+          className={`relative ${index === 0 || index === 3 ? "aspect-[3/4]" : "aspect-square"
+            }`}
         >
           {imgError ? (
             <div className="absolute inset-0 flex items-center justify-center bg-[var(--bg-elevated)] text-[var(--text-tertiary)]">
@@ -70,7 +69,7 @@ export function FeaturedWork() {
         <SectionHeading
           label="The Portfolio"
           title="Featured Works"
-          description="Curated masterpieces from our resident laboratory. Each piece is a bespoke commission, designed for the editorial aesthetic."
+          description="A collection of our work, focused on precision, consistency, and clean execution."
         />
 
         {/* Staggered grid */}

@@ -1,13 +1,10 @@
 "use client";
 
-import { useState, useRef, useEffect, useCallback } from "react";
-import { motion, AnimatePresence, type PanInfo } from "framer-motion";
+import { useState, useEffect, useCallback } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { SectionHeading } from "@/components/shared/section-heading";
 import { testimonials } from "@/data/testimonials";
-import { useReducedMotion } from "@/hooks/use-reduced-motion";
 import { useIsMobile, useMediaQuery } from "@/hooks/use-media-query";
-import { registerGSAP } from "@/hooks/use-gsap";
 
 const AUTOPLAY_INTERVAL = 5000;
 
@@ -19,9 +16,7 @@ function getVisibleCount(isMobile: boolean, isTablet: boolean): number {
 
 export function Testimonials() {
   const [current, setCurrent] = useState(0);
-  const [direction, setDirection] = useState(0);
   const [isPaused, setIsPaused] = useState(false);
-  const prefersReducedMotion = useReducedMotion();
   const isMobile = useIsMobile();
   const isTablet = useMediaQuery("(min-width: 769px) and (max-width: 1023px)");
 
@@ -29,20 +24,19 @@ export function Testimonials() {
   const maxIndex = Math.max(0, testimonials.length - visibleCount);
 
   const goTo = useCallback(
-    (index: number, dir?: number) => {
+    (index: number) => {
       const next = Math.max(0, Math.min(index, maxIndex));
-      setDirection(dir ?? (next > current ? 1 : -1));
       setCurrent(next);
     },
-    [current, maxIndex]
+    [maxIndex]
   );
 
   const goNext = useCallback(() => {
-    goTo(current >= maxIndex ? 0 : current + 1, 1);
+    goTo(current >= maxIndex ? 0 : current + 1);
   }, [current, maxIndex, goTo]);
 
   const goPrev = useCallback(() => {
-    goTo(current <= 0 ? maxIndex : current - 1, -1);
+    goTo(current <= 0 ? maxIndex : current - 1);
   }, [current, maxIndex, goTo]);
 
   // Pause autoplay when tab is hidden
@@ -61,37 +55,6 @@ export function Testimonials() {
     return () => clearInterval(timer);
   }, [goNext, isPaused, isTabHidden]);
 
-  // Drag handler
-  const handleDragEnd = (_: MouseEvent | TouchEvent | PointerEvent, info: PanInfo) => {
-    const threshold = 50;
-    if (info.offset.x < -threshold) {
-      goNext();
-    } else if (info.offset.x > threshold) {
-      goPrev();
-    }
-  };
-
-  const slideVariants = prefersReducedMotion
-    ? {
-        enter: { opacity: 1 },
-        center: { opacity: 1 },
-        exit: { opacity: 1 },
-      }
-    : {
-        enter: (dir: number) => ({
-          x: dir > 0 ? 300 : -300,
-          opacity: 0,
-        }),
-        center: {
-          x: 0,
-          opacity: 1,
-        },
-        exit: (dir: number) => ({
-          x: dir > 0 ? -300 : 300,
-          opacity: 0,
-        }),
-      };
-
   const visibleTestimonials = testimonials.slice(
     current,
     current + visibleCount
@@ -101,8 +64,8 @@ export function Testimonials() {
     <section className="bg-[var(--bg-primary)] py-24 md:py-32">
       <div className="mx-auto max-w-7xl px-4 md:px-8">
         <SectionHeading
-          label="Distinguished Voices"
-          title="Client Testimonials"
+          label="Real Stories. Real Tattoos."
+          title="What Clients Say"
           align="center"
         />
 
@@ -129,46 +92,24 @@ export function Testimonials() {
             <ChevronRight size={18} />
           </button>
 
-          {/* Carousel track */}
+          {/* Carousel track - Simple transition with CSS */}
           <div className="overflow-hidden">
-            <AnimatePresence custom={direction} mode="wait">
-              <motion.div
-                key={current}
-                custom={direction}
-                variants={slideVariants}
-                initial="enter"
-                animate="center"
-                exit="exit"
-                transition={
-                  prefersReducedMotion
-                    ? { duration: 0 }
-                    : {
-                        type: "spring",
-                        stiffness: 300,
-                        damping: 30,
-                      }
-                }
-                drag="x"
-                dragConstraints={{ left: 0, right: 0 }}
-                dragElastic={0.2}
-                onDragEnd={handleDragEnd}
-                className={`grid cursor-grab gap-6 active:cursor-grabbing ${
-                  visibleCount === 1
-                    ? "grid-cols-1"
-                    : visibleCount === 2
-                      ? "grid-cols-2"
-                      : "grid-cols-3"
-                }`}
-              >
-                {visibleTestimonials.map((testimonial) => (
-                  <TestimonialCard
-                    key={testimonial.name}
-                    testimonial={testimonial}
-                    prefersReducedMotion={prefersReducedMotion}
-                  />
-                ))}
-              </motion.div>
-            </AnimatePresence>
+            <div
+              className={`grid gap-6 transition-opacity duration-300 ${
+                visibleCount === 1
+                  ? "grid-cols-1"
+                  : visibleCount === 2
+                    ? "grid-cols-2"
+                    : "grid-cols-3"
+              }`}
+            >
+              {visibleTestimonials.map((testimonial) => (
+                <TestimonialCard
+                  key={testimonial.name}
+                  testimonial={testimonial}
+                />
+              ))}
+            </div>
           </div>
 
           {/* Screen reader announcement for slide changes */}
@@ -199,77 +140,15 @@ export function Testimonials() {
 
 type TestimonialCardProps = {
   testimonial: (typeof testimonials)[number];
-  prefersReducedMotion: boolean;
 };
 
-function TestimonialCard({
-  testimonial,
-  prefersReducedMotion,
-}: TestimonialCardProps) {
-  const quoteMarkRef = useRef<HTMLParagraphElement>(null);
-  const quoteTextRef = useRef<HTMLParagraphElement>(null);
-
-  // Item 6: GSAP animation for quote mark + text
-  useEffect(() => {
-    if (prefersReducedMotion || typeof window === "undefined") return;
-    registerGSAP();
-
-    let ctx: ReturnType<typeof import("gsap").default.context> | undefined;
-
-    const init = async () => {
-      const gsap = (await import("gsap")).default;
-
-      if (!quoteMarkRef.current || !quoteTextRef.current) return;
-
-      ctx = gsap.context(() => {
-        // Quote mark: starts large + transparent, shrinks to final size
-        gsap.fromTo(
-          quoteMarkRef.current,
-          { scale: 2.5, opacity: 0 },
-          {
-            scale: 1,
-            opacity: 1,
-            duration: 0.6,
-            ease: "back.out(1.7)",
-          }
-        );
-
-        // Quote text: fades in with a slight delay
-        gsap.fromTo(
-          quoteTextRef.current,
-          { opacity: 0, y: 10 },
-          {
-            opacity: 1,
-            y: 0,
-            duration: 0.5,
-            delay: 0.25,
-            ease: "power2.out",
-          }
-        );
-      });
-    };
-
-    init();
-
-    return () => {
-      ctx?.revert();
-    };
-  }, [prefersReducedMotion, testimonial.name]);
-
+function TestimonialCard({ testimonial }: TestimonialCardProps) {
   return (
     <div className="flex h-full flex-col border border-[var(--border-default)] bg-[var(--bg-secondary)] p-8">
-      <p
-        ref={quoteMarkRef}
-        className="mb-1 inline-block origin-left font-serif text-3xl text-[var(--accent-silver-muted)]"
-        style={prefersReducedMotion ? {} : { opacity: 0 }}
-      >
+      <p className="mb-1 inline-block origin-left font-serif text-3xl text-[var(--accent-silver-muted)]">
         &ldquo;
       </p>
-      <p
-        ref={quoteTextRef}
-        className="flex-1 text-sm italic leading-relaxed text-[var(--text-secondary)]"
-        style={prefersReducedMotion ? {} : { opacity: 0 }}
-      >
+      <p className="flex-1 text-sm italic leading-relaxed text-[var(--text-secondary)]">
         {testimonial.quote}
       </p>
       <div className="mt-6 border-t border-[var(--border-default)] pt-4">

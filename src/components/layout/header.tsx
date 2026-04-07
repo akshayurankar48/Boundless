@@ -3,7 +3,6 @@
 import { useState, useEffect, useRef, useCallback, memo } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X, Phone, Check } from "lucide-react";
 import { siteConfig } from "@/data/site-config";
 import { cn } from "@/lib/utils";
@@ -162,55 +161,45 @@ export const Header = memo(function Header() {
         </nav>
       </header>
 
-      <AnimatePresence>
-        {isMobileMenuOpen && (
-          <motion.div
-            ref={menuRef}
-            id="mobile-menu"
-            role="dialog"
-            aria-modal="true"
-            aria-label="Navigation menu"
-            className="fixed inset-0 z-40 flex flex-col items-center justify-center bg-[var(--bg-primary)] md:hidden"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 0.3 }}
+      {/* Mobile menu - simple CSS transition instead of Framer Motion */}
+      {isMobileMenuOpen && (
+        <div
+          ref={menuRef}
+          id="mobile-menu"
+          role="dialog"
+          aria-modal="true"
+          aria-label="Navigation menu"
+          className="fixed inset-0 z-40 flex flex-col items-center justify-center bg-[var(--bg-primary)] opacity-100 transition-opacity duration-300 md:hidden"
+        >
+          <button
+            onClick={closeMobileMenu}
+            className="absolute top-4 right-4 flex h-11 w-11 items-center justify-center text-[var(--text-primary)]"
+            aria-label="Close menu"
+            autoFocus
           >
-            <button
-              onClick={closeMobileMenu}
-              className="absolute top-4 right-4 flex h-11 w-11 items-center justify-center text-[var(--text-primary)]"
-              aria-label="Close menu"
-              autoFocus
-            >
-              <X size={24} />
-            </button>
+            <X size={24} />
+          </button>
 
-            <nav className="flex flex-col items-center gap-8">
-              {siteConfig.nav.map((item, i) => (
-                <motion.div
-                  key={item.href}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: i * 0.05 + 0.1 }}
+          <nav className="flex flex-col items-center gap-8">
+            {siteConfig.nav.map((item) => (
+              <div key={item.href}>
+                <Link
+                  href={item.href}
+                  className={cn(
+                    "font-serif text-3xl transition-colors",
+                    pathname === item.href
+                      ? "text-[var(--text-primary)]"
+                      : "text-[var(--text-tertiary)] hover:text-[var(--text-primary)]"
+                  )}
+                  onClick={closeMobileMenu}
                 >
-                  <Link
-                    href={item.href}
-                    className={cn(
-                      "font-serif text-3xl transition-colors",
-                      pathname === item.href
-                        ? "text-[var(--text-primary)]"
-                        : "text-[var(--text-tertiary)] hover:text-[var(--text-primary)]"
-                    )}
-                    onClick={closeMobileMenu}
-                  >
-                    {item.label}
-                  </Link>
-                </motion.div>
-              ))}
-            </nav>
-          </motion.div>
-        )}
-      </AnimatePresence>
+                  {item.label}
+                </Link>
+              </div>
+            ))}
+          </nav>
+        </div>
+      )}
 
       <CopyToast
         message={siteConfig.studio.phone}

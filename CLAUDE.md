@@ -1,6 +1,6 @@
 # Tattoo Studio Website
 
-VANGUARD INK -- a high-end tattoo studio portfolio site for black & gray realism.
+BOUNDDLESS TATTOOO STUDIO -- a high-end tattoo studio portfolio site for black & gray realism.
 
 ## Tech Stack
 

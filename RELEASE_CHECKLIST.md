@@ -1,9 +1,9 @@
-# Release Checklist — VANGUARD INK
+# Release Checklist — BOUNDDLESS TATTOOO STUDIO
 
 ## Before Going Live
 
 ### Email Configuration
-- [ ] **Update Resend `from` address** — Currently using sandbox `onboarding@resend.dev`. Once you verify your domain on [Resend](https://resend.com), update the `from` field in `src/app/api/contact/route.ts` to `VANGUARD INK <noreply@vanguardink.art>` (appears twice — notification + auto-reply)
+- [ ] **Update Resend `from` address** — Currently using sandbox `onboarding@resend.dev`. Once you verify your domain on [Resend](https://resend.com), update the `from` field in `src/app/api/contact/route.ts` to `BOUNDDLESS TATTOOO STUDIO <noreply@vanguardink.art>` (appears twice — notification + auto-reply)
 - [ ] **Update studio email** — Currently set to `akshayurankar48@gmail.com` in `src/data/site-config.ts`. Change to production studio email when ready
 - [ ] **Verify Resend API key** — Current key in `.env.local` is for dev. Replace with production key if needed
 

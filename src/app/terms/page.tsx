@@ -7,11 +7,11 @@ import { siteConfig } from "@/data/site-config";
 export const metadata: Metadata = {
   title: "Terms of Service",
   description:
-    "Terms of service for VANGUARD INK. Booking policies, deposits, cancellations, and studio guidelines.",
+    "Terms of service for BOUNDDLESS TATTOOO STUDIO. Booking policies, deposits, cancellations, and studio guidelines.",
   openGraph: {
-    title: "Terms of Service | VANGUARD INK",
+    title: "Terms of Service | BOUNDDLESS TATTOOO STUDIO",
     description:
-      "Terms of service for VANGUARD INK. Booking policies, deposits, cancellations, and studio guidelines.",
+      "Terms of service for BOUNDDLESS TATTOOO STUDIO. Booking policies, deposits, cancellations, and studio guidelines.",
   },
 };
 

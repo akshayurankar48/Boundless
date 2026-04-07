@@ -16,7 +16,7 @@
 |----------|--------|
 | **Project type** | Real tattoo studio website |
 | **Artist setup** | Solo artist |
-| **Studio branding** | Placeholder name for now (e.g. "VANGUARD INK") — real name swapped in later |
+| **Studio branding** | Placeholder name for now (e.g. "BOUNDDLESS TATTOOO STUDIO") — real name swapped in later |
 | **Tattoo specialty** | Black & gray realism |
 | **Content status** | No content yet — build entirely with high-quality placeholder images/text |
 | **Design direction** | Mix the best of all Stitch refs: Vanguard's cinematic drama + Studio 2026's gold luxury palette + Obsidian's mobile-native feel |

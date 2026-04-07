@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   description:
     "Visit our sanctuary for black & gray realism. Medical-grade sterilization, premium vegan inks, and an atmosphere designed for artistic transcendence.",
   openGraph: {
-    title: "Studio | VANGUARD INK",
+    title: "Studio | BOUNDDLESS TATTOOO STUDIO",
     description:
       "Visit our sanctuary for black & gray realism. Medical-grade sterilization, premium vegan inks, and an atmosphere designed for artistic transcendence.",
     images: [
@@ -18,7 +18,7 @@ export const metadata: Metadata = {
         url: "/images/og/default.jpg",
         width: 1200,
         height: 630,
-        alt: "VANGUARD INK Studio",
+        alt: "BOUNDDLESS TATTOOO STUDIO Studio",
       },
     ],
   },

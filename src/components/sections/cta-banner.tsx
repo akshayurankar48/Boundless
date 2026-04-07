@@ -12,11 +12,10 @@ export function CTABanner() {
             Begin Your Legacy
           </p>
           <h2 className="text-h1 font-serif font-bold text-[var(--text-primary)]">
-            Ready to Make It Permanent?
+             Ready to Get Inked?
           </h2>
           <p className="mx-auto mt-6 max-w-md text-base text-[var(--text-secondary)]">
-            Every masterpiece starts with a conversation. Share your vision and
-            let&apos;s create something that lasts forever.
+             Have an idea or need guidance? Let’s talk and get it done the right way.
           </p>
           <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
             <Link

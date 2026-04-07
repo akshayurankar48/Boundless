@@ -26,7 +26,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     title: item.title,
     description: item.description,
     openGraph: {
-      title: `${item.title} | VANGUARD INK`,
+      title: `${item.title} | BOUNDDLESS TATTOOO STUDIO`,
       description: item.description,
       type: "article",
       images: [
@@ -40,7 +40,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     },
     twitter: {
       card: "summary_large_image",
-      title: `${item.title} | VANGUARD INK`,
+      title: `${item.title} | BOUNDDLESS TATTOOO STUDIO`,
       description: item.description,
       images: [item.image],
     },

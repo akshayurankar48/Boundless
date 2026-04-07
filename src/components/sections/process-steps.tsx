@@ -1,69 +1,24 @@
 "use client";
 
-import { useRef, useEffect } from "react";
 import { SectionHeading } from "@/components/shared/section-heading";
 import { ScrollReveal } from "@/components/animations/scroll-reveal";
 import { processSteps } from "@/data/process-steps";
-import { useReducedMotion } from "@/hooks/use-reduced-motion";
-import { registerGSAP } from "@/hooks/use-gsap";
 
 export function ProcessSteps() {
-  const sectionRef = useRef<HTMLElement>(null);
-  const lineRef = useRef<HTMLDivElement>(null);
-  const prefersReducedMotion = useReducedMotion();
-
-  useEffect(() => {
-    if (prefersReducedMotion || typeof window === "undefined") return;
-    registerGSAP();
-
-    let ctx: ReturnType<typeof import("gsap").default.context> | undefined;
-
-    const init = async () => {
-      const gsap = (await import("gsap")).default;
-      const { ScrollTrigger } = await import("gsap/ScrollTrigger");
-      gsap.registerPlugin(ScrollTrigger);
-
-      if (!sectionRef.current || !lineRef.current) return;
-
-      ctx = gsap.context(() => {
-        gsap.fromTo(
-          lineRef.current,
-          { scaleX: 0 },
-          {
-            scaleX: 1,
-            ease: "none",
-            scrollTrigger: {
-              trigger: sectionRef.current,
-              start: "top 60%",
-              end: "bottom 40%",
-              scrub: 1,
-            },
-          }
-        );
-      }, sectionRef);
-    };
-
-    init();
-
-    return () => {
-      ctx?.revert();
-    };
-  }, [prefersReducedMotion]);
 
   return (
-    <section ref={sectionRef} className="bg-[var(--bg-secondary)] py-24 md:py-32">
+    <section className="bg-[var(--bg-secondary)] py-24 md:py-32">
       <div className="mx-auto max-w-7xl px-4 md:px-8">
         <SectionHeading
           label="The Process"
-          title="From Vision to Permanence"
-          description="A seamless journey from initial concept to healed masterpiece. Every step designed for your comfort and confidence."
+          title="From Idea to Tattoo"
+          description="A clear and simple process, designed to keep things transparent, comfortable, and easy to understand."
           align="center"
         />
 
         <div className="relative">
           {/* Connecting line — horizontal on desktop, vertical on mobile */}
           <div
-            ref={lineRef}
             className="pointer-events-none absolute hidden lg:block"
             style={{
               top: "28px",

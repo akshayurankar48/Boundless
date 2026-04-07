@@ -52,16 +52,11 @@ export function ArtistIntro() {
           <p className="mt-6 text-base leading-relaxed text-[var(--text-secondary)]">
             {artist.bio}
           </p>
-          <p className="mt-4 text-base leading-relaxed text-[var(--text-secondary)]">
-            We don&apos;t just tattoo, we curate a legacy. Every line etched
-            with precision, every shadow a depth of character. This is where
-            fine art meets clinical precision.
-          </p>
           {/* Stats bar */}
           <div className="mt-8 grid grid-cols-3 gap-6 border-t border-[var(--border-default)] pt-8">
             <div>
               <p className="font-serif text-2xl font-bold text-[var(--text-primary)] md:text-3xl">
-                <Counter target={10} suffix="+" />
+                <Counter target={5} suffix="+" />
               </p>
               <p className="mt-1 font-mono text-[10px] uppercase tracking-[0.15em] text-[var(--text-tertiary)]">
                 Years
@@ -69,10 +64,10 @@ export function ArtistIntro() {
             </div>
             <div>
               <p className="font-serif text-2xl font-bold text-[var(--text-primary)] md:text-3xl">
-                <Counter target={500} suffix="+" />
+                <Counter target={700} suffix="+" />
               </p>
               <p className="mt-1 font-mono text-[10px] uppercase tracking-[0.15em] text-[var(--text-tertiary)]">
-                Pieces
+                Tattoos crafted
               </p>
             </div>
             <div>
@@ -80,7 +75,7 @@ export function ArtistIntro() {
                 <Counter target={100} suffix="%" />
               </p>
               <p className="mt-1 font-mono text-[10px] uppercase tracking-[0.15em] text-[var(--text-tertiary)]">
-                Satisfaction
+                Focus
               </p>
             </div>
           </div>

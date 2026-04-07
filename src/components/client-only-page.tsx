@@ -11,7 +11,7 @@ import { Testimonials } from "@/components/sections/testimonials";
 import { StudioPreview } from "@/components/sections/studio-preview";
 import { CTABanner } from "@/components/sections/cta-banner";
 
-export default function HomePage() {
+export function ClientOnlyPage() {
   return (
     <>
       <Header />

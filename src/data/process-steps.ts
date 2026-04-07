@@ -7,26 +7,26 @@ export type ProcessStep = {
 export const processSteps: ProcessStep[] = [
   {
     number: "01",
-    title: "Consult",
+    title: "Consultation",
     description:
-      "Share your vision. We discuss concept, placement, sizing, and style direction. No commitment — just creative dialogue.",
+      "You share your idea, and we discuss placement, size, and what works best. No pressure — just a clear conversation.",
   },
   {
     number: "02",
-    title: "Design",
+    title: "Design & Adjustments",
     description:
-      "Your concept is translated into a custom design. Every piece is original — no flash, no templates. Revisions until it's perfect.",
+      "We work on the design together and make necessary changes until it feels right — simple, clear, and not overcomplicated.",
   },
   {
     number: "03",
-    title: "Ink",
+    title: "Size & Placement",
     description:
-      "The session. Medical-grade sterilization, premium inks, and unwavering focus. Comfort breaks as needed. Your experience matters.",
+      "We test the size and placement on your body to make sure it sits right and looks good where it matters.",
   },
   {
     number: "04",
-    title: "Heal",
+    title: "Pricing & Booking",
     description:
-      "Detailed aftercare guidance. Follow-up check-in at 2 weeks. Touch-ups included if needed. We stand behind every piece.",
+      "You get a clear quote with no surprises. Once confirmed, we take a deposit and lock your appointment.",
   },
 ];
