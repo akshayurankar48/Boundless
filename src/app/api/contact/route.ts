@@ -133,7 +133,7 @@ export async function POST(request: Request) {
       );
     }
 
-    const { name, email, idea, placement, preferredDate, preferredTime } = result.data;
+    const { name, email, phone, place, idea, placement, preferredDate, preferredTime } = result.data;
     const images: ImageAttachment[] = Array.isArray(body.images) ? body.images.slice(0, 3) : [];
 
     // Validate image data
@@ -206,6 +206,8 @@ export async function POST(request: Request) {
       console.log("[Contact Inquiry — No RESEND_API_KEY]", {
         name,
         email,
+        phone,
+        place,
         placement,
         preferredDate: preferredDate || "No preference",
         preferredTime: preferredTime || "No preference",

@@ -62,6 +62,14 @@ export function getInquiryNotificationHtml(data: InquiryData): string {
               <td style="padding:8px 0;font-size:14px;"><a href="mailto:${escapeHtml(data.email)}" style="color:#c0c0c0;text-decoration:none;">${escapeHtml(data.email)}</a></td>
             </tr>
             <tr>
+              <td style="padding:8px 0;font-size:11px;color:#737373;text-transform:uppercase;letter-spacing:0.1em;">Phone</td>
+              <td style="padding:8px 0;font-size:14px;"><a href="tel:${escapeHtml(data.phone)}" style="color:#c0c0c0;text-decoration:none;">${escapeHtml(data.phone)}</a></td>
+            </tr>
+            <tr>
+              <td style="padding:8px 0;font-size:11px;color:#737373;text-transform:uppercase;letter-spacing:0.1em;">Location</td>
+              <td style="padding:8px 0;font-size:14px;color:#e5e5e5;">${escapeHtml(data.place)}</td>
+            </tr>
+            <tr>
               <td style="padding:8px 0;font-size:11px;color:#737373;text-transform:uppercase;letter-spacing:0.1em;">Placement</td>
               <td style="padding:8px 0;font-size:14px;color:#e5e5e5;">${escapeHtml(placementLabel)}</td>
             </tr>

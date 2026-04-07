@@ -37,6 +37,8 @@ export function InquiryForm() {
   const [formData, setFormData] = useState<ContactFormData>({
     name: "",
     email: "",
+    phone: "",
+    place: "",
     idea: "",
     placement: "forearm",
     preferredDate: "",
@@ -326,6 +328,88 @@ export function InquiryForm() {
               className="mt-1.5 text-xs text-destructive"
             >
               {errors.email}
+            </motion.p>
+          )}
+        </AnimatePresence>
+      </div>
+
+      {/* Phone */}
+      <div>
+        <label
+          htmlFor="phone"
+          className="mb-2 block font-mono text-xs uppercase tracking-[0.15em] text-[var(--text-secondary)]"
+        >
+          Phone Number
+        </label>
+        <Input
+          id="phone"
+          name="phone"
+          type="tel"
+          placeholder="+91 98765 43210"
+          autoComplete="tel"
+          required
+          aria-required="true"
+          value={formData.phone}
+          onChange={handleChange}
+          aria-invalid={!!errors.phone}
+          aria-describedby={errors.phone ? "phone-error" : undefined}
+          className={cn(
+            "h-11 rounded-md border-[var(--border-default)] bg-[var(--bg-secondary)] px-4 text-sm text-[var(--text-primary)] placeholder:text-[var(--text-tertiary)] focus-visible:border-[var(--accent-silver)] focus-visible:ring-[var(--accent-silver)]/20",
+            errors.phone && "border-destructive focus-visible:border-destructive"
+          )}
+        />
+        <AnimatePresence>
+          {errors.phone && (
+            <motion.p
+              id="phone-error"
+              role="alert"
+              initial={{ opacity: 0, height: 0 }}
+              animate={{ opacity: 1, height: "auto" }}
+              exit={{ opacity: 0, height: 0 }}
+              className="mt-1.5 text-xs text-destructive"
+            >
+              {errors.phone}
+            </motion.p>
+          )}
+        </AnimatePresence>
+      </div>
+
+      {/* Place */}
+      <div>
+        <label
+          htmlFor="place"
+          className="mb-2 block font-mono text-xs uppercase tracking-[0.15em] text-[var(--text-secondary)]"
+        >
+          City / Location
+        </label>
+        <Input
+          id="place"
+          name="place"
+          type="text"
+          placeholder="e.g., Hubballi, Bangalore"
+          autoComplete="address-level2"
+          required
+          aria-required="true"
+          value={formData.place}
+          onChange={handleChange}
+          aria-invalid={!!errors.place}
+          aria-describedby={errors.place ? "place-error" : undefined}
+          className={cn(
+            "h-11 rounded-md border-[var(--border-default)] bg-[var(--bg-secondary)] px-4 text-sm text-[var(--text-primary)] placeholder:text-[var(--text-tertiary)] focus-visible:border-[var(--accent-silver)] focus-visible:ring-[var(--accent-silver)]/20",
+            errors.place && "border-destructive focus-visible:border-destructive"
+          )}
+        />
+        <AnimatePresence>
+          {errors.place && (
+            <motion.p
+              id="place-error"
+              role="alert"
+              initial={{ opacity: 0, height: 0 }}
+              animate={{ opacity: 1, height: "auto" }}
+              exit={{ opacity: 0, height: 0 }}
+              className="mt-1.5 text-xs text-destructive"
+            >
+              {errors.place}
             </motion.p>
           )}
         </AnimatePresence>
