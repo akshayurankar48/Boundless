@@ -40,7 +40,7 @@ export function StudioContent() {
       <section className="relative h-[70vh] min-h-[500px] md:h-[80vh]">
         <ParallaxImage
           src="https://images.unsplash.com/photo-1611501275019-9b5cda994e8d?w=1600&q=80"
-          alt="Vanguard Ink studio interior"
+          alt="BOUNDDLESS TATTOOO STUDIO studio interior"
           width={1600}
           height={900}
           className="absolute inset-0 h-full w-full"
@@ -51,7 +51,7 @@ export function StudioContent() {
         <div className="absolute bottom-0 left-0 right-0 pb-16 md:pb-24">
           <div className="mx-auto max-w-7xl px-4 md:px-8">
             <p className="mb-3 font-mono text-xs uppercase tracking-[0.2em] text-[var(--accent-silver)]">
-              The Space
+              The Studio
             </p>
             <TextReveal
               text="A Sanctuary of Precision"
@@ -81,7 +81,7 @@ export function StudioContent() {
               <div className="space-y-4 text-base leading-relaxed text-[var(--text-secondary)]">
                 <p>
                   Located at {studio.address} in the heart of {studio.city},
-                  Vanguard Ink was conceived by award-winning architects to
+                  BOUNDDLESS TATTOOO STUDIO was conceived by award-winning architects to
                   provide a cinematic atmosphere that inspires both artist and
                   collector. Every element &mdash; from the curated lighting to
                   the acoustic design &mdash; exists to serve the craft.
@@ -231,15 +231,9 @@ export function StudioContent() {
                     <div className="space-y-1 text-base text-[var(--text-secondary)]">
                       <p>
                         <span className="text-[var(--text-primary)]">
-                          Mon&ndash;Fri:
+                          Mon&ndash;Sat:
                         </span>{" "}
                         {studio.hours.weekdays}
-                      </p>
-                      <p>
-                        <span className="text-[var(--text-primary)]">
-                          Saturday:
-                        </span>{" "}
-                        {studio.hours.saturday}
                       </p>
                       <p>
                         <span className="text-[var(--text-primary)]">

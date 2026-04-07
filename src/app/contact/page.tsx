@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   description:
     "Book a consultation. Share your vision and let's create something permanent.",
   openGraph: {
-    title: "Contact | VANGUARD INK",
+    title: "Contact | BOUNDDLESS TATTOOO STUDIO",
     description:
       "Book a consultation. Share your vision and let's create something permanent.",
     images: [
@@ -21,7 +21,7 @@ export const metadata: Metadata = {
         url: "/images/og/default.jpg",
         width: 1200,
         height: 630,
-        alt: "Contact VANGUARD INK",
+        alt: "Contact BOUNDDLESS TATTOOO STUDIO",
       },
     ],
   },
@@ -74,8 +74,7 @@ function StudioInfo() {
           <div className="flex items-center gap-3">
             <Clock className="h-4 w-4 shrink-0 text-[var(--accent-silver)]" />
             <div className="text-sm text-[var(--text-secondary)]">
-              <p>Mon - Fri: {studio.hours.weekdays}</p>
-              <p>Saturday: {studio.hours.saturday}</p>
+              <p>Mon - Sat: {studio.hours.weekdays}</p>
               <p>Sunday: {studio.hours.sunday}</p>
             </div>
           </div>

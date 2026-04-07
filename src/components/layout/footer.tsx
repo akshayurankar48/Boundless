@@ -56,12 +56,8 @@ export function Footer() {
             </p>
             <div className="space-y-2 text-sm text-[var(--text-secondary)]">
               <p>
-                <span className="text-[var(--text-tertiary)]">Mon–Fri:</span>{" "}
+                <span className="text-[var(--text-tertiary)]">Mon–Sat:</span>{" "}
                 {siteConfig.studio.hours.weekdays}
-              </p>
-              <p>
-                <span className="text-[var(--text-tertiary)]">Saturday:</span>{" "}
-                {siteConfig.studio.hours.saturday}
               </p>
               <p>
                 <span className="text-[var(--text-tertiary)]">Sunday:</span>{" "}
