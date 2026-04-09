@@ -1,8 +1,13 @@
-// Service Worker — Cache-first for fonts/videos, stale-while-revalidate for images, network-first for pages
-const CACHE_NAME = "tattoo-studio-v2";
+// Service Worker — Optimized caching for tattoo studio assets
+// Cache-first: fonts, videos, static chunks
+// Stale-while-revalidate: images (including optimized WebP)
+// Network-first: HTML pages
+const CACHE_NAME = "tattoo-studio-v3";
 const STATIC_ASSETS = [
   "/videos/hero-ambient.webm",
   "/videos/hero-ambient.mp4",
+  "/videos/studio.webm",
+  "/videos/artist.webm",
 ];
 
 self.addEventListener("install", (event) => {
@@ -32,7 +37,7 @@ self.addEventListener("fetch", (event) => {
     request.destination === "font" ||
     request.destination === "video" ||
     url.pathname.startsWith("/_next/static/") ||
-    /\.(mp4|woff2?|ttf)$/.test(url.pathname)
+    /\.(mp4|webm|woff2?|ttf|otf)$/.test(url.pathname)
   ) {
     event.respondWith(
       caches.match(request).then((cached) => {
