@@ -1,0 +1,715 @@
+🚀 Starting Full Portfolio Image Optimization
+
+Source: public/images/portfolio/Photos
+Backup: public/images/portfolio/_originals
+Quality: 75%
+WebP sizes: 400px, 800px, 1600px
+
+Found 173 images to optimize
+
+============================================================
+[1/173] 📸 1 Animal Tattoos/Angel Fish.jpg
+          Original: 2.09 MB
+          Optimized: 407.42 KB (saved 1.69 MB - 81%)
+
+[2/173] 📸 1 Animal Tattoos/Bear - Shoulder Tattoo.jpg
+          Original: 1.6 MB
+          Optimized: 291.34 KB (saved 1.31 MB - 82%)
+
+[3/173] 📸 1 Animal Tattoos/Eagle - Shoulder Tattoo.jpg
+          Original: 2.68 MB
+          Optimized: 438.17 KB (saved 2.26 MB - 84%)
+
+[4/173] 📸 1 Animal Tattoos/Eagle on Arm Tattoo.jpg
+          Original: 1.79 MB
+          Optimized: 377.85 KB (saved 1.42 MB - 79%)
+
+[5/173] 📸 1 Animal Tattoos/Elephant.jpg
+          Original: 1.59 MB
+          Optimized: 334.73 KB (saved 1.27 MB - 79%)
+
+[6/173] 📸 1 Animal Tattoos/Lion - Forest Theme.jpg
+          Original: 2.1 MB
+          Optimized: 417.85 KB (saved 1.69 MB - 81%)
+
+[7/173] 📸 1 Animal Tattoos/Lion - Shoulder Tattoo.jpg
+          Original: 1.03 MB
+          Optimized: 163.78 KB (saved 895.99 KB - 85%)
+
+[8/173] 📸 1 Animal Tattoos/Lion Forearm Tattoo.jpg
+          Original: 1.99 MB
+          Optimized: 415.95 KB (saved 1.58 MB - 80%)
+
+[9/173] 📸 1 Animal Tattoos/Lion Front Forearm.jpg
+          Original: 1.16 MB
+          Optimized: 198.61 KB (saved 991.41 KB - 83%)
+
+[10/173] 📸 1 Animal Tattoos/Lion Half Sleeve.jpg
+          Original: 1.49 MB
+          Optimized: 316.7 KB (saved 1.18 MB - 79%)
+
+[11/173] 📸 1 Animal Tattoos/Lion Mandala.jpg
+          Original: 1.07 MB
+          Optimized: 142.86 KB (saved 952.95 KB - 87%)
+
+[12/173] 📸 1 Animal Tattoos/Lion Roar - Shoulder Tattoo.jpg
+          Original: 1.75 MB
+          Optimized: 324.9 KB (saved 1.43 MB - 82%)
+
+[13/173] 📸 1 Animal Tattoos/Owl.jpg
+          Original: 6.15 MB
+          Optimized: 1.26 MB (saved 4.89 MB - 79%)
+
+[14/173] 📸 1 Animal Tattoos/Pet Dog Tattoo.jpg
+          Original: 1.75 MB
+          Optimized: 384.95 KB (saved 1.37 MB - 78%)
+
+[15/173] 📸 1 Animal Tattoos/Raven Tattoo.jpg
+          Original: 1.87 MB
+          Optimized: 397.31 KB (saved 1.48 MB - 79%)
+
+[16/173] 📸 1 Animal Tattoos/Reindeer Tattoo.jpg
+          Original: 1.28 MB
+          Optimized: 207.49 KB (saved 1.08 MB - 84%)
+
+[17/173] 📸 1 Animal Tattoos/Swan Tattoo.jpg
+          Original: 1.86 MB
+          Optimized: 367.85 KB (saved 1.5 MB - 81%)
+
+[18/173] 📸 1 Animal Tattoos/Wolf Coverup Tattoo.jpg
+          Original: 1.25 MB
+          Optimized: 234.2 KB (saved 1.02 MB - 82%)
+
+[19/173] 📸 1 Animal Tattoos/Wolf Mandala Tattoo.jpg
+          Original: 1.86 MB
+          Optimized: 366.67 KB (saved 1.5 MB - 81%)
+
+[20/173] 📸 1 Animal Tattoos/Wolf Pup Tattoo.jpg
+          Original: 1.8 MB
+          Optimized: 386.02 KB (saved 1.42 MB - 79%)
+
+[21/173] 📸 1 Animal Tattoos/lion Scar Coverup.jpg
+          Original: 1.74 MB
+          Optimized: 375.61 KB (saved 1.38 MB - 79%)
+
+[22/173] 📸 1 Animal Tattoos/lion on fist.jpg
+          Original: 2.01 MB
+          Optimized: 421.55 KB (saved 1.6 MB - 80%)
+
+[23/173] 📸 2 Realism and portraits/Baby Foot Tattoo.jpg
+          Original: 9.97 MB
+          Optimized: 1.58 MB (saved 8.4 MB - 84%)
+
+[24/173] 📸 2 Realism and portraits/Bal Krishna Tattoo.jpg
+          Original: 1.69 MB
+          Optimized: 316.51 KB (saved 1.38 MB - 82%)
+
+[25/173] 📸 2 Realism and portraits/Blindfolded Realism Tattoo.jpg
+          Original: 4.71 MB
+          Optimized: 758.53 KB (saved 3.97 MB - 84%)
+
+[26/173] 📸 2 Realism and portraits/Buddha Tattoo.jpg
+          Original: 7.21 MB
+          Optimized: 1.26 MB (saved 5.95 MB - 83%)
+
+[27/173] 📸 2 Realism and portraits/Custom Goth Based Tattoo.jpg
+          Original: 5.12 MB
+          Optimized: 1.12 MB (saved 4 MB - 78%)
+
+[28/173] 📸 2 Realism and portraits/Durga Devi Tattoo.jpg
+          Original: 1.95 MB
+          Optimized: 380.87 KB (saved 1.58 MB - 81%)
+
+[29/173] 📸 2 Realism and portraits/Egypt theme Back Tattoo.jpg
+          Original: 1.61 MB
+          Optimized: 308.31 KB (saved 1.31 MB - 81%)
+
+[30/173] 📸 2 Realism and portraits/Female Poratrait Tattoo.jpg
+          Original: 1 MB
+          Optimized: 161.19 KB (saved 866.26 KB - 84%)
+
+[31/173] 📸 2 Realism and portraits/Female Warrior Tattoo.jpg
+          Original: 6.71 MB
+          Optimized: 1.26 MB (saved 5.45 MB - 81%)
+
+[32/173] 📸 2 Realism and portraits/Full Back Heaven Hell Concept Full Back.jpg
+          Original: 1.51 MB
+          Optimized: 309.83 KB (saved 1.21 MB - 80%)
+
+[33/173] 📸 2 Realism and portraits/Gangster Realism Tattoo.jpg
+          Original: 2.24 MB
+          Optimized: 474.77 KB (saved 1.78 MB - 79%)
+
+[34/173] 📸 2 Realism and portraits/Hanuman on Chest Tattoo.jpg
+          Original: 1.06 MB
+          Optimized: 173.91 KB (saved 906.7 KB - 84%)
+
+[35/173] 📸 2 Realism and portraits/Infant Portrait Tattoo.jpg
+          Original: 5.56 MB
+          Optimized: 1.17 MB (saved 4.39 MB - 79%)
+
+[36/173] 📸 2 Realism and portraits/Infant Portrait on Arm - Side pose.jpg
+          Original: 1.92 MB
+          Optimized: 366.19 KB (saved 1.56 MB - 81%)
+
+[37/173] 📸 2 Realism and portraits/Money Dont Lie Concept Tattoo.jpg
+          Original: 1.86 MB
+          Optimized: 394.48 KB (saved 1.47 MB - 79%)
+
+[38/173] 📸 2 Realism and portraits/Mother Father Portrait.jpg
+          Original: 2.06 MB
+          Optimized: 368.06 KB (saved 1.7 MB - 83%)
+
+[39/173] 📸 2 Realism and portraits/Mother Portrait on chest.jpg
+          Original: 1.75 MB
+          Optimized: 318.26 KB (saved 1.43 MB - 82%)
+
+[40/173] 📸 2 Realism and portraits/Nature Realism Tattoo.jpg
+          Original: 1.86 MB
+          Optimized: 407.95 KB (saved 1.46 MB - 79%)
+
+[41/173] 📸 2 Realism and portraits/Nature theme Half Sleeve.jpg
+          Original: 1.79 MB
+          Optimized: 365.69 KB (saved 1.43 MB - 80%)
+
+[42/173] 📸 2 Realism and portraits/Portrait Tattoo - on Chest.jpg
+          Original: 1.48 MB
+          Optimized: 219.14 KB (saved 1.26 MB - 86%)
+
+[43/173] 📸 2 Realism and portraits/Portrait Tattoo - on arm.jpg
+          Original: 1.84 MB
+          Optimized: 360.34 KB (saved 1.48 MB - 81%)
+
+[44/173] 📸 2 Realism and portraits/Portrait Tattoo.jpg
+          Original: 1.69 MB
+          Optimized: 254.7 KB (saved 1.44 MB - 85%)
+
+[45/173] 📸 2 Realism and portraits/Portrait on female arm.jpg
+          Original: 1.76 MB
+          Optimized: 363.41 KB (saved 1.41 MB - 80%)
+
+[46/173] 📸 2 Realism and portraits/Raja Rajeshwari Devi Portrait tattoo.jpg
+          Original: 8.19 MB
+          Optimized: 1.01 MB (saved 7.17 MB - 88%)
+
+[47/173] 📸 2 Realism and portraits/Realism Concept Tattoo.jpg
+          Original: 1.72 MB
+          Optimized: 365.96 KB (saved 1.36 MB - 79%)
+
+[48/173] 📸 2 Realism and portraits/Samurai Tattoo.jpg
+          Original: 565.99 KB
+          Optimized: 402.75 KB (saved 163.23 KB - 29%)
+
+[49/173] 📸 2 Realism and portraits/Shiva Half Sleeve Tattoo.jpg
+          Original: 1.42 MB
+          Optimized: 242.85 KB (saved 1.18 MB - 83%)
+
+[50/173] 📸 2 Realism and portraits/Warcraft Theme Tattoo.jpg
+          Original: 10.7 MB
+          Optimized: 1.65 MB (saved 9.04 MB - 85%)
+
+[51/173] 📸 2 Realism and portraits/Wolf Tattoo.jpg
+          Original: 1.89 MB
+          Optimized: 346.59 KB (saved 1.55 MB - 82%)
+
+[52/173] 📸 3 Color tattoos/Abstract Color Tattoo.jpg
+          Original: 1.88 MB
+          Optimized: 393.32 KB (saved 1.5 MB - 80%)
+
+[53/173] 📸 3 Color tattoos/Butterfly Color tattoo.jpg
+          Original: 1.79 MB
+          Optimized: 233.22 KB (saved 1.56 MB - 87%)
+
+[54/173] 📸 3 Color tattoos/Butterfly on Back.jpg
+          Original: 1.3 MB
+          Optimized: 197.56 KB (saved 1.11 MB - 85%)
+
+[55/173] 📸 3 Color tattoos/Butterfly with FLower tattoo.jpg
+          Original: 1.91 MB
+          Optimized: 398.67 KB (saved 1.52 MB - 80%)
+
+[56/173] 📸 3 Color tattoos/Color Realism Tattoo.jpg
+          Original: 1.93 MB
+          Optimized: 424.15 KB (saved 1.51 MB - 79%)
+
+[57/173] 📸 3 Color tattoos/Colorful Flower Tattoo.jpg
+          Original: 2.35 MB
+          Optimized: 419.85 KB (saved 1.94 MB - 83%)
+
+[58/173] 📸 3 Color tattoos/Coyote Tattoo.jpg
+          Original: 1017.07 KB
+          Optimized: 138.05 KB (saved 879.02 KB - 86%)
+
+[59/173] 📸 3 Color tattoos/Demon Hunter.jpg
+          Original: 912.84 KB
+          Optimized: 132.21 KB (saved 780.63 KB - 86%)
+
+[60/173] 📸 3 Color tattoos/Dracula Tattoo.jpg
+          Original: 1.59 MB
+          Optimized: 249.2 KB (saved 1.35 MB - 85%)
+
+[61/173] 📸 3 Color tattoos/Flower on back Tatto.jpg
+          Original: 1.72 MB
+          Optimized: 299.08 KB (saved 1.43 MB - 83%)
+
+[62/173] 📸 3 Color tattoos/Krishna Flute Tattoo.jpg
+          Original: 2.05 MB
+          Optimized: 369.07 KB (saved 1.69 MB - 82%)
+
+[63/173] 📸 3 Color tattoos/Line Art With Color Butterflies.jpg
+          Original: 903.36 KB
+          Optimized: 133.25 KB (saved 770.11 KB - 85%)
+
+[64/173] 📸 3 Color tattoos/Lord Shiva Tattoo.jpg
+          Original: 1.78 MB
+          Optimized: 363.1 KB (saved 1.42 MB - 80%)
+
+[65/173] 📸 3 Color tattoos/Mantis Tattoo.jpg
+          Original: 1.9 MB
+          Optimized: 253.84 KB (saved 1.65 MB - 87%)
+
+[66/173] 📸 3 Color tattoos/Mind Heart Concept Tattoo.jpg
+          Original: 1.1 MB
+          Optimized: 146.9 KB (saved 979.84 KB - 87%)
+
+[67/173] 📸 3 Color tattoos/Panda with Heart Tattoo.jpg
+          Original: 1.84 MB
+          Optimized: 345.91 KB (saved 1.51 MB - 82%)
+
+[68/173] 📸 3 Color tattoos/Red Dragon Tattoo.jpg
+          Original: 1.51 MB
+          Optimized: 265.72 KB (saved 1.25 MB - 83%)
+
+[69/173] 📸 3 Color tattoos/Sudarshan Chakra Tattoo.jpg
+          Original: 1.84 MB
+          Optimized: 339.73 KB (saved 1.5 MB - 82%)
+
+[70/173] 📸 3 Color tattoos/Trishul Gadha Tattoo.jpg
+          Original: 1.13 MB
+          Optimized: 165.19 KB (saved 993.51 KB - 86%)
+
+[71/173] 📸 3 Color tattoos/Trishul with Mantra Tattoo.jpg
+          Original: 2.08 MB
+          Optimized: 415.47 KB (saved 1.67 MB - 80%)
+
+[72/173] 📸 3 Color tattoos/Watercolor Compass Tattoo.jpg
+          Original: 1.78 MB
+          Optimized: 343.47 KB (saved 1.45 MB - 81%)
+
+[73/173] 📸 3 Color tattoos/Watercolor Feather Tattoo.jpg
+          Original: 1.77 MB
+          Optimized: 336.82 KB (saved 1.44 MB - 81%)
+
+[74/173] 📸 4 Black and Grey/Abstract Armband Tattoo.jpg
+          Original: 3.87 MB
+          Optimized: 641.85 KB (saved 3.24 MB - 84%)
+
+[75/173] 📸 4 Black and Grey/Aquman Tattoo.jpg
+          Original: 3.84 MB
+          Optimized: 771.28 KB (saved 3.09 MB - 80%)
+
+[76/173] 📸 4 Black and Grey/Back Chakra Tattoo.jpg
+          Original: 1.46 MB
+          Optimized: 250.57 KB (saved 1.21 MB - 83%)
+
+[77/173] 📸 4 Black and Grey/Back Mandala Tattoo.jpg
+          Original: 1.17 MB
+          Optimized: 190.03 KB (saved 1004.99 KB - 84%)
+
+[78/173] 📸 4 Black and Grey/Buddha Tattoo.jpg
+          Original: 1.66 MB
+          Optimized: 315.97 KB (saved 1.35 MB - 81%)
+
+[79/173] 📸 4 Black and Grey/Constellation Tattoo.jpg
+          Original: 1.82 MB
+          Optimized: 339.29 KB (saved 1.49 MB - 82%)
+
+[80/173] 📸 4 Black and Grey/Custom Compass Tattoo.jpg
+          Original: 1.84 MB
+          Optimized: 359.27 KB (saved 1.49 MB - 81%)
+
+[81/173] 📸 4 Black and Grey/Custom Tattoo.jpg
+          Original: 2.02 MB
+          Optimized: 416.77 KB (saved 1.62 MB - 80%)
+
+[82/173] 📸 4 Black and Grey/Dic Tattoo.jpg
+          Original: 1.84 MB
+          Optimized: 377.88 KB (saved 1.47 MB - 80%)
+
+[83/173] 📸 4 Black and Grey/Eagle Back Tattoo.jpg
+          Original: 1.61 MB
+          Optimized: 259.13 KB (saved 1.35 MB - 84%)
+
+[84/173] 📸 4 Black and Grey/Eagle Fist Tattoo.jpg
+          Original: 607.75 KB
+          Optimized: 434.57 KB (saved 173.18 KB - 28%)
+
+[85/173] 📸 4 Black and Grey/Floral Arm Tattoo.jpg
+          Original: 3.36 MB
+          Optimized: 661 KB (saved 2.71 MB - 81%)
+
+[86/173] 📸 4 Black and Grey/Fox Tattoo.jpg
+          Original: 2.05 MB
+          Optimized: 392.92 KB (saved 1.67 MB - 81%)
+
+[87/173] 📸 4 Black and Grey/Geometric Armband Tattoo.jpg
+          Original: 2.53 MB
+          Optimized: 491.03 KB (saved 2.05 MB - 81%)
+
+[88/173] 📸 4 Black and Grey/God First Tattoo.jpg
+          Original: 732.04 KB
+          Optimized: 101.43 KB (saved 630.61 KB - 86%)
+
+[89/173] 📸 4 Black and Grey/Horseshoe Tattoo.jpg
+          Original: 1.89 MB
+          Optimized: 373.28 KB (saved 1.52 MB - 81%)
+
+[90/173] 📸 4 Black and Grey/Knee Skull Tattoo.jpg
+          Original: 2.14 MB
+          Optimized: 412.53 KB (saved 1.74 MB - 81%)
+
+[91/173] 📸 4 Black and Grey/Knife Tattoo.jpg
+          Original: 1.9 MB
+          Optimized: 391.37 KB (saved 1.52 MB - 80%)
+
+[92/173] 📸 4 Black and Grey/Koi Fish Armband Tattoo.jpg
+          Original: 3.49 MB
+          Optimized: 682.73 KB (saved 2.83 MB - 81%)
+
+[93/173] 📸 4 Black and Grey/Krishna Tattoo.jpg
+          Original: 970.67 KB
+          Optimized: 155.55 KB (saved 815.13 KB - 84%)
+
+[94/173] 📸 4 Black and Grey/Moksha Tattoo.jpg
+          Original: 1.84 MB
+          Optimized: 376.54 KB (saved 1.47 MB - 80%)
+
+[95/173] 📸 4 Black and Grey/Pheonix - Rise from ashes.jpg
+          Original: 1.82 MB
+          Optimized: 381.34 KB (saved 1.44 MB - 80%)
+
+[96/173] 📸 4 Black and Grey/Pheonix Tattoo.jpg
+          Original: 1.66 MB
+          Optimized: 276.96 KB (saved 1.39 MB - 84%)
+
+[97/173] 📸 4 Black and Grey/Rayaridare Tattoo.jpg
+          Original: 1.66 MB
+          Optimized: 247.66 KB (saved 1.42 MB - 85%)
+
+[98/173] 📸 4 Black and Grey/Rudra Black and Grey Tattoo.jpg
+          Original: 1.2 MB
+          Optimized: 199.47 KB (saved 1 MB - 84%)
+
+[99/173] 📸 4 Black and Grey/Rudra Shiva Tattoo.jpg
+          Original: 1.92 MB
+          Optimized: 412.05 KB (saved 1.52 MB - 79%)
+
+[100/173] 📸 4 Black and Grey/Sailor Tattoo.jpg
+          Original: 1.48 MB
+          Optimized: 244.03 KB (saved 1.25 MB - 84%)
+
+[101/173] 📸 4 Black and Grey/Sailor Theme Tattoo.jpg
+          Original: 2.6 MB
+          Optimized: 455.66 KB (saved 2.16 MB - 83%)
+
+[102/173] 📸 4 Black and Grey/Samurai Tattoo.jpg
+          Original: 2.07 MB
+          Optimized: 448.5 KB (saved 1.63 MB - 79%)
+
+[103/173] 📸 4 Black and Grey/Satan Tattoo.jpg
+          Original: 2.58 MB
+          Optimized: 503.32 KB (saved 2.09 MB - 81%)
+
+[104/173] 📸 4 Black and Grey/Shiva Jotirlinga Tattoo.jpg
+          Original: 1.98 MB
+          Optimized: 398.5 KB (saved 1.59 MB - 80%)
+
+[105/173] 📸 4 Black and Grey/Shiva Nandi Tattoo.jpg
+          Original: 2.78 MB
+          Optimized: 524.3 KB (saved 2.26 MB - 82%)
+
+[106/173] 📸 4 Black and Grey/Shiva Tattoo.jpg
+          Original: 2.98 MB
+          Optimized: 549.13 KB (saved 2.44 MB - 82%)
+
+[107/173] 📸 4 Black and Grey/Shivaji Maharaj Tattoo.jpg
+          Original: 1.59 MB
+          Optimized: 272.53 KB (saved 1.32 MB - 83%)
+
+[108/173] 📸 4 Black and Grey/Shivlinga Tattoo.jpg
+          Original: 1.9 MB
+          Optimized: 361.63 KB (saved 1.55 MB - 81%)
+
+[109/173] 📸 4 Black and Grey/Shri Raghvendra Swami Tattoo.jpg
+          Original: 1.79 MB
+          Optimized: 370.14 KB (saved 1.43 MB - 80%)
+
+[110/173] 📸 4 Black and Grey/Sudarshan Chakra Tattoo.jpg
+          Original: 1.93 MB
+          Optimized: 367.75 KB (saved 1.57 MB - 81%)
+
+[111/173] 📸 4 Black and Grey/Tree of life Tattoo.jpg
+          Original: 1.78 MB
+          Optimized: 363.29 KB (saved 1.43 MB - 80%)
+
+[112/173] 📸 4 Black and Grey/Trishul Tattoo.jpg
+          Original: 1 MB
+          Optimized: 159.15 KB (saved 867.48 KB - 84%)
+
+[113/173] 📸 4 Black and Grey/Trishul Waves Custom Tattoo.jpg
+          Original: 1.71 MB
+          Optimized: 358.52 KB (saved 1.36 MB - 80%)
+
+[114/173] 📸 4 Black and Grey/Wings on Back Tattoo.jpg
+          Original: 1.7 MB
+          Optimized: 299.85 KB (saved 1.41 MB - 83%)
+
+[115/173] 📸 4 Black and Grey/Wolf Tattoo.jpg
+          Original: 1.67 MB
+          Optimized: 298.69 KB (saved 1.38 MB - 83%)
+
+[116/173] 📸 4 Black and Grey/Zeus Tattoo.jpg
+          Original: 2.31 MB
+          Optimized: 441.78 KB (saved 1.88 MB - 81%)
+
+[117/173] 📸 4 Black and Grey/medusa swati copy.jpg
+          Original: 1.68 MB
+          Optimized: 297.44 KB (saved 1.39 MB - 83%)
+
+[118/173] 📸 5 Small and coverups/1111 constellation.jpg
+          Original: 225.2 KB
+          Optimized: 236.01 KB (saved NaN undefined - -5%)
+
+[119/173] 📸 5 Small and coverups/Adventure Tattoo.jpg
+          Original: 1.81 MB
+          Optimized: 355.58 KB (saved 1.46 MB - 81%)
+
+[120/173] 📸 5 Small and coverups/Baby holding Finger.jpg
+          Original: 1.89 MB
+          Optimized: 410.25 KB (saved 1.49 MB - 79%)
+
+[121/173] 📸 5 Small and coverups/Back Mandala Tattoo.jpg
+          Original: 1001.93 KB
+          Optimized: 127.82 KB (saved 874.11 KB - 87%)
+
+[122/173] 📸 5 Small and coverups/Balance on Chest.jpg
+          Original: 2.39 MB
+          Optimized: 364.46 KB (saved 2.04 MB - 85%)
+
+[123/173] 📸 5 Small and coverups/Basketball Player Tattoo.jpg
+          Original: 1.56 MB
+          Optimized: 318.14 KB (saved 1.25 MB - 80%)
+
+[124/173] 📸 5 Small and coverups/Bull Line Art.jpg
+          Original: 820.72 KB
+          Optimized: 100.59 KB (saved 720.14 KB - 88%)
+
+[125/173] 📸 5 Small and coverups/Cartoon Tattoo.jpg
+          Original: 1.87 MB
+          Optimized: 380.59 KB (saved 1.49 MB - 80%)
+
+[126/173] 📸 5 Small and coverups/Cat Face Tattoo.jpg
+          Original: 1.83 MB
+          Optimized: 340.02 KB (saved 1.5 MB - 82%)
+
+[127/173] 📸 5 Small and coverups/Cat Line Art.jpg
+          Original: 1.58 MB
+          Optimized: 258.94 KB (saved 1.33 MB - 84%)
+
+[128/173] 📸 5 Small and coverups/Cybersigilism Tattoo.jpg
+          Original: 1.79 MB
+          Optimized: 379.79 KB (saved 1.41 MB - 79%)
+
+[129/173] 📸 5 Small and coverups/Dandelion.jpg
+          Original: 1.79 MB
+          Optimized: 363.84 KB (saved 1.44 MB - 80%)
+
+[130/173] 📸 5 Small and coverups/Date Tattoo.jpg
+          Original: 1.44 MB
+          Optimized: 241.93 KB (saved 1.2 MB - 84%)
+
+[131/173] 📸 5 Small and coverups/Dragon Tribal.jpg
+          Original: 1.9 MB
+          Optimized: 383.21 KB (saved 1.53 MB - 80%)
+
+[132/173] 📸 5 Small and coverups/Dragon.jpg
+          Original: 901.43 KB
+          Optimized: 125.94 KB (saved 775.49 KB - 86%)
+
+[133/173] 📸 5 Small and coverups/Dragonfly.jpg
+          Original: 1.82 MB
+          Optimized: 382.74 KB (saved 1.45 MB - 79%)
+
+[134/173] 📸 5 Small and coverups/Eagle Coverup.jpg
+          Original: 1.8 MB
+          Optimized: 352.24 KB (saved 1.45 MB - 81%)
+
+[135/173] 📸 5 Small and coverups/Eagle Triangle.jpg
+          Original: 485.93 KB
+          Optimized: 344.02 KB (saved 141.91 KB - 29%)
+
+[136/173] 📸 5 Small and coverups/Ear Tattoo.jpg
+          Original: 1.71 MB
+          Optimized: 297.21 KB (saved 1.42 MB - 83%)
+
+[137/173] 📸 5 Small and coverups/Finger Tattoo.jpg
+          Original: 1 MB
+          Optimized: 130.09 KB (saved 896.14 KB - 87%)
+
+[138/173] 📸 5 Small and coverups/Flute Feather Tattoo.jpg
+          Original: 244.36 KB
+          Optimized: 260.46 KB (saved NaN undefined - -7%)
+
+[139/173] 📸 5 Small and coverups/Free Soul Script Tattoo.jpg
+          Original: 968.84 KB
+          Optimized: 110.06 KB (saved 858.78 KB - 89%)
+
+[140/173] 📸 5 Small and coverups/Geleya.jpg
+          Original: 1.88 MB
+          Optimized: 374.24 KB (saved 1.51 MB - 81%)
+
+[141/173] 📸 5 Small and coverups/Gods Plan.jpg
+          Original: 205.14 KB
+          Optimized: 215.8 KB (saved NaN undefined - -5%)
+
+[142/173] 📸 5 Small and coverups/Hindi Script Tattoo.jpg
+          Original: 1.91 MB
+          Optimized: 378.55 KB (saved 1.54 MB - 81%)
+
+[143/173] 📸 5 Small and coverups/Holding Hands Line Art.jpg
+          Original: 835.05 KB
+          Optimized: 109.18 KB (saved 725.87 KB - 87%)
+
+[144/173] 📸 5 Small and coverups/Koi Fish Tattoo on Shoulder.jpg
+          Original: 1.27 MB
+          Optimized: 224.25 KB (saved 1.05 MB - 83%)
+
+[145/173] 📸 5 Small and coverups/Koi Fish Tattoo.jpg
+          Original: 1.87 MB
+          Optimized: 378.79 KB (saved 1.5 MB - 80%)
+
+[146/173] 📸 5 Small and coverups/Krishna Scar Cover Up.jpg
+          Original: 1.04 MB
+          Optimized: 171.96 KB (saved 888.33 KB - 84%)
+
+[147/173] 📸 5 Small and coverups/Line Art Tattoo.jpg
+          Original: 4.58 MB
+          Optimized: 827.07 KB (saved 3.77 MB - 82%)
+
+[148/173] 📸 5 Small and coverups/Lion Scar Tattoo.jpg
+          Original: 1.71 MB
+          Optimized: 324.82 KB (saved 1.39 MB - 81%)
+
+[149/173] 📸 5 Small and coverups/Lotus Mandala Tattoo.jpg
+          Original: 871.12 KB
+          Optimized: 117.87 KB (saved 753.24 KB - 86%)
+
+[150/173] 📸 5 Small and coverups/Maa Paa Tattoo.jpg
+          Original: 265.5 KB
+          Optimized: 284.95 KB (saved NaN undefined - -7%)
+
+[151/173] 📸 5 Small and coverups/Mandala on Fist Tattoo.jpg
+          Original: 1.88 MB
+          Optimized: 421.07 KB (saved 1.47 MB - 78%)
+
+[152/173] 📸 5 Small and coverups/Memto Mori Tattoo.jpg
+          Original: 1.76 MB
+          Optimized: 331.42 KB (saved 1.43 MB - 82%)
+
+[153/173] 📸 5 Small and coverups/Moon Tattoo.jpg
+          Original: 10.57 MB
+          Optimized: 1.8 MB (saved 8.77 MB - 83%)
+
+[154/173] 📸 5 Small and coverups/Om Taurus.jpg
+          Original: 560.08 KB
+          Optimized: 397.85 KB (saved 162.23 KB - 29%)
+
+[155/173] 📸 5 Small and coverups/Om Trishul Tattoo.jpg
+          Original: 1.44 MB
+          Optimized: 283.28 KB (saved 1.17 MB - 81%)
+
+[156/173] 📸 5 Small and coverups/Om Trishul.jpg
+          Original: 1.62 MB
+          Optimized: 292.95 KB (saved 1.34 MB - 82%)
+
+[157/173] 📸 5 Small and coverups/Owl Coverup Tattoo.jpg
+          Original: 1.79 MB
+          Optimized: 333.4 KB (saved 1.47 MB - 82%)
+
+[158/173] 📸 5 Small and coverups/Rayariddare Tattoo.jpg
+          Original: 1.7 MB
+          Optimized: 329.1 KB (saved 1.38 MB - 81%)
+
+[159/173] 📸 5 Small and coverups/Rich Risk Tattoo.jpg
+          Original: 1.49 MB
+          Optimized: 254.28 KB (saved 1.24 MB - 83%)
+
+[160/173] 📸 5 Small and coverups/Scar Cover Lion.jpg
+          Original: 1.92 MB
+          Optimized: 401.47 KB (saved 1.53 MB - 80%)
+
+[161/173] 📸 5 Small and coverups/Scar Cover Uop.jpg
+          Original: 1.89 MB
+          Optimized: 366.43 KB (saved 1.53 MB - 81%)
+
+[162/173] 📸 5 Small and coverups/Sparrow Scar Cover up.jpg
+          Original: 1.63 MB
+          Optimized: 303.46 KB (saved 1.34 MB - 82%)
+
+[163/173] 📸 5 Small and coverups/Star Coverup Tattoo.jpg
+          Original: 2.1 MB
+          Optimized: 396.4 KB (saved 1.71 MB - 82%)
+
+[164/173] 📸 5 Small and coverups/Star on Shoulder.jpg
+          Original: 1.22 MB
+          Optimized: 208.38 KB (saved 1.02 MB - 83%)
+
+[165/173] 📸 5 Small and coverups/Still I Rise in Red.jpg
+          Original: 1.08 MB
+          Optimized: 92.67 KB (saved 1010.99 KB - 92%)
+
+[166/173] 📸 5 Small and coverups/Sun - Moon on Chest Tattoo.jpg
+          Original: 1.14 MB
+          Optimized: 188.47 KB (saved 982.84 KB - 84%)
+
+[167/173] 📸 5 Small and coverups/Sun Moon Tattoo.jpg
+          Original: 1.48 MB
+          Optimized: 262.51 KB (saved 1.22 MB - 83%)
+
+[168/173] 📸 5 Small and coverups/Sun on Shoulder.jpg
+          Original: 1.51 MB
+          Optimized: 292.12 KB (saved 1.23 MB - 81%)
+
+[169/173] 📸 5 Small and coverups/Sunflower Lineart Tattoo.jpg
+          Original: 1.14 MB
+          Optimized: 161.14 KB (saved 1009.27 KB - 86%)
+
+[170/173] 📸 5 Small and coverups/Sunflower Tattoo.jpg
+          Original: 1.08 MB
+          Optimized: 182.15 KB (saved 924.24 KB - 84%)
+
+[171/173] 📸 5 Small and coverups/Sword Lightening Tattoo.jpg
+          Original: 810.79 KB
+          Optimized: 93.31 KB (saved 717.48 KB - 88%)
+
+[172/173] 📸 5 Small and coverups/Turtle Coverup Tattoo.jpg
+          Original: 1.77 MB
+          Optimized: 307.48 KB (saved 1.47 MB - 83%)
+
+[173/173] 📸 5 Small and coverups/Wild Heart Script Tattoo.jpg
+          Original: 902 KB
+          Optimized: 78.89 KB (saved 823.11 KB - 91%)
+
+============================================================
+📊 OPTIMIZATION COMPLETE
+
+Images processed: 173/173
+Total original size: 346.71 MB
+Total optimized size: 64.14 MB
+Total saved: 282.57 MB
+Average reduction: 81%
+
+✅ Originals backed up to: public/images/portfolio/_originals
+✅ WebP variants created in each directory/_webp/
+
+📝 Next: Update portfolio.ts to reference optimized images
