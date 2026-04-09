@@ -1,38 +1,40 @@
 "use client";
 
-import { useState } from "react";
-import Image from "next/image";
+import { useState, useRef } from "react";
 import { ScrollReveal } from "@/components/animations/scroll-reveal";
 import { Counter } from "@/components/animations/counter";
 import { siteConfig } from "@/data/site-config";
-import { BLUR_PLACEHOLDER } from "@/lib/image-utils";
 
 export function ArtistIntro() {
   const { artist } = siteConfig;
-  const [imgError, setImgError] = useState(false);
+  const videoRef = useRef<HTMLVideoElement>(null);
+  const [videoFailed, setVideoFailed] = useState(false);
 
   return (
     <section className="bg-[var(--bg-secondary)] py-24 md:py-32">
       <div className="mx-auto grid max-w-7xl grid-cols-1 gap-12 px-4 md:grid-cols-2 md:gap-16 md:px-8">
-        {/* Image */}
+        {/* Video */}
         <ScrollReveal direction="left">
           <div className="relative aspect-[3/4] overflow-hidden">
-            {imgError ? (
+            {!videoFailed && (
+              <video
+                ref={videoRef}
+                autoPlay
+                muted
+                loop
+                playsInline
+                preload="metadata"
+                onError={() => setVideoFailed(true)}
+                className="absolute inset-0 h-full w-full object-cover"
+              >
+                <source src="/videos/artist.webm" type="video/webm" />
+                <source src="/videos/artist.mp4" type="video/mp4" />
+              </video>
+            )}
+            {videoFailed && (
               <div className="absolute inset-0 flex items-center justify-center bg-[var(--bg-elevated)] text-[var(--text-tertiary)]">
-                <span className="font-mono text-xs uppercase tracking-wider">Image unavailable</span>
+                <span className="font-mono text-xs uppercase tracking-wider">Video unavailable</span>
               </div>
-            ) : (
-              <Image
-                src="https://images.unsplash.com/photo-1611501275019-9b5cda994e8d?w=800&q=80"
-                alt={artist.name}
-                fill
-                loading="lazy"
-                sizes="(max-width: 768px) 100vw, 50vw"
-                placeholder="blur"
-                blurDataURL={BLUR_PLACEHOLDER}
-                className="object-cover"
-                onError={() => setImgError(true)}
-              />
             )}
           </div>
         </ScrollReveal>
