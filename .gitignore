@@ -45,3 +45,19 @@ next-env.d.ts
 
 # claude code
 .claude/
+
+# documentation and reference (not needed in production)
+*.md
+docs/
+design-ref/
+
+# optimization scripts and logs (development only)
+scripts/
+optimization-log.txt
+build-analysis.txt
+
+# image backup folders and generated variants (not needed in production)
+public/images/portfolio/_originals/
+public/images/_test-optimized/
+public/videos/_originals/
+public/images/portfolio/Photos/*/_webp/
