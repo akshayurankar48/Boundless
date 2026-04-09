@@ -2,7 +2,6 @@
 
 import { useState } from "react";
 import Image from "next/image";
-import Link from "next/link";
 import { ScrollReveal } from "@/components/animations/scroll-reveal";
 import { Counter } from "@/components/animations/counter";
 import { siteConfig } from "@/data/site-config";
@@ -78,15 +77,6 @@ export function ArtistIntro() {
                 Focus
               </p>
             </div>
-          </div>
-
-          <div className="mt-8">
-            <Link
-              href="/artist"
-              className="font-mono text-xs uppercase tracking-[0.15em] text-[var(--accent-silver)] transition-colors hover:text-[var(--accent-silver-hover)]"
-            >
-              Read Full Profile →
-            </Link>
           </div>
         </ScrollReveal>
       </div>

@@ -30,7 +30,6 @@ export const siteConfig = {
     { label: "Home", href: "/" },
     { label: "Portfolio", href: "/portfolio" },
     { label: "The Space", href: "/studio" },
-    { label: "Artist", href: "/artist" },
     { label: "Contact", href: "/contact" },
   ],
   stats: {

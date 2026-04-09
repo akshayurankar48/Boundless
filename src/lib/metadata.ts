@@ -59,7 +59,7 @@ export function getPersonSchema() {
       "@type": "LocalBusiness",
       name: siteConfig.name,
     },
-    url: `${SITE_URL}/artist`,
+    url: SITE_URL,
     knowsAbout: [
       "Tattoo Art",
       "Black and Gray Realism",

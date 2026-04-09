@@ -1,8 +1,8 @@
 "use client";
 
+import { useRef, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { ParallaxImage } from "@/components/animations/parallax-image";
 import { TextReveal } from "@/components/animations/text-reveal";
 import { ScrollReveal } from "@/components/animations/scroll-reveal";
 import { ClipPathReveal } from "@/components/animations/clip-path-reveal";
@@ -33,22 +33,45 @@ const studioImages = [
 
 export function StudioContent() {
   const { studio } = siteConfig;
+  const videoRef = useRef<HTMLVideoElement>(null);
+  const [videoFailed, setVideoFailed] = useState(false);
 
   return (
     <>
       {/* Hero */}
-      <section className="relative h-[70vh] min-h-[500px] md:h-[80vh]">
-        <ParallaxImage
-          src="https://images.unsplash.com/photo-1611501275019-9b5cda994e8d?w=1600&q=80"
-          alt="BOUNDDLESS TATTOOO STUDIO studio interior"
-          width={1600}
-          height={900}
-          className="absolute inset-0 h-full w-full"
-          sizes="100vw"
-          speed={0.2}
-        />
-        <div className="absolute inset-0 bg-gradient-to-t from-[var(--bg-primary)] via-[var(--bg-primary)]/40 to-transparent" />
-        <div className="absolute bottom-0 left-0 right-0 pb-16 md:pb-24">
+      <section className="relative h-[70vh] min-h-[500px] md:h-[80vh] overflow-hidden">
+        {/* Background video with image fallback */}
+        <div className="absolute inset-0 z-0">
+          {!videoFailed && (
+            <video
+              ref={videoRef}
+              autoPlay
+              muted
+              loop
+              playsInline
+              preload="metadata"
+              poster="https://images.unsplash.com/photo-1611501275019-9b5cda994e8d?w=1600&q=80"
+              onError={() => setVideoFailed(true)}
+              className="absolute inset-0 h-full w-full object-cover opacity-60"
+            >
+              <source src="/videos/studio.webm" type="video/webm" />
+              <source src="/videos/studio.mp4" type="video/mp4" />
+            </video>
+          )}
+          {videoFailed && (
+            <div
+              className="absolute inset-0 opacity-60"
+              style={{
+                backgroundImage:
+                  "url('https://images.unsplash.com/photo-1611501275019-9b5cda994e8d?w=1600&q=80')",
+                backgroundSize: "cover",
+                backgroundPosition: "center",
+              }}
+            />
+          )}
+          <div className="absolute inset-0 bg-gradient-to-t from-[var(--bg-primary)] via-[var(--bg-primary)]/40 to-transparent" />
+        </div>
+        <div className="absolute bottom-0 left-0 right-0 z-10 pb-16 md:pb-24">
           <div className="mx-auto max-w-7xl px-4 md:px-8">
             <p className="mb-3 font-mono text-xs uppercase tracking-[0.2em] text-[var(--accent-silver)]">
               The Studio
@@ -67,10 +90,10 @@ export function StudioContent() {
         <div className="mx-auto max-w-7xl px-4 md:px-8">
           <ScrollReveal>
             <div className="mx-auto max-w-4xl space-y-8 text-center">
-              <p className="font-serif text-2xl leading-relaxed text-[var(--text-secondary)] md:text-3xl lg:text-4xl">
+              <p className="font-serif text-2xl leading-relaxed text-[var(--text-secondary)] md:text-3xl lg:text-3xl">
                 A private studio setup designed for a calm, distraction-free tattoo experience. The space is maintained with proper hygiene, clean equipment, and a comfortable environment throughout your session.
               </p>
-              <p className="font-serif text-2xl leading-relaxed text-[var(--text-secondary)] md:text-3xl lg:text-4xl">
+              <p className="font-serif text-2xl leading-relaxed text-[var(--text-secondary)] md:text-3xl lg:text-3xl">
                 Clean work, precise execution, and proper hygiene &mdash; every tattoo is done with care and professionalism.
               </p>
             </div>
