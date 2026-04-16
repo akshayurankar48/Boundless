@@ -14,20 +14,20 @@ import { MapPlaceholder } from "@/components/shared/map-placeholder";
 
 const studioImages = [
   {
-    src: "https://images.unsplash.com/photo-1611501275019-9b5cda994e8d?w=800&q=80",
-    alt: "Studio workstation with professional tattoo equipment",
+    src: "/images/studio/IMG_7992.JPEG",
+    alt: "Boundless Tattoo studio space",
   },
   {
-    src: "https://images.unsplash.com/photo-1568515045052-f9a854d70bfd?w=800&q=80",
-    alt: "Clean studio interior with modern industrial design",
+    src: "/images/studio/IMG_7980.JPEG",
+    alt: "Boundless Tattoo studio interior",
   },
   {
-    src: "https://images.unsplash.com/photo-1565058379802-bbe93b2f703a?w=800&q=80",
-    alt: "Artist workspace with reference materials and ink setup",
+    src: "/images/studio/IMG_7984.JPEG",
+    alt: "Boundless Tattoo studio environment",
   },
   {
-    src: "https://images.unsplash.com/photo-1611501275019-9b5cda994e8d?w=800&q=80",
-    alt: "Studio reception and client consultation area",
+    src: "/images/studio/IMG_7988.JPEG",
+    alt: "Boundless Tattoo studio setup",
   },
 ];
 
@@ -110,68 +110,50 @@ export function StudioContent() {
             description="Every corner of our studio is intentionally designed to support the art of tattooing at the highest level."
           />
 
-          <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-12">
-            {/* Large left image */}
-            <ClipPathReveal
-              direction="left"
-              className="lg:col-span-7 lg:row-span-2"
-            >
-              <div className="relative aspect-[4/3] lg:aspect-auto lg:h-full">
+          <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
+            <ClipPathReveal direction="left" delay={0}>
+              <div className="relative aspect-[4/3]">
                 <Image
                   src={studioImages[0].src}
                   alt={studioImages[0].alt}
                   fill
-                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 58vw"
+                  sizes="(max-width: 640px) 100vw, 50vw"
                   className="object-cover"
                 />
               </div>
             </ClipPathReveal>
 
-            {/* Top right */}
-            <ClipPathReveal
-              direction="right"
-              delay={0.15}
-              className="lg:col-span-5"
-            >
+            <ClipPathReveal direction="right" delay={0.1}>
               <div className="relative aspect-[4/3]">
                 <Image
                   src={studioImages[1].src}
                   alt={studioImages[1].alt}
                   fill
-                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 42vw"
+                  sizes="(max-width: 640px) 100vw, 50vw"
                   className="object-cover"
                 />
               </div>
             </ClipPathReveal>
 
-            {/* Bottom right - two images side by side */}
-            <ClipPathReveal
-              direction="bottom"
-              delay={0.25}
-              className="sm:col-span-1 lg:col-span-2"
-            >
-              <div className="relative aspect-square">
+            <ClipPathReveal direction="left" delay={0.2}>
+              <div className="relative aspect-[4/3]">
                 <Image
                   src={studioImages[2].src}
                   alt={studioImages[2].alt}
                   fill
-                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 25vw, 17vw"
+                  sizes="(max-width: 640px) 100vw, 50vw"
                   className="object-cover"
                 />
               </div>
             </ClipPathReveal>
 
-            <ClipPathReveal
-              direction="bottom"
-              delay={0.35}
-              className="sm:col-span-1 lg:col-span-3"
-            >
-              <div className="relative aspect-square">
+            <ClipPathReveal direction="right" delay={0.3}>
+              <div className="relative aspect-[4/3]">
                 <Image
                   src={studioImages[3].src}
                   alt={studioImages[3].alt}
                   fill
-                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 25vw, 25vw"
+                  sizes="(max-width: 640px) 100vw, 50vw"
                   className="object-cover"
                 />
               </div>

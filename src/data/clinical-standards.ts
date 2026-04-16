@@ -6,27 +6,27 @@ export type ClinicalStandard = {
 
 export const clinicalStandards: ClinicalStandard[] = [
   {
-    title: "Hospital Grade Autoclave",
+    title: "100% Disposable Setup",
     description:
-      "Industry-leading auto-sterilization for all precision instruments. Every tool undergoes a full sterilization cycle before each client.",
+      "All needles, tubes, and grips are single-use and disposed of after every session. No reuse, no compromise on safety.",
     icon: "shield",
   },
   {
-    title: "100% Single Use",
+    title: "No Cross Contamination",
     description:
-      "Needles, tubes, grips — single-use, medical-grade, and fully disposable. Zero cross-contamination risk.",
+      "Everything used during your session is handled carefully and discarded after use, maintaining a clean and controlled environment.",
     icon: "syringe",
   },
   {
-    title: "Licensed & Certified",
+    title: "Government Licensed & Trained",
     description:
-      "Fully certified practitioners with advanced medical hygiene training. Exceeding industry health and safety standards.",
+      "Operating with a valid government trade license and trained under experienced mentors.",
     icon: "award",
   },
   {
-    title: "Premium Vegan Inks",
+    title: "Quality Vegan Inks",
     description:
-      "ISO-certified sterilization and premium vegan-friendly mineral inks. Your safety is the canvas for our craft.",
+      "We use Quantum vegan inks, known for smooth application, strong pigmentation, and long-lasting results.",
     icon: "scan",
   },
 ];
