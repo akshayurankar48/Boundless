@@ -27,7 +27,6 @@ export function ArtistIntro() {
                 onError={() => setVideoFailed(true)}
                 className="absolute inset-0 h-full w-full object-cover"
               >
-                <source src="/videos/artist.webm" type="video/webm" />
                 <source src="/videos/artist.mp4" type="video/mp4" />
               </video>
             )}
