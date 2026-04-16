@@ -4,9 +4,9 @@ export type InstagramPost = {
   href: string;
 };
 
-// Curated static grid — no API dependency
-// Replace these with real Instagram post images and links
-// All URLs verified working as of 2026-03-16
+// TODO: Replace with real Instagram content
+// Current images are Unsplash placeholders - need actual studio portfolio shots
+// Links point to example URLs - update with real Instagram post links
 export const instagramPosts: InstagramPost[] = [
   {
     image: "https://images.unsplash.com/photo-1611501275019-9b5cda994e8d?w=400&q=70",

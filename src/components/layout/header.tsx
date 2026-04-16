@@ -79,12 +79,12 @@ export const Header = memo(function Header() {
 
   return (
     <>
-      <a
+      {/* <a
         href="#main"
         className="absolute -top-full left-4 z-[60] bg-[var(--accent-silver)] px-4 py-2 font-mono text-xs uppercase tracking-wider text-[var(--bg-primary)] focus:top-4"
       >
         Skip to content
-      </a>
+      </a> */}
 
       <header
         className={cn(

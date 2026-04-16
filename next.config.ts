@@ -2,6 +2,10 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   reactCompiler: true,
+  compress: true,
+  poweredByHeader: false,
+  output: "standalone",
+  outputFileTracingRoot: __dirname,
   images: {
     remotePatterns: [
       {
