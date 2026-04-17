@@ -90,10 +90,10 @@ export function StudioContent() {
         <div className="mx-auto max-w-7xl px-4 md:px-8">
           <ScrollReveal>
             <div className="mx-auto max-w-4xl space-y-8 text-center">
-              <p className="font-serif text-2xl leading-relaxed text-[var(--text-secondary)] md:text-3xl lg:text-3xl">
+              <p className="font-serif text-2xl leading-relaxed text-[var(--text-secondary)] md:text-3xl lg:text-2xl">
                 A private studio setup designed for a calm, distraction-free tattoo experience. The space is maintained with proper hygiene, clean equipment, and a comfortable environment throughout your session.
               </p>
-              <p className="font-serif text-2xl leading-relaxed text-[var(--text-secondary)] md:text-3xl lg:text-3xl">
+              <p className="font-serif text-2xl leading-relaxed text-[var(--text-secondary)] md:text-3xl lg:text-2xl">
                 Clean work, precise execution, and proper hygiene &mdash; every tattoo is done with care and professionalism.
               </p>
             </div>
