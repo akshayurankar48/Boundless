@@ -153,7 +153,7 @@ function TestimonialCard({ testimonial }: TestimonialCardProps) {
       <p className="mb-1 inline-block origin-left font-serif text-3xl text-[var(--accent-silver-muted)]">
         &ldquo;
       </p>
-      <p className="flex-1 text-sm italic leading-relaxed text-[var(--text-secondary)]">
+      <p className="flex-1 line-clamp-5 text-sm italic leading-relaxed text-[var(--text-secondary)]">
         {testimonial.quote}
       </p>
       <div className="mt-6 border-t border-[var(--border-default)] pt-4">

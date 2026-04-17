@@ -26,8 +26,8 @@ export function ClinicalStandards() {
           {clinicalStandards.map((standard, i) => {
             const Icon = iconMap[standard.icon];
             return (
-              <ScrollReveal key={standard.title} delay={i * 0.1}>
-                <div className="group border border-[var(--border-default)] bg-[var(--bg-secondary)] p-6 transition-colors hover:border-[var(--border-hover)]">
+              <ScrollReveal key={standard.title} delay={i * 0.1} className="h-full">
+                <div className="group h-full border border-[var(--border-default)] bg-[var(--bg-secondary)] p-6 transition-colors hover:border-[var(--border-hover)]">
                   <Icon
                     size={24}
                     className="mb-4 text-[var(--accent-silver)]"
