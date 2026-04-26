@@ -27,7 +27,6 @@ export function HeroSection() {
             onError={() => setVideoFailed(true)}
             className="absolute inset-0 h-full w-full object-cover opacity-60"
           >
-            <source src="/videos/hero-ambient.webm" type="video/webm" />
             <source src="/videos/hero-ambient.mp4" type="video/mp4" />
           </video>
         )}
