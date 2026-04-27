@@ -22,7 +22,7 @@ const studioImages = [
     alt: "Boundless Tattoo studio interior",
   },
   {
-    src: "/images/studio/IMG_7984.JPEG",
+    src: "/images/studio/studio_outside.JPEG",
     alt: "Boundless Tattoo studio environment",
   },
   {

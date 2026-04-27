@@ -8,7 +8,6 @@ import { FeaturedWork } from "@/components/sections/featured-work";
 import { ArtistIntro } from "@/components/sections/artist-intro";
 import { ProcessSteps } from "@/components/sections/process-steps";
 import { Testimonials } from "@/components/sections/testimonials";
-import { StudioPreview } from "@/components/sections/studio-preview";
 import { CTABanner } from "@/components/sections/cta-banner";
 
 export function ClientOnlyPage() {
@@ -21,7 +20,6 @@ export function ClientOnlyPage() {
         <ArtistIntro />
         <ProcessSteps />
         <Testimonials />
-        <StudioPreview />
         <CTABanner />
       </main>
       <Footer />
