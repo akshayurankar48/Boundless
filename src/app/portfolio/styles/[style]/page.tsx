@@ -59,13 +59,13 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   }
 
   const title = `${data.label} Tattoos`;
-  const description = `${data.description} Browse our ${data.label.toLowerCase()} tattoo portfolio at BOUNDDLESS TATTOOO STUDIO.`;
+  const description = `${data.description} Browse our ${data.label.toLowerCase()} tattoo portfolio at BOUNDLESS TATTOO STUDIO.`;
 
   return {
     title,
     description,
     openGraph: {
-      title: `${data.label} Tattoos | BOUNDDLESS TATTOOO STUDIO`,
+      title: `${data.label} Tattoos | BOUNDLESS TATTOO STUDIO`,
       description,
       type: "website",
       images: [
@@ -73,13 +73,13 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
           url: "/images/og/default.jpg",
           width: 1200,
           height: 630,
-          alt: `${data.label} Tattoos at BOUNDDLESS TATTOOO STUDIO`,
+          alt: `${data.label} Tattoos at BOUNDLESS TATTOO STUDIO`,
         },
       ],
     },
     twitter: {
       card: "summary_large_image",
-      title: `${data.label} Tattoos | BOUNDDLESS TATTOOO STUDIO`,
+      title: `${data.label} Tattoos | BOUNDLESS TATTOO STUDIO`,
       description,
     },
   };

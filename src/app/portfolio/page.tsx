@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   description:
     "Explore our curated collection of black & gray realism tattoos. Every piece is selected for its technical perfection and visionary narrative.",
   openGraph: {
-    title: "Portfolio | BOUNDDLESS TATTOOO STUDIO",
+    title: "Portfolio | BOUNDLESS TATTOO STUDIO",
     description:
       "Explore our curated collection of black & gray realism tattoos. Every piece is selected for its technical perfection and visionary narrative.",
     images: [
@@ -17,7 +17,7 @@ export const metadata: Metadata = {
         url: "/images/og/default.jpg",
         width: 1200,
         height: 630,
-        alt: "BOUNDDLESS TATTOOO STUDIO Portfolio",
+        alt: "BOUNDLESS TATTOO STUDIO Portfolio",
       },
     ],
   },

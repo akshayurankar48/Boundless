@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   description:
     "Book a consultation. Share your vision and let's create something permanent.",
   openGraph: {
-    title: "Contact | BOUNDDLESS TATTOOO STUDIO",
+    title: "Contact | BOUNDLESS TATTOO STUDIO",
     description:
       "Book a consultation. Share your vision and let's create something permanent.",
     images: [
@@ -21,7 +21,7 @@ export const metadata: Metadata = {
         url: "/images/og/default.jpg",
         width: 1200,
         height: 630,
-        alt: "Contact BOUNDDLESS TATTOOO STUDIO",
+        alt: "Contact BOUNDLESS TATTOO STUDIO",
       },
     ],
   },

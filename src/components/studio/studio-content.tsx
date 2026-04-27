@@ -275,8 +275,7 @@ export function StudioContent() {
               Book a Consultation
             </h2>
             <p className="mx-auto mt-6 max-w-md text-base text-[var(--text-secondary)]">
-              Every masterpiece starts with a conversation. Visit us in person or
-              schedule a consultation to discuss your vision.
+               Your idea is the starting point. Book a consultation and we'll take it from there.
             </p>
             <div className="mt-10">
               <Link

@@ -70,7 +70,7 @@ export function FeaturedWork() {
         <SectionHeading
           label="The Portfolio"
           title="Featured Works"
-          description="A collection of our work, focused on precision, consistency, and clean execution."
+          description="Every piece tells a story"
         />
 
         <div className="grid grid-cols-2 gap-3 md:grid-cols-3 md:gap-4">

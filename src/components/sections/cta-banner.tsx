@@ -15,7 +15,7 @@ export function CTABanner() {
              Ready to Get Inked?
           </h2>
           <p className="mx-auto mt-6 max-w-md text-base text-[var(--text-secondary)]">
-             Have an idea or need guidance? Let’s talk and get it done the right way.
+             Whether it's your first or your fifteenth — bring the idea, we'll bring the execution.
           </p>
           <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
             <Link

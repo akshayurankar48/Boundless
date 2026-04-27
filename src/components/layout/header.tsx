@@ -106,7 +106,7 @@ export const Header = memo(function Header() {
             <div className="relative w-auto">
               <Image
                 src="/images/logo.png"
-                alt="BOUNDDLESS TATTOOO STUDIO"
+                alt="BOUNDLESS TATTOO STUDIO"
                 width={250}
                 height={60}
                 className="h-14 w-auto object-contain md:h-16"

@@ -1,8 +1,8 @@
 export const siteConfig = {
-  name: "BOUNDDLESS TATTOOO STUDIO",
+  name: "BOUNDLESS TATTOO STUDIO",
   tagline: "Crafting Tattoos That Last a Lifetime",
   description:
-    "Clean work, precise execution, and proper hygiene — every tattoo is done with care and professionalism.",
+    "Every piece is executed with clean technique the attention your skin deserves.",
   artist: {
     name: "Sai",
     title: "Founder & Lead Artist",

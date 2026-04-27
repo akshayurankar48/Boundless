@@ -15,7 +15,7 @@ export const processSteps: ProcessStep[] = [
     number: "02",
     title: "Design & Adjustments",
     description:
-      "We work on the design together and make necessary changes until it feels right — simple, clear, and not overcomplicated.",
+      "We refine the design together — adjustments are included until it's exactly what you envisioned.",
   },
   {
     number: "03",
