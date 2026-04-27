@@ -18,16 +18,16 @@ const studioImages = [
     alt: "Boundless Tattoo studio space",
   },
   {
+    src: "/images/studio/IMG_7988.JPEG",
+    alt: "Boundless Tattoo studio setup",
+  },
+  {
     src: "/images/studio/IMG_7980.JPEG",
     alt: "Boundless Tattoo studio interior",
   },
   {
     src: "/images/studio/studio_outside.JPEG",
     alt: "Boundless Tattoo studio environment",
-  },
-  {
-    src: "/images/studio/IMG_7988.JPEG",
-    alt: "Boundless Tattoo studio setup",
   },
 ];
 
